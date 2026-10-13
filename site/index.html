@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-quote="red_up">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Invest Buddy</title>
+<script>
+(function () {
+  var mode = "system";
+  try {
+    var stored = localStorage.getItem("invest-buddy-theme");
+    if (stored === "light" || stored === "dark" || stored === "system") mode = stored;
+  } catch (e) {}
+  var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var theme = mode === "system" ? (dark ? "dark" : "light") : mode;
+  var root = document.documentElement;
+  root.dataset.theme = theme;
+  root.dataset.themeMode = mode;
+})();
+</script>
+<style>
+  html { background: #1c1f26; color-scheme: dark; }
+  html[data-theme="light"] { background: #f4f6f8; color-scheme: light; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=17">
+</head>
+<body>
+<div class="app">
+  <header class="top" id="top"><h1>Invest Buddy</h1></header>
+  <div class="shell">
+    <nav class="side" id="side" aria-label="主导航"></nav>
+    <main id="main"><div class="empty-state" role="status"><strong>正在读取投研数据</strong></div><noscript><p class="note">请启用 JavaScript 以查看行情和研究内容。</p></noscript></main>
+    <aside id="dock" aria-label="标的详情" hidden></aside>
+  </div>
+</div>
+<div id="backdrop" hidden></div>
+<div id="sheet" hidden></div>
+<div id="modal" hidden></div>
+<div id="toast" role="status" hidden></div>
+<div id="tip" hidden role="tooltip"></div>
+<footer id="tape" hidden></footer>
+<nav class="tab" id="tab" aria-label="快捷导航"></nav>
+<script src="js/glossary.js?v=18"></script>
+<script src="js/app.js?v=18"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+# 每日 AI 研究。调用 OpenAI 兼容接口，默认示例是 DeepSeek。
+# 规则引擎的股数和动作不读这里。
+# 研究结果由 GitHub Actions 直接写入 data/research，不经过 issue 评论。
+
+ai_research:
+  backend: openai-compatible
+
+# 接口和模型。密钥只放环境变量 LLM_API_KEY，不要写进这个文件。
+# LLM_BASE_URL、LLM_MODEL_FAST、LLM_MODEL_DEEP 会盖过下面三行。
+# DeepSeek 文档：https://api-docs.deepseek.com/  的 OpenAI 兼容 base_url 是 https://api.deepseek.com
+llm:
+  base_url: https://api.deepseek.com
+  model_fast: deepseek-flash
+  model_deep: deepseek-v4-pro
+
+# 定时研究的本地钟点。GitHub cron 是 UTC，读不到这份文件。
+# 工作流在 DeepSeek 折扣窗口里每 30 分钟醒来一次。折扣时段大约是北京时间 00:30–08:30。
+# 脚本用 zoneinfo 换成 timezone 的本地钟点，只有星期命中、且落在 time ± tolerance_minutes 内才调用模型。
+# 中国无夏令时，所以 Asia/Shanghai 的 07:30 固定是前一日 23:30 UTC。默认 07:30 落在折扣窗口里。
+# 有夏令时的时区由 zoneinfo 换算。把 time 改到工作流的 UTC 唤醒窗口之外时，必须同时改
+# .github/workflows/research.yml 的 cron。
+schedule:
+  timezone: Asia/Shanghai
+  # ISO：周一是 1，周日是 7。默认周二到周六，也就是美股周一至周五收盘之后的北京时间早晨。
+  weekdays: [2, 3, 4, 5, 6]
+  time: "07:30"
+  tolerance_minutes: 25
+
+# 持仓（不含期权）每天研究几只。示例账户 8 只股票、每天 3 只，大约 3 天轮完。
+holdings_per_run: 3
+# 当天新出现、且通过规则的买入信号，最多再加几只。
+max_new_signals: 3
+# 单次硬上限。持仓加信号超过这个数时，多出来的信号留到下一天。
+max_tickers_per_run: 5
+# 单只超时（分钟）。超时记失败，不写评级，继续下一只。
+per_ticker_minutes: 7
+# 研究日期比行情日期早过这么多天，页面标过期。
+stale_days: 3
+# 同一只新信号在这么多天内不重复研究。
+signal_cooldown_days: 2
+
+max_debate_rounds: 1
+max_risk_rounds: 1
+max_tool_rounds: 3
+
+# 费用只作估算。下面是 DeepSeek 空闲时段、缓存未命中的美元 / 百万 token。
+# 高峰大约是这两倍。来源：https://api-docs.deepseek.com/quick_start/pricing
+# 表里没有的模型，估算记 0。
+prices_per_million:
+  deepseek-flash:
+    input: 0.15
+    output: 0.60
+  deepseek-v4-pro:
+    input: 0.66
+    output: 1.98

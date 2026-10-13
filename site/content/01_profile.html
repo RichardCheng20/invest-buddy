@@ -1,0 +1,54 @@
+<h1>投资者画像（EXAMPLE）</h1>
+<blockquote>
+<p>这是开源示例页，不是任何人的真实账户。把本页和 <code>data/portfolio.yaml</code> 改成你自己的描述。</p>
+</blockquote>
+<h2>示例参数</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>账户标记</td>
+<td>EXAMPLE</td>
+</tr>
+<tr>
+<td>净值</td>
+<td>100,000 美元</td>
+</tr>
+<tr>
+<td>现金</td>
+<td>40,000 美元，不用融资</td>
+</tr>
+<tr>
+<td>单票上限</td>
+<td>净值的 10%</td>
+</tr>
+<tr>
+<td>主题上限</td>
+<td>净值的 25%</td>
+</tr>
+<tr>
+<td>总敞口</td>
+<td>≤ 100%</td>
+</tr>
+<tr>
+<td>单笔风险</td>
+<td>短线 0.5%，中线 1%</td>
+</tr>
+<tr>
+<td>止损合计</td>
+<td>≤ 净值的 4%</td>
+</tr>
+</tbody>
+</table>
+<p>示例持仓是 AAPL、MSFT、NVDA、AMZN、GOOGL、JPM、UNH、XOM。股数和成本写在 <code>data/portfolio.yaml</code>，都标了 EXAMPLE。</p>
+<h2>怎么改成你的</h2>
+<ol>
+<li>用你的券商截图或导出，改 <code>data/portfolio.yaml</code> 的净值、现金、股数、成本和止损。</li>
+<li>自选股改 <code>data/watchlist.txt</code>，大约保持在你跟得住的数量。新代码到 <code>config/universe.yaml</code> 登记主题。</li>
+<li>跑 <code>python scripts/refresh.py</code>，或等 GitHub Actions 刷新。页面上的市值以行情为准，不要手填价格。</li>
+</ol>

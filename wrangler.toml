@@ -1,0 +1,19 @@
+# 静态页在 site/，/api/* 进 Worker。
+# 部署用 `npx wrangler deploy`。不要再加 `--assets=./site`，否则只有静态文件，接口不会上去。
+name = "invest-buddy"
+main = "worker/index.js"
+compatibility_date = "2026-03-01"
+
+# 部署前把 YOUR_GITHUB_USER 改成你的 GitHub 用户名。Worker 拒绝这个占位符。
+[vars]
+GH_REPO = "YOUR_GITHUB_USER/invest-buddy"
+GH_BRANCH = "main"
+
+[assets]
+directory = "./site"
+binding = "ASSETS"
+run_worker_first = [ "/api/*" ]
+
+# 预览不继承上面的生产配置。空表表示预览不另挂路由、定时任务或密钥。
+# `npx wrangler deploy` 仍只发布生产配置。
+[previews]

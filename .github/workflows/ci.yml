@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: 安装校验依赖
+        run: pip install -r requirements.txt jsonschema
+      - name: 语法与研究自检
+        run: |
+          python -m py_compile scripts/*.py
+          node --check site/js/app.js
+          node --check site/js/glossary.js
+          node --check worker/index.js
+          python scripts/research.py --self-check
+      - name: 示例数据与邮件 HTML
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("site/data")
+          required = ["meta.json", "market.json", "sentiment.json", "regime.json", "scanner.json", "portfolio.json", "events.json", "decisions.json", "reports.json"]
+          missing = [name for name in required if not (root / name).exists()]
+          if missing:
+              raise SystemExit("缺少示例数据：" + "、".join(missing))
+          for name in required:
+              json.loads((root / name).read_text(encoding="utf-8"))
+          book = Path("data/portfolio.yaml").read_text(encoding="utf-8")
+          if "EXAMPLE" not in book:
+              raise SystemExit("portfolio.yaml 必须标明 EXAMPLE")
+          PY
+          python scripts/email_report.py --render --kind morning > "$RUNNER_TEMP/mail.html"
+          python - <<'PY'
+          import os
+          html = open(os.environ["RUNNER_TEMP"] + "/mail.html", encoding="utf-8").read().lower()
+          for token in ("background", "#fff", "#ffffff", "white"):
+              if token in html:
+                  raise SystemExit("邮件含有不允许的样式：" + token)
+          for token in ("📈", "💼", "免责声明"):
+              if token not in open(os.environ["RUNNER_TEMP"] + "/mail.html", encoding="utf-8").read():
+                  raise SystemExit("邮件缺段落：" + token)
+          print("mail ok")
+          PY
+      - name: 静态页能被读到
+        run: |
+          python -m http.server 8765 --directory site >/tmp/site-http.log 2>&1 &
+          echo $! > /tmp/site-http.pid
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            curl -fsS http://127.0.0.1:8765/index.html >/tmp/index.html && break
+            sleep 0.3
+          done
+          test -s /tmp/index.html
+          curl -fsS http://127.0.0.1:8765/js/app.js >/dev/null
+          curl -fsS http://127.0.0.1:8765/data/portfolio.json >/dev/null
+          curl -fsS http://127.0.0.1:8765/data/meta.json >/dev/null
+          kill "$(cat /tmp/site-http.pid)"
+          grep -q "Invest Buddy" /tmp/index.html

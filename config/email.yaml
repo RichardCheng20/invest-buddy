@@ -1,0 +1,18 @@
+# 邮件报告的本地时间。GitHub cron 是 UTC，夏令时由这里的时区数据库处理。
+# 工作流会在夏令时和冬令时两个 UTC 时刻都启动，只有本地时钟对准时才发信。
+
+morning:
+  label: 早报
+  # 美股周一至周五收盘后的北京时间早晨。周二到周六。中国无夏令时。
+  timezone: Asia/Shanghai
+  weekdays: [2, 3, 4, 5, 6]
+  time: "08:00"
+  tolerance_minutes: 25
+
+premarket:
+  label: 盘前
+  # 美东开盘 09:30 前一小时。America/New_York 会自动切换夏令时。
+  timezone: America/New_York
+  weekdays: [1, 2, 3, 4, 5]
+  time: "08:30"
+  tolerance_minutes: 25

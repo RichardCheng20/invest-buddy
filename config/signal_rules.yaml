@@ -1,0 +1,213 @@
+# 信号与风控阈值。扫描器只读这个文件，不在代码里写死门槛。
+# 含义以 content/signal_rules.md 与 content/02_framework.md §2.1–2.2 为准。
+# 改完后重新跑 python scripts/refresh.py，或等 GitHub Actions 下一次刷新。
+
+account:
+  nlv_base: 100000         # EXAMPLE 回撤基准（美元）。实际高水位见 data/state.json，脚本只会上调。
+  risk_swing: 0.005        # 短线单笔风险 / 净值
+  risk_position: 0.010     # 中线单笔风险 / 净值
+  max_open_risk: 0.04      # 所有持仓到止损的风险合计 / 净值
+  max_pos_pct: 0.10        # 单只标的市值 / 净值
+  max_pos_pct_bluechip: 0.125  # 框架允许的个别大市值放宽，仅作对照，默认检查仍用 max_pos_pct
+  max_theme_pct: 0.25      # 单一主题市值 / 净值
+  max_gross: 1.00          # 多头敞口 / 净值。禁止融资。
+  max_stop_pct_swing: 0.08
+  max_stop_pct_position: 0.12
+  buy_zone_pct: 0.05       # 入场价最高 = pivot × (1 + 该值)
+  max_option_premium_pct: 0.01    # 单笔权利金 / 净值
+  max_option_premium_total: 0.03  # 买入期权权利金合计 / 净值
+  implied_move_fallback: 0.15     # 拿不到平值跨式时，财报跳空按 15%
+  implied_move_stress: 1.5        # 跳空测试用 1.5 倍隐含幅度
+  earnings_gap_loss_cap: 0.01     # 跳空亏损 ≤ 净值的 1%
+  earnings_block_days: 5          # 财报前 N 个交易日不开新仓
+  hi_vol_atr_pct: 0.05            # ATR% 超过该值则单笔风险再减半
+  extended_atr: 2.5               # 收盘高于 21 日 EMA 超过 N 倍 ATR 视为延伸
+  extended_sma50: 1.25            # 收盘 > 50 日 SMA × 该倍数视为延伸
+  liquid_dollar_avg: 200000000    # 50 日平均成交额下限（美元）
+  new_entries_per_theme_per_day: 1
+  swing_time_stop_bars: 10
+  leveraged_max_hold_bars: 5
+  cooldown_bars_after_stops: 10
+  consecutive_stops_for_cooldown: 2
+  macro_swing_blackout_calendar_days: 2  # FOMC/CPI/NFP/PCE 前的短线静默（日历日）
+
+# 宏观档位是人工判断（利率、通胀不在日线里）。技术环境分由脚本每天重算。
+# 最终权益敞口上限 = min(宏观上限, 环境上限)。
+macro_tier:
+  name: neutral            # offensive | neutral | defensive
+  cap: 0.60
+  note: "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。"
+
+regime:
+  green_min_score: 4
+  yellow_min_score: 2
+  breadth_above_50_min: 0.50
+  breadth_above_200_min: 0.40
+  distribution_lookback: 25
+  distribution_return: -0.002     # 跌幅达到或超过 0.2%
+  distribution_count_penalty: 5   # 25 日内派发日达到该次数则环境分 -1
+  vix_ratio_invert: 1.00
+  vix_ratio_clear: 0.95
+  vix_clear_closes: 2
+  risk_mult:
+    GREEN: 1.0
+    YELLOW: 0.5
+    RED: 0.0
+  max_new_entries_per_week:
+    GREEN: null            # 不限
+    YELLOW: 2
+    RED: 0
+  exposure_cap:
+    GREEN: 0.70
+    YELLOW: 0.60
+    RED: 0.35              # 防守档 30%–40% 取中位
+
+indicators:
+  ema_fast: 10
+  ema_mid: 21
+  sma_mid: 50
+  sma_long: 150
+  sma_trend: 200
+  atr: 14
+  atr_slow: 20
+  atr_chandelier: 22
+  rsi: 14
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  rvol: 50
+  volume_avg_short: 20
+  bb_period: 20
+  bb_std: 2.0
+  kc_period: 20
+  kc_atr: 20
+  kc_mult: 1.5
+  squeeze_lookback: 126
+  squeeze_width_pct: 0.10
+  rs_weights: [0.4, 0.2, 0.2, 0.2]   # 最近 3 个月、3–6、6–9、9–12；每段 63 根
+  rs_span: 63
+  weekly_sma: 30
+  slope_lookback: 20
+  flat_slope_abs: 0.01
+  flat_crosses: 4
+  cross_lookback: 20
+  high_low_bars: 252
+  chandelier_mult: 3.0
+  gap_abs: 0.05
+
+stage2:
+  sma200_rising_bars: 20
+  min_above_low: 1.30          # 收盘 ≥ 52 周低点 × 1.30
+  min_of_high: 0.75            # 收盘 ≥ 52 周高点 × 0.75（距高点不超过 25%）
+
+stops:
+  # 持仓页的一键填入：max(吊灯, 50日均线 − 该倍数×ATR14)，而且必须低于现价。
+  suggest_sma50_atr: 2.0
+  # nearer：取更高的止损价（离现价更近）。对应框架 2.1(f)「取较近的那个」。
+  # farther：对两个价格取 min，即更远的那个。对应 signal_rules §5 里的 min() 字面。
+  # 杯柄的杯底经常深于 12% 止损上限，字面 min() 会拒绝几乎所有 E1，因此默认 nearer。
+  combine: nearer              # nearer | farther
+  below_min_atr: reject        # reject：止损距离 < 1×ATR 则放弃；widen：放到 1×ATR 再检查上限
+  min_stop_atr: 1.0
+  structure_pad_atr: 0.25
+  e1_atr_mult: 2.5
+  e2_atr_mult: 1.5
+  e3_atr_mult: 1.5
+  e5_atr_mult: 1.5
+
+entries:
+  e1_rvol: 1.5
+  e2_rvol_max: 0.8
+  e2_close_location: 0.5       # (close-low)/(high-low)
+  e2_ma_atr: 1.0               # 最低价触达 MA + N×ATR 以内，且收盘仍在 MA 之上
+  e3_ma_band: 0.02
+  e3_sma50_atr: 2.0
+  e3_down_lookback: 10
+  e4_gap: 0.05
+  e4_rvol: 3.0
+  e4_close_location: 0.5
+  e4_window_bars: 10
+  e5_rvol: 1.5
+  leader_pos_rs: 80
+  leader_swing_rs: 70
+  pullback_min_bars: 2
+  pullback_max_lookback: 15
+
+patterns:
+  flat_min_bars: 25
+  flat_max_bars: 80
+  flat_depth: 0.15
+  cup_min_bars: 35
+  cup_max_bars: 325
+  cup_depth_min: 0.12
+  cup_depth_max: 0.35
+  handle_min_bars: 5
+  handle_max_bars: 25
+  handle_depth_max: 0.12
+  handle_rvol_max: 1.0
+  handle_vs_left_high: 1.05
+  cup_recover: 0.92
+  vcp_window: 120
+  vcp_segments_min: 2
+  vcp_segments_max: 4
+  vcp_contraction: 0.6         # 下一次回调深度 < 上一次 × 0.6
+  vcp_last_depth: 0.08
+  vcp_last_rvol: 1.0
+  vcp_recency: 15
+
+confirmation:
+  udvol_lookback: 50
+  udvol_rvol: 1.0
+  udvol_min: 1.2
+  rsi_pullback_low: 40
+  rsi_pullback_high: 50
+  rsi_pullback_lookback: 10
+  macd_falling_bars: 3
+  rs_high_bars: 252
+  size_mult_full: 1.0
+  size_mult_half: 0.5
+  full_min_score: 2
+
+exits:
+  fail_breakout_bars: 3
+  fail_rvol: 1.0
+  x4_rvol: 1.5
+  x6_extension: 1.25           # 收盘 > 50 日 SMA × 1.25
+  x6_gap_days: 3
+  x6_rsi: 80
+  x6_rvol: 1.5
+  x8_flat_bars: 20
+  x8_flat_abs: 0.03
+  x8_rs_low_bars: 63
+  x8_dist_lookback: 10
+  x8_dist_count: 3
+  x8_near_high: 0.90           # 收盘在 52 周高点的 10% 以内
+  x8_dist_return: -0.02
+  x8_dist_rvol: 1.5
+  trail_rs_rank: 90            # RS ≥ 90 的短线用 10 日 EMA，否则 21 日 EMA
+
+drawdown:
+  # 相对高水位
+  pause_swing: -0.03
+  gross_60: -0.05
+  gross_35: -0.075
+  flat: -0.10
+  gross_cap_at_5: 0.60
+  gross_cap_at_7_5: 0.35
+  cooldown_trading_days: 10
+
+horizon:
+  E1: position
+  E2: position
+  E3: position
+  E4: position
+  E5: swing
+
+initial_fraction:
+  E1: 1.0
+  E2: 0.5
+  E3: 0.5
+  E4: 1.0
+  E5: 1.0
+
+priority: [E1, E4, E2, E3, E5]

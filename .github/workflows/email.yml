@@ -1,0 +1,44 @@
+name: 邮件报告
+
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: auto 只在配置的钟点发送；morning / premarket 立刻发一封
+        required: false
+        type: choice
+        options:
+          - auto
+          - morning
+          - premarket
+        default: auto
+  schedule:
+    # 早报：北京时间 08:00 = 00:00 UTC，周二到周六。中国无夏令时。
+    - cron: "0 0 * * 2-6"
+    # 盘前：美东 08:30。夏令时是 12:30 UTC，冬令时是 13:30 UTC。两次都启动，脚本只在本地时钟对准时发信。
+    - cron: "30 12 * * 1-5"
+    - cron: "30 13 * * 1-5"
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安装依赖
+        run: pip install PyYAML
+      - name: 生成并发送
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          REPORT_TO: ${{ secrets.REPORT_TO }}
+        run: |
+          python scripts/email_report.py --send --kind "${{ github.event.inputs.kind || 'auto' }}"

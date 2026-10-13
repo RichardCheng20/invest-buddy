@@ -1,0 +1,5 @@
+# 报价颜色。改完刷新页面即可；站点读的是 site/data/ui.json，两处保持一致。
+# red_up  红涨绿跌（默认）
+# green_up  绿涨红跌
+quote_color: red_up
+title: Invest Buddy

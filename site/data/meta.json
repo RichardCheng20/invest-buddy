@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-10-13T08:49:55.492337+00:00",
+  "generated_at_cn": "2026-10-13 16:49",
+  "generated_date_cn": "2026-10-13",
+  "bar_date": "2026-10-12",
+  "session": "am",
+  "timezone": "Asia/Shanghai",
+  "watchlist_count": 20,
+  "scan_count": 20,
+  "macro": {
+    "name": "neutral",
+    "cap": 0.6,
+    "note": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。"
+  },
+  "exposure_cap": 0.6,
+  "regime_risk_mult": 1.0,
+  "approximations": [
+    "市场宽度用观察列表，不是标普 500 全部成分。",
+    "财报潜在亏损优先用平值跨式；跨式取不到时该格留空，不再用 15% 填上。近 8 次跳空用日线高低价。",
+    "距离财报的交易日用工作日近似，没有扣除交易所假日。",
+    "行业相对强度用主题对应的 ETF，不是 GICS 官方行业。",
+    "净值 = 配置里的现金 + 本次行情算出的持仓市值，不含融资利息。",
+    "宏观档位来自 config/signal_rules.yaml，需要你自己在利率或通胀变化后修改。",
+    "RS 排名在观察列表和持仓里计算，不是全市场。",
+    "止损合成默认取较近的那个（stops.combine: nearer）。",
+    "CNN 恐惧与贪婪和 CBOE 日统计来自非官方接口。情绪读数不计入环境分。"
+  ],
+  "errors": [],
+  "account": {
+    "nlv_base": 100000,
+    "risk_swing": 0.005,
+    "risk_position": 0.01,
+    "max_open_risk": 0.04,
+    "max_pos_pct": 0.1,
+    "max_theme_pct": 0.25,
+    "max_gross": 1.0,
+    "max_stop_pct_swing": 0.08,
+    "max_stop_pct_position": 0.12
+  },
+  "disclaimer": "规则输出只供个人研究对照，不构成投资建议，也不构成买卖任何证券的推荐。"
+}

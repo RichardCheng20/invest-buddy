@@ -1,0 +1,19 @@
+# 可选。用来执行两条抑制规则，不填则视为「没有记录」：
+# 1. 同一标的最近两笔都是止损 → 暂停该标的 cooldown_bars_after_stops 根 K 线
+# 2. 环境为「谨慎」时，本周新开仓笔数达到上限后不再给新仓位
+#
+# trades:
+#   - ticker: AAPL
+#     date: "2026-01-02"
+#     action: exit          # entry | exit
+#     result: stop          # stop | target | other
+#     note: EXAMPLE
+#   - ticker: AAPL          # 只有带 signal: E1 的 entry 才会评估 X2
+#     date: "2026-01-02"
+#     action: entry
+#     signal: E1
+#     pivot: 180
+#     breakout_low: 175
+#     note: EXAMPLE
+
+trades: []

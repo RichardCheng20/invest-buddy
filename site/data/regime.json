@@ -1,0 +1,40 @@
+{
+  "score": 4,
+  "score_raw_before_lock": 4,
+  "regime": "GREEN",
+  "distribution_count": 10,
+  "distribution_penalty": true,
+  "vix": 15.21,
+  "vix3m": 17.93,
+  "vix_ratio": 0.848299,
+  "vix_lock": false,
+  "breadth_above_50": 0.75,
+  "breadth_above_200": 0.8,
+  "breadth_n": 20,
+  "risk_mult": 1.0,
+  "exposure_cap": 0.6,
+  "yesterday_regime": "GREEN",
+  "alerts": [
+    {
+      "id": "R2",
+      "level": "primary",
+      "title": "派发日达到 5 个",
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 10 个派发日"
+    }
+  ],
+  "index_below_200": [],
+  "breadth_approximate": true,
+  "breadth_note": "宽度用观察列表（含持仓）计算，不是标普 500 全成分。只作近似。",
+  "parts": {
+    "spy_above_50": true,
+    "spy_above_200_stack": true,
+    "qqq_above_50": true,
+    "breadth": true,
+    "vix_contango": true
+  },
+  "macro": {
+    "name": "neutral",
+    "cap": 0.6,
+    "note": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。"
+  }
+}

@@ -1,0 +1,6 @@
+yfinance>=0.2.54
+pandas>=2.2
+numpy>=1.26
+PyYAML>=6.0
+Markdown>=3.6
+xlrd>=2.0.1

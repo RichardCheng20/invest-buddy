@@ -1,0 +1,345 @@
+{
+  "macro": [
+    {
+      "date": "2026-10-14",
+      "time_et": "08:30",
+      "time_cn": "20:30",
+      "title": "9 月 CPI",
+      "tags": [
+        "cpi",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 2
+    },
+    {
+      "date": "2026-10-15",
+      "time_et": "08:30",
+      "time_cn": "20:30",
+      "title": "9 月 PPI",
+      "tags": [
+        "ppi",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 3
+    },
+    {
+      "date": "2026-10-16",
+      "time_et": null,
+      "time_cn": null,
+      "title": "月度期权到期",
+      "tags": [
+        "opex"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 4
+    },
+    {
+      "date": "2026-10-28",
+      "time_et": "14:00",
+      "time_cn": "10/29 02:00",
+      "title": "FOMC 利率决议",
+      "tags": [
+        "fomc",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "note": "会议为 10/27–10/28，声明在 10/28 14:00 美东",
+      "days_away": 16
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:30",
+      "time_cn": "20:30",
+      "title": "三季度 GDP 初值 + 9 月 PCE",
+      "tags": [
+        "gdp",
+        "pce",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 17
+    },
+    {
+      "date": "2026-10-30",
+      "time_et": "08:30",
+      "time_cn": "20:30",
+      "title": "三季度雇佣成本指数（ECI）",
+      "tags": [
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 18
+    },
+    {
+      "date": "2026-11-01",
+      "title": "美国夏令时结束",
+      "tags": [
+        "clock"
+      ],
+      "confirmed": true,
+      "note": "此后美东 8:30 的数据对应北京时间 21:30。邮件盘前仍按 America/New_York 自动换算。",
+      "days_away": 20
+    },
+    {
+      "date": "2026-11-06",
+      "time_et": "08:30",
+      "time_cn": "21:30",
+      "title": "10 月非农",
+      "tags": [
+        "nfp",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 25
+    },
+    {
+      "date": "2026-11-10",
+      "time_et": "08:30",
+      "time_cn": "21:30",
+      "title": "10 月 CPI",
+      "tags": [
+        "cpi",
+        "macro"
+      ],
+      "confirmed": true,
+      "related": [],
+      "days_away": 29
+    },
+    {
+      "date": "2026-11-26",
+      "title": "感恩节休市",
+      "tags": [
+        "holiday"
+      ],
+      "confirmed": true,
+      "days_away": 45
+    },
+    {
+      "date": "2026-11-27",
+      "title": "感恩节后提前收盘",
+      "tags": [
+        "holiday"
+      ],
+      "confirmed": true,
+      "note": "流动性变差",
+      "days_away": 46
+    },
+    {
+      "date": "2026-12-09",
+      "time_et": "14:00",
+      "time_cn": "12/10 03:00",
+      "title": "FOMC 利率决议 + SEP / 点阵图",
+      "tags": [
+        "fomc",
+        "macro"
+      ],
+      "confirmed": true,
+      "note": "会议为 12/8–12/9",
+      "days_away": 58
+    },
+    {
+      "date": "2026-12-10",
+      "time_et": "08:30",
+      "time_cn": "21:30",
+      "title": "11 月 CPI",
+      "tags": [
+        "cpi",
+        "macro"
+      ],
+      "confirmed": true,
+      "days_away": 59
+    },
+    {
+      "date": "2026-12-18",
+      "title": "四巫日（季度期权 / 期货到期）",
+      "tags": [
+        "opex"
+      ],
+      "confirmed": true,
+      "days_away": 67
+    },
+    {
+      "date": "2026-12-25",
+      "title": "圣诞节休市",
+      "tags": [
+        "holiday"
+      ],
+      "confirmed": true,
+      "days_away": 74
+    }
+  ],
+  "earnings": [
+    {
+      "ticker": "JPM",
+      "date": "2026-10-13",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 1,
+      "held": true
+    },
+    {
+      "ticker": "UNH",
+      "date": "2026-10-13",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 1,
+      "held": true
+    },
+    {
+      "ticker": "JNJ",
+      "date": "2026-10-13",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 1,
+      "held": false
+    },
+    {
+      "ticker": "META",
+      "date": "2026-10-21",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 7,
+      "held": false
+    },
+    {
+      "ticker": "TSLA",
+      "date": "2026-10-21",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 7,
+      "held": false
+    },
+    {
+      "ticker": "PG",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 8,
+      "held": false
+    },
+    {
+      "ticker": "V",
+      "date": "2026-10-27",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 11,
+      "held": false
+    },
+    {
+      "ticker": "MSFT",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 12,
+      "held": true
+    },
+    {
+      "ticker": "GOOGL",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 12,
+      "held": true
+    },
+    {
+      "ticker": "AMZN",
+      "date": "2026-10-29",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 13,
+      "held": true
+    },
+    {
+      "ticker": "MA",
+      "date": "2026-10-29",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 13,
+      "held": false
+    },
+    {
+      "ticker": "LLY",
+      "date": "2026-10-29",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 13,
+      "held": false
+    },
+    {
+      "ticker": "XOM",
+      "date": "2026-10-30",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 14,
+      "held": true
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-11-02",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 15,
+      "held": true
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-11-17",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 26,
+      "held": true
+    },
+    {
+      "ticker": "HD",
+      "date": "2026-11-17",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 26,
+      "held": false
+    },
+    {
+      "ticker": "AVGO",
+      "date": "2026-12-09",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 42,
+      "held": false
+    },
+    {
+      "ticker": "COST",
+      "date": "2026-12-10",
+      "confirmed": false,
+      "note": null,
+      "source": "yfinance",
+      "days": 43,
+      "held": false
+    }
+  ],
+  "bar_date": "2026-10-12"
+}

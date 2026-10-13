@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "id": "tech",
+      "name": "大型科技 / 平台",
+      "short": "科技"
+    },
+    {
+      "id": "fin",
+      "name": "金融",
+      "short": "金融"
+    },
+    {
+      "id": "health",
+      "name": "医疗",
+      "short": "医疗"
+    },
+    {
+      "id": "energy",
+      "name": "能源",
+      "short": "能源"
+    },
+    {
+      "id": "consumer",
+      "name": "消费",
+      "short": "消费"
+    },
+    {
+      "id": "broad",
+      "name": "宽基",
+      "short": "宽基"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+# EXAMPLE 主题。观察列表在 data/watchlist.txt。未登记的代码会进「未分类」。
+
+themes:
+  tech:
+    name: 大型科技 / 平台
+    sector_etf: XLK
+    tickers: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, TSLA, AVGO]
+  fin:
+    name: 金融
+    sector_etf: XLF
+    tickers: [JPM, V, MA]
+  health:
+    name: 医疗
+    sector_etf: XLV
+    tickers: [UNH, JNJ, LLY]
+  energy:
+    name: 能源
+    sector_etf: XLE
+    tickers: [XOM]
+  consumer:
+    name: 消费
+    sector_etf: XLY
+    tickers: [COST, HD, PG]
+  broad:
+    name: 宽基
+    sector_etf: SPY
+    sector_mode: market
+    tickers: [SPY, QQQ]
+
+# 杠杆 / 反向 ETF。示例仓库留空。要加的话写成：
+# SOXL: {underlying: SOXX, leverage: 3, name: 三倍做多半导体}
+leveraged: {}
+
+# 全球市场看板。symbol 是 Yahoo 代码。
+market:
+  - {symbol: "^GSPC", name: 标普 500, group: us}
+  - {symbol: "^DJI", name: 道琼斯, group: us}
+  - {symbol: "^IXIC", name: 纳斯达克综合, group: us}
+  - {symbol: "^NDX", name: 纳斯达克 100, group: us}
+  - {symbol: "^RUT", name: 罗素 2000, group: us}
+  - {symbol: "^N225", name: 日经 225, group: global}
+  - {symbol: "^HSI", name: 恒生, group: global}
+  - {symbol: "^FTSE", name: 富时 100, group: global}
+  - {symbol: "^GDAXI", name: 德国 DAX, group: global}
+  - {symbol: "^FCHI", name: 法国 CAC, group: global}
+  - {symbol: "000001.SS", name: 上证综指, group: global}
+  - {symbol: "^TNX", name: 美国 10 年期国债收益率, group: rates, kind: yield}
+  - {symbol: "^TYX", name: 美国 30 年期国债收益率, group: rates, kind: yield}
+  - {symbol: "^FVX", name: 美国 5 年期国债收益率, group: rates, kind: yield}
+  - {symbol: "DX-Y.NYB", name: 美元指数, group: rates}
+  - {symbol: "CL=F", name: WTI 原油, group: commodity}
+  - {symbol: "BZ=F", name: 布伦特原油, group: commodity}
+  - {symbol: "GC=F", name: 黄金, group: commodity}
+  - {symbol: "SI=F", name: 白银, group: commodity}
+  - {symbol: "HG=F", name: 铜, group: commodity}
+  - {symbol: "BTC-USD", name: 比特币, group: commodity}
+
+sectors:
+  - {symbol: XLK, name: 科技}
+  - {symbol: XLF, name: 金融}
+  - {symbol: XLE, name: 能源}
+  - {symbol: XLV, name: 医疗}
+  - {symbol: XLI, name: 工业}
+  - {symbol: XLY, name: 可选消费}
+  - {symbol: XLP, name: 必选消费}
+  - {symbol: XLB, name: 材料}
+  - {symbol: XLRE, name: 不动产}
+  - {symbol: XLU, name: 公用事业}
+  - {symbol: XLC, name: 通信}
+  - {symbol: SMH, name: 半导体}
+
+core_symbols: [SPY, QQQ, "^VIX", "^VIX3M"]
+
+# ETF 没有个股财报。财报过滤记为「不适用」。
+no_earnings: [SPY, QQQ, XLK, XLF, XLE, XLV, XLI, XLY, XLP, XLB, XLRE, XLU, XLC, SMH]

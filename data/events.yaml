@@ -1,0 +1,111 @@
+# 宏观与事件日历。日期为美东。confirmed: false 的在页面上标「待确认」。
+# tags 含 fomc / cpi / nfp / pce 的日期会触发短线静默（见 signal_rules.yaml）。
+# EXAMPLE：下面是公开宏观日历，不是个人持仓事件。个股财报写到 data/earnings_seed.yaml。
+
+items:
+  - date: "2026-10-14"
+    time_et: "08:30"
+    time_cn: "20:30"
+    title: 9 月 CPI
+    tags: [cpi, macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-10-15"
+    time_et: "08:30"
+    time_cn: "20:30"
+    title: 9 月 PPI
+    tags: [ppi, macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-10-16"
+    time_et: null
+    time_cn: null
+    title: 月度期权到期
+    tags: [opex]
+    confirmed: true
+    related: []
+
+  - date: "2026-10-28"
+    time_et: "14:00"
+    time_cn: "10/29 02:00"
+    title: FOMC 利率决议
+    tags: [fomc, macro]
+    confirmed: true
+    related: []
+    note: 会议为 10/27–10/28，声明在 10/28 14:00 美东
+
+  - date: "2026-10-29"
+    time_et: "08:30"
+    time_cn: "20:30"
+    title: 三季度 GDP 初值 + 9 月 PCE
+    tags: [gdp, pce, macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-10-30"
+    time_et: "08:30"
+    time_cn: "20:30"
+    title: 三季度雇佣成本指数（ECI）
+    tags: [macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-11-01"
+    title: 美国夏令时结束
+    tags: [clock]
+    confirmed: true
+    note: 此后美东 8:30 的数据对应北京时间 21:30。邮件盘前仍按 America/New_York 自动换算。
+
+  - date: "2026-11-06"
+    time_et: "08:30"
+    time_cn: "21:30"
+    title: 10 月非农
+    tags: [nfp, macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-11-10"
+    time_et: "08:30"
+    time_cn: "21:30"
+    title: 10 月 CPI
+    tags: [cpi, macro]
+    confirmed: true
+    related: []
+
+  - date: "2026-11-26"
+    title: 感恩节休市
+    tags: [holiday]
+    confirmed: true
+
+  - date: "2026-11-27"
+    title: 感恩节后提前收盘
+    tags: [holiday]
+    confirmed: true
+    note: 流动性变差
+
+  - date: "2026-12-09"
+    time_et: "14:00"
+    time_cn: "12/10 03:00"
+    title: FOMC 利率决议 + SEP / 点阵图
+    tags: [fomc, macro]
+    confirmed: true
+    note: 会议为 12/8–12/9
+
+  - date: "2026-12-10"
+    time_et: "08:30"
+    time_cn: "21:30"
+    title: 11 月 CPI
+    tags: [cpi, macro]
+    confirmed: true
+
+  - date: "2026-12-18"
+    title: 四巫日（季度期权 / 期货到期）
+    tags: [opex]
+    confirmed: true
+
+  - date: "2026-12-25"
+    title: 圣诞节休市
+    tags: [holiday]
+    confirmed: true

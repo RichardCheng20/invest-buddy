@@ -1,0 +1,95 @@
+# EXAMPLE — 示例持仓，不是任何人的真实账户。
+# 把股数、成本、止损、现金改成你自己的，然后跑 python scripts/refresh.py，或等 Actions 刷新。
+# 价格由脚本从行情源填写。平均成本未知就保持 null，页面不计算盈亏。
+
+as_of: "2026-01-02"
+account: EXAMPLE
+base_currency: USD
+
+# EXAMPLE 净值。回撤高水位的起点，和 config/signal_rules.yaml 的 nlv_base 对齐。
+nlv: 100000
+# 现金。负数表示融资。示例账户不用融资。
+cash: 40000
+
+snapshot:
+  as_of: "2026-01-02T16:00-05:00"
+  nlv: 100000
+  maintenance_margin: 0
+  excess_liquidity: 100000
+  buying_power: 100000
+  unrealized_pnl: 0
+  day_pnl: 0
+  note: EXAMPLE
+
+positions:
+  - ticker: AAPL
+    instrument: stock
+    shares: 20
+    avg_cost: 180
+    stop: 170
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: MSFT
+    instrument: stock
+    shares: 10
+    avg_cost: 420
+    stop: 390
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: NVDA
+    instrument: stock
+    shares: 8
+    avg_cost: 120
+    stop: 100
+    horizon: swing
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: AMZN
+    instrument: stock
+    shares: 12
+    avg_cost: 190
+    stop: 175
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: GOOGL
+    instrument: stock
+    shares: 8
+    avg_cost: 160
+    stop: 145
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: JPM
+    instrument: stock
+    shares: 15
+    avg_cost: 200
+    stop: 185
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: UNH
+    instrument: stock
+    shares: 4
+    avg_cost: 500
+    stop: 460
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE
+
+  - ticker: XOM
+    instrument: stock
+    shares: 20
+    avg_cost: 110
+    stop: 100
+    horizon: position
+    entry_date: "2026-01-02"
+    note: EXAMPLE

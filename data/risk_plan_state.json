@@ -1,0 +1,114 @@
+{
+  "full": [
+    {
+      "id": "sell:NVDA:0",
+      "status": "open",
+      "kind": "sell",
+      "ticker": "NVDA",
+      "title": "卖出 NVDA 8 股",
+      "why": "规则卖出：收盘跌破吊灯移动止损，可以整仓退出。财报 2026-11-17",
+      "shares": 8,
+      "proceeds": 1810.56,
+      "shares_after": 0.0,
+      "fraction_left": null,
+      "after": {
+        "cash": 41810.56,
+        "gross": 0.40227216345920364,
+        "worst_name": {
+          "ticker": "AAPL",
+          "exposure": 6819.4,
+          "weight": 0.09749080656625789
+        },
+        "worst_theme": {
+          "id": "tech",
+          "name": "大型科技 / 平台",
+          "exposure": 18167.02,
+          "weight": 0.25971749011205725
+        }
+      }
+    },
+    {
+      "id": "sell:AMZN:9",
+      "status": "open",
+      "kind": "sell",
+      "ticker": "AMZN",
+      "title": "卖出 AMZN 3 股",
+      "why": "规则是持有，只减到上限，不会清仓。财报 2026-10-29。大型科技 / 平台高出主题上限",
+      "shares": 3,
+      "proceeds": 778.59,
+      "shares_after": 9.0,
+      "fraction_left": null,
+      "after": {
+        "cash": 42589.15,
+        "gross": 0.3911413650816847,
+        "worst_name": {
+          "ticker": "AAPL",
+          "exposure": 6819.4,
+          "weight": 0.09749080656625789
+        },
+        "worst_theme": {
+          "id": "tech",
+          "name": "大型科技 / 平台",
+          "exposure": 17388.43,
+          "weight": 0.2485866917345383
+        }
+      }
+    }
+  ],
+  "staged": [
+    {
+      "id": "sell:NVDA:0",
+      "status": "open",
+      "kind": "sell",
+      "ticker": "NVDA",
+      "title": "卖出 NVDA 8 股",
+      "why": "规则卖出：收盘跌破吊灯移动止损，可以整仓退出。财报 2026-11-17",
+      "shares": 8,
+      "proceeds": 1810.56,
+      "shares_after": 0.0,
+      "fraction_left": null,
+      "after": {
+        "cash": 41810.56,
+        "gross": 0.40227216345920364,
+        "worst_name": {
+          "ticker": "AAPL",
+          "exposure": 6819.4,
+          "weight": 0.09749080656625789
+        },
+        "worst_theme": {
+          "id": "tech",
+          "name": "大型科技 / 平台",
+          "exposure": 18167.02,
+          "weight": 0.25971749011205725
+        }
+      }
+    },
+    {
+      "id": "sell:AMZN:9",
+      "status": "open",
+      "kind": "sell",
+      "ticker": "AMZN",
+      "title": "卖出 AMZN 3 股",
+      "why": "规则是持有，只减到上限，不会清仓。财报 2026-10-29。大型科技 / 平台高出主题上限",
+      "shares": 3,
+      "proceeds": 778.59,
+      "shares_after": 9.0,
+      "fraction_left": null,
+      "after": {
+        "cash": 42589.15,
+        "gross": 0.3911413650816847,
+        "worst_name": {
+          "ticker": "AAPL",
+          "exposure": 6819.4,
+          "weight": 0.09749080656625789
+        },
+        "worst_theme": {
+          "id": "tech",
+          "name": "大型科技 / 平台",
+          "exposure": 17388.43,
+          "weight": 0.2485866917345383
+        }
+      }
+    }
+  ]
+}

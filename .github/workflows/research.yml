@@ -1,0 +1,87 @@
+name: AI 研究
+
+run-name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.ticker != '' && format('AI 研究 {0}', github.event.inputs.ticker) || 'AI 研究' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: 只研究这一只，例如 AAPL。留空则按 config/research.yaml 轮换
+        required: false
+        type: string
+  schedule:
+    # DeepSeek 折扣时段大约是北京时间 00:30–08:30。中国无夏令时。
+    # cron 是 UTC，读不到 config/research.yaml，所以整段窗口每 30 分钟醒一次。
+    # 脚本用 zoneinfo 看本地钟点，只有 yaml 里的星期和 time ± tolerance 命中才调用模型。
+    # 把 time 改到这个 UTC 窗口之外时，必须同时改下面的 cron。
+    # 北京 00:30–07:30 = 前一日 UTC 16:30–23:30（周一至周五 UTC，即周二至周六早晨）。
+    # 北京 08:00 和 08:30 = 当日 UTC 00:00 和 00:30（周二至周六）。
+    - cron: "*/30 16-23 * * 1-5"
+    - cron: "0,30 0 * * 2-6"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: 对齐默认分支
+        run: git pull --ff-only origin "${{ github.event.repository.default_branch }}"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 判断要不要跑
+        id: gate
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL_FAST: ${{ secrets.LLM_MODEL_FAST }}
+          LLM_MODEL_DEEP: ${{ secrets.LLM_MODEL_DEEP }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install PyYAML
+          python scripts/research.py --gate \
+            --event "${{ github.event_name }}" \
+            --ticker "${{ github.event.inputs.ticker || '' }}" \
+            --created-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+      - name: 安装 TradingAgents
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r requirements-research.txt
+      - name: 跑研究并写入 data/research
+        if: steps.gate.outputs.run == 'true'
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL_FAST: ${{ secrets.LLM_MODEL_FAST }}
+          LLM_MODEL_DEEP: ${{ secrets.LLM_MODEL_DEEP }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          SEC_EDGAR_USER_AGENT: ${{ secrets.SEC_EDGAR_USER_AGENT }}
+        run: |
+          python scripts/research.py \
+            --event "${{ github.event_name }}" \
+            --ticker "${{ github.event.inputs.ticker || '' }}" \
+            --created-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+      - name: 提交研究结果
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research site/data/research.json site/data/research site/research reports site/reports
+          if git diff --staged --quiet; then
+            echo "没有新研究"
+          else
+            git commit -m "data: AI 研究 $(TZ=Asia/Shanghai date +%F-%H%M)"
+            git push
+          fi

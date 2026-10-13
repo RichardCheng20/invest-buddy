@@ -1,0 +1,14 @@
+This project runs TradingAgents as an installed dependency. The source is not
+vendored here.
+
+TradingAgents
+Copyright Tauric Research
+Licensed under the Apache License, Version 2.0
+https://github.com/TauricResearch/TradingAgents
+https://www.apache.org/licenses/LICENSE-2.0
+
+Pinned commit: 1394a3f72aa4393e1a98f51b382434c4b4c2d972
+(v0.6.0, declared in requirements-research.txt)
+
+The Apache License, Version 2.0, and any notices shipped inside that package
+apply to TradingAgents itself. This repository's own code is separate.

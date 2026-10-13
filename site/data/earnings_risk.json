@@ -1,0 +1,367 @@
+{
+  "bar_date": "2026-10-12",
+  "nlv": 69949.159973,
+  "holdings": [
+    {
+      "ticker": "AAPL",
+      "held": true,
+      "etf": false,
+      "date": "2026-11-02",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 21,
+      "note": "EXAMPLE，待你填入已公告的日期",
+      "source": "yfinance",
+      "price": 340.970001,
+      "exposure": 6819.400024,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.024589,
+        "max_adverse": -0.100261
+      },
+      "implied": {
+        "expiry": "2026-11-06",
+        "strike": 340.0,
+        "straddle": 19.15,
+        "move": 0.056163,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 383.0,
+      "loss_implied_pct": 0.005475,
+      "loss_adverse": 683.718831,
+      "loss_adverse_pct": 0.009775,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "MSFT",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-28",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 16,
+      "note": "EXAMPLE，待你填入已公告的日期",
+      "source": "yfinance",
+      "price": 541.150024,
+      "exposure": 5411.500244,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.07019,
+        "max_adverse": -0.125843
+      },
+      "implied": {
+        "expiry": "2026-10-30",
+        "strike": 540.0,
+        "straddle": 33.2,
+        "move": 0.061351,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 332.0,
+      "loss_implied_pct": 0.004746,
+      "loss_adverse": 681.001773,
+      "loss_adverse_pct": 0.009736,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "NVDA",
+      "held": true,
+      "etf": false,
+      "date": "2026-11-17",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 36,
+      "note": "EXAMPLE，待你填入已公告的日期",
+      "source": "yfinance",
+      "price": 226.320007,
+      "exposure": 1810.560059,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.04021,
+        "max_adverse": -0.085847
+      },
+      "implied": {
+        "expiry": "2026-11-20",
+        "strike": 225.0,
+        "straddle": 21.05,
+        "move": 0.09301,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 168.4,
+      "loss_implied_pct": 0.002407,
+      "loss_adverse": 155.431441,
+      "loss_adverse_pct": 0.002222,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "AMZN",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-29",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 17,
+      "note": "",
+      "source": "yfinance",
+      "price": 259.529999,
+      "exposure": 3114.359985,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.062315,
+        "max_adverse": -0.100498
+      },
+      "implied": {
+        "expiry": "2026-10-30",
+        "strike": 260.0,
+        "straddle": 19.84,
+        "move": 0.076446,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 238.08,
+      "loss_implied_pct": 0.003404,
+      "loss_adverse": 312.988418,
+      "loss_adverse_pct": 0.004475,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "GOOGL",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-28",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 16,
+      "note": "",
+      "source": "yfinance",
+      "price": 352.720001,
+      "exposure": 2821.76001,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.0412,
+        "max_adverse": -0.088914
+      },
+      "implied": {
+        "expiry": "2026-10-30",
+        "strike": 355.0,
+        "straddle": 25.05,
+        "move": 0.07102,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 200.4,
+      "loss_implied_pct": 0.002865,
+      "loss_adverse": 250.893514,
+      "loss_adverse_pct": 0.003587,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "JPM",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-13",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 1,
+      "note": "",
+      "source": "yfinance",
+      "price": 334.299988,
+      "exposure": 5014.499817,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.025719,
+        "max_adverse": -0.04468
+      },
+      "implied": {
+        "expiry": "2026-10-16",
+        "strike": 335.0,
+        "straddle": 10.48,
+        "move": 0.031349,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 157.2,
+      "loss_implied_pct": 0.002247,
+      "loss_adverse": 224.04637,
+      "loss_adverse_pct": 0.003203,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "UNH",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-13",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 1,
+      "note": "",
+      "source": "yfinance",
+      "price": 378.519989,
+      "exposure": 1514.079956,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.090293,
+        "max_adverse": -0.235779
+      },
+      "implied": {
+        "expiry": "2026-10-16",
+        "strike": 377.5,
+        "straddle": 25.43,
+        "move": 0.067183,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 101.72,
+      "loss_implied_pct": 0.001454,
+      "loss_adverse": 356.987909,
+      "loss_adverse_pct": 0.005104,
+      "flags_implied": [],
+      "flags_adverse": []
+    },
+    {
+      "ticker": "XOM",
+      "held": true,
+      "etf": false,
+      "date": "2026-10-30",
+      "session": null,
+      "session_cn": "时段未标明",
+      "confirmed": false,
+      "days": 18,
+      "note": "",
+      "source": "yfinance",
+      "price": 172.149994,
+      "exposure": 3442.999878,
+      "history": {
+        "n": 8,
+        "avg_abs": 0.011482,
+        "max_adverse": -0.031669
+      },
+      "implied": {
+        "expiry": "2026-10-30",
+        "strike": 172.5,
+        "straddle": 8.66,
+        "move": 0.050305,
+        "source": "平值跨式买卖中间价"
+      },
+      "loss_implied": 173.2,
+      "loss_implied_pct": 0.002476,
+      "loss_adverse": 109.03726,
+      "loss_adverse_pct": 0.001559,
+      "flags_implied": [],
+      "flags_adverse": []
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "JNJ",
+      "held": false,
+      "date": "2026-10-13",
+      "days": 1,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "META",
+      "held": false,
+      "date": "2026-10-21",
+      "days": 7,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "TSLA",
+      "held": false,
+      "date": "2026-10-21",
+      "days": 7,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "PG",
+      "held": false,
+      "date": "2026-10-22",
+      "days": 8,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "V",
+      "held": false,
+      "date": "2026-10-27",
+      "days": 11,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "MA",
+      "held": false,
+      "date": "2026-10-29",
+      "days": 13,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "LLY",
+      "held": false,
+      "date": "2026-10-29",
+      "days": 13,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "HD",
+      "held": false,
+      "date": "2026-11-17",
+      "days": 26,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "AVGO",
+      "held": false,
+      "date": "2026-12-09",
+      "days": 42,
+      "confirmed": false,
+      "note": "yfinance"
+    },
+    {
+      "ticker": "COST",
+      "held": false,
+      "date": "2026-12-10",
+      "days": 43,
+      "confirmed": false,
+      "note": "yfinance"
+    }
+  ],
+  "deltas": {},
+  "cluster": {
+    "start": "2026-10-15",
+    "end": "2026-10-29",
+    "tickers": [
+      "MSFT",
+      "AMZN",
+      "GOOGL"
+    ],
+    "loss_implied": 770.48,
+    "loss_implied_pct": 0.011015,
+    "loss_adverse": 1244.883705,
+    "loss_adverse_pct": 0.017797,
+    "flags_implied": [],
+    "flags_adverse": [],
+    "note": "同一窗口里的潜在亏损相加，表示若这些跳空同向。不是预测它们会一起发生。"
+  },
+  "breakers": [
+    0.03,
+    0.05,
+    0.1
+  ],
+  "note": "跳空用财报日前后的收盘和最低价。隐含波动是财报后最近到期日的平值跨式；取不到就空着，不用 15% 去填。"
+}

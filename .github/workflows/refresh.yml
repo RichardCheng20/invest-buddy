@@ -1,0 +1,58 @@
+name: 刷新行情
+
+on:
+  workflow_dispatch:
+    inputs:
+      session:
+        description: am 为北京时间上午，pm 为下午，auto 按当时的北京时间判断
+        required: false
+        type: choice
+        options:
+          - auto
+          - am
+          - pm
+        default: auto
+  schedule:
+    # 收盘后。美股周一至周五 16:00 美东收盘（夏令时 20:00 UTC，冬令时 21:00 UTC）。
+    # cron 用 UTC 周一至周五，落到上海周二至周六早晨，给 09:00 早报留出延误。
+    # 主跑 21:30 UTC = 上海 05:30。备跑 22:20 UTC = 上海 06:20。
+    # 冬令时收盘是 21:00 UTC，21:30 可能还没有新 K 线；备跑会看到新收盘再算一遍。
+    - cron: "30 21 * * 1-5"
+    - cron: "20 22 * * 1-5"
+    # 下午。赶在上海工作日 15:30 前。主跑 05:00 UTC = 13:00，备跑 05:40 UTC = 13:40。
+    # 即使 Actions 晚 90 分钟，主跑大约 14:30 到，备跑大约 15:10 到。
+    - cron: "0 5 * * 1-5"
+    - cron: "40 5 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+      - name: 拉行情并计算信号
+        run: python scripts/refresh.py --session "${{ github.event.inputs.session || 'auto' }}"
+      - name: 把生成的数据提交回仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data site/content site/reports reports data/state.json
+          if git diff --staged --quiet; then
+            echo "没有新数据"
+          else
+            git commit -m "data: 刷新行情 $(TZ=Asia/Shanghai date +%F-%H%M)"
+            git push
+          fi

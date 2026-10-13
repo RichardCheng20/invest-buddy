@@ -1,0 +1,16 @@
+# EXAMPLE。已经核对过的财报日期。confirmed: true 的日期优先于行情源。
+# 没有具体日期就不要填 date。日期为美东日历日。
+
+items:
+  - ticker: AAPL
+    date: null
+    confirmed: false
+    note: EXAMPLE，待你填入已公告的日期
+  - ticker: MSFT
+    date: null
+    confirmed: false
+    note: EXAMPLE，待你填入已公告的日期
+  - ticker: NVDA
+    date: null
+    confirmed: false
+    note: EXAMPLE，待你填入已公告的日期

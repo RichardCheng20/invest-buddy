@@ -1,0 +1,11 @@
+# AI 研究单独安装。不要并进 requirements.txt：TradingAgents 需要 Python 3.11+
+# 和 pandas 3，行情刷新仍用原来的依赖。
+#
+# TradingAgents — Apache License 2.0
+# Copyright Tauric Research
+# https://github.com/TauricResearch/TradingAgents
+# 固定在 v0.6.0 的合并提交，不把源码放进本仓库。
+tradingagents @ git+https://github.com/TauricResearch/TradingAgents.git@1394a3f72aa4393e1a98f51b382434c4b4c2d972
+
+PyYAML>=6.0
+jsonschema>=4.20

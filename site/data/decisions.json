@@ -8,7 +8,12 @@
     {
       "id": "theme",
       "title": "大型科技 / 平台 超过主题上限",
-      "detail": "市值 $20,021，占净值 29%。主题上限对应 $17,496。"
+      "detail": "市值 $19,797，占净值 28%。主题上限对应 $17,487。"
+    },
+    {
+      "id": "trim",
+      "title": "AAPL 减仓",
+      "detail": "AAPL：连续 3 根跳空高开"
     },
     {
       "id": "trim",
@@ -16,9 +21,9 @@
       "detail": "MSFT：连续 3 根跳空高开"
     },
     {
-      "id": "trim",
-      "title": "AMZN 减仓",
-      "detail": "AMZN：连续 3 根跳空高开"
+      "id": "sell",
+      "title": "NVDA 卖出",
+      "detail": "NVDA：收盘 221.30 跌破21 日均线 227.59"
     },
     {
       "id": "trim",
@@ -27,26 +32,57 @@
     },
     {
       "id": "sell",
-      "title": "JPM 卖出",
-      "detail": "JPM：收盘 331.43 跌破吊灯移动止损 335.08；放量跌破 50 日均线或财报锚定均价，规则是减半"
+      "title": "UNH 卖出",
+      "detail": "UNH：最低价碰到止损 460.00；连续 3 根跳空高开"
     },
     {
-      "id": "sell",
-      "title": "UNH 卖出",
-      "detail": "UNH：最低价碰到止损 460.00；放量跌破 50 日均线或财报锚定均价，规则是减半；连续 3 根跳空高开"
+      "id": "trim",
+      "title": "XOM 减仓",
+      "detail": "XOM：连续 3 根跳空高开"
     },
     {
       "id": "null",
       "title": "止损和加仓这次算不了",
       "detail": "持仓没填成本或止损，交易日志也没有突破记录。这些规则是未定，不是没触发。"
-    },
-    {
-      "id": "watch",
-      "title": "NVDA 观望",
-      "detail": "相对强度排名 68，需要 ≥ 70。NVDA：缩量回踩 21 日均线后收阳，相对强度排名 68，买入确认分 2/3"
     }
   ],
   "reviews": [
+    {
+      "ticker": "AAPL",
+      "action": "trim",
+      "action_label": "减仓",
+      "block": "",
+      "line": "AAPL：连续 3 根跳空高开",
+      "code": "X6",
+      "name": "高潮止盈",
+      "c_tag": "X6",
+      "checks": [
+        {
+          "label": "高潮止盈",
+          "pass": true,
+          "text": "连续 3 根跳空高开"
+        },
+        {
+          "label": "突破失败",
+          "pass": null,
+          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+        }
+      ],
+      "confirmation": [],
+      "plan": {
+        "text": "减一部分，不是一次性清仓。",
+        "entry": null,
+        "stop": 170,
+        "shares": 0,
+        "shares_model": 0,
+        "risk_usd": 0,
+        "risk_model": 0
+      },
+      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "pending": [
+        "X2"
+      ]
+    },
     {
       "ticker": "MSFT",
       "action": "trim",
@@ -84,19 +120,19 @@
       ]
     },
     {
-      "ticker": "AMZN",
-      "action": "trim",
-      "action_label": "减仓",
+      "ticker": "NVDA",
+      "action": "sell",
+      "action_label": "卖出",
       "block": "",
-      "line": "AMZN：连续 3 根跳空高开",
-      "code": "X6",
-      "name": "高潮止盈",
-      "c_tag": "X6",
+      "line": "NVDA：收盘 221.30 跌破21 日均线 227.59",
+      "code": "X3",
+      "name": "跌破吊灯移动止损",
+      "c_tag": "X3",
       "checks": [
         {
-          "label": "高潮止盈",
+          "label": "跌破吊灯移动止损",
           "pass": true,
-          "text": "连续 3 根跳空高开"
+          "text": "收盘 221.30 跌破21 日均线 227.59"
         },
         {
           "label": "突破失败",
@@ -106,15 +142,15 @@
       ],
       "confirmation": [],
       "plan": {
-        "text": "减一部分，不是一次性清仓。",
+        "text": "卖出剩余仓位。",
         "entry": null,
-        "stop": 175,
+        "stop": 100,
         "shares": 0,
         "shares_model": 0,
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "invalidate": "收盘重新站上吊灯移动止损 225.26 后，这条就不再成立。",
       "pending": [
         "X2"
       ]
@@ -156,65 +192,19 @@
       ]
     },
     {
-      "ticker": "JPM",
-      "action": "sell",
-      "action_label": "卖出",
-      "block": "",
-      "line": "JPM：收盘 331.43 跌破吊灯移动止损 335.08；放量跌破 50 日均线或财报锚定均价，规则是减半",
-      "code": "X3",
-      "name": "跌破吊灯移动止损、跌破均线减仓",
-      "c_tag": "X3+X4",
-      "checks": [
-        {
-          "label": "跌破吊灯移动止损",
-          "pass": true,
-          "text": "收盘 331.43 跌破吊灯移动止损 335.08"
-        },
-        {
-          "label": "跌破均线减仓",
-          "pass": true,
-          "text": "收盘 331.43 相对 50 日均线 347.83，量比 1.98，并低于财报锚定均价 335.65"
-        },
-        {
-          "label": "突破失败",
-          "pass": null,
-          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-        }
-      ],
-      "confirmation": [],
-      "plan": {
-        "text": "卖出剩余仓位。",
-        "entry": null,
-        "stop": 185,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0
-      },
-      "invalidate": "收盘重新站上吊灯移动止损 335.08 后，这条就不再成立。收盘回到 50 日均线 347.83 之上且不再放量，减半条件取消。",
-      "pending": [
-        "X2"
-      ]
-    },
-    {
       "ticker": "UNH",
       "action": "sell",
       "action_label": "卖出",
       "block": "",
-      "line": "UNH：最低价碰到止损 460.00；放量跌破 50 日均线或财报锚定均价，规则是减半；连续 3 根跳空高开",
+      "line": "UNH：最低价碰到止损 460.00；连续 3 根跳空高开",
       "code": "X1",
-      "name": "固定止损、跌破均线减仓、高潮止盈",
-      "c_tag": "X1+X4+X6",
+      "name": "固定止损、高潮止盈",
+      "c_tag": "X1+X6",
       "checks": [
         {
           "label": "固定止损",
           "pass": true,
           "text": "最低价碰到止损 460.00"
-        },
-        {
-          "label": "跌破均线减仓",
-          "pass": true,
-          "text": "收盘 377.76 相对 50 日均线 386.35，量比 2.56，并低于财报锚定均价 383.50"
         },
         {
           "label": "高潮止盈",
@@ -237,78 +227,46 @@
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "收盘回到 50 日均线 386.35 之上且不再放量，减半条件取消。高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
       "pending": [
         "X2"
       ]
     },
     {
-      "ticker": "NVDA",
-      "action": "watch",
-      "action_label": "观望",
-      "block": "相对强度排名 68，需要 ≥ 70",
-      "line": "NVDA：缩量回踩 21 日均线后收阳，相对强度排名 68，买入确认分 2/3",
-      "code": "E2",
-      "name": "回踩买点",
-      "c_tag": "C1:2",
+      "ticker": "XOM",
+      "action": "trim",
+      "action_label": "减仓",
+      "block": "",
+      "line": "XOM：连续 3 根跳空高开",
+      "code": "X6",
+      "name": "高潮止盈",
+      "c_tag": "X6",
       "checks": [
         {
-          "label": "回踩",
+          "label": "高潮止盈",
           "pass": true,
-          "text": "最低 223.06 触及 21 日均线 228.22，收盘 228.52 在均线之上"
+          "text": "连续 3 根跳空高开"
         },
         {
-          "label": "收阳",
-          "pass": true,
-          "text": "收盘高于开盘，收在当天振幅的 98%"
-        },
-        {
-          "label": "缩量",
-          "pass": true,
-          "text": "回踩段平均量比 0.77，上限 0.8"
-        },
-        {
-          "label": "止损",
-          "pass": true,
-          "text": "止损距离在 1 倍 平均真实波幅 和止损上限之间"
-        },
-        {
-          "label": "相对强度排名",
-          "pass": false,
-          "text": "观察列表内排名 68，这条需要 ≥ 70"
+          "label": "突破失败",
+          "pass": null,
+          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
         }
       ],
-      "confirmation": [
-        {
-          "id": "rs_high",
-          "label": "相对强度线处在近一年高点",
-          "pass": false,
-          "text": "没有处在近一年高点"
-        },
-        {
-          "id": "udvol",
-          "label": "放量上涨量 / 放量下跌量",
-          "pass": true,
-          "text": "2.30，门槛 1.2"
-        },
-        {
-          "id": "momentum",
-          "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-          "pass": true,
-          "text": "相对强弱指数 近 10 日最低 49.4，落在 40–50，且 52.0 高于前一日 49.4"
-        }
-      ],
+      "confirmation": [],
       "plan": {
+        "text": "减一部分，不是一次性清仓。",
         "entry": null,
-        "stop": null,
+        "stop": 100,
         "shares": 0,
         "shares_model": 0,
         "risk_usd": 0,
-        "risk_model": 0.0,
-        "text": "入场 —，止损 —。公式 0 股，模型风险 $0。规则没有放行，建议股数是 0。"
+        "risk_model": 0
       },
-      "invalidate": "收盘跌破回踩低点 223.06，回踩买点失效。止损放在 221.66。",
-      "pending": []
+      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "pending": [
+        "X2"
+      ]
     }
   ],
   "checklist": [
@@ -345,7 +303,7 @@
     {
       "n": 7,
       "text": "单票 ≤ 10%，单行业 ≤ 25%，风险合计 ≤ 4%，总敞口 ≤ 1 倍，不用融资？",
-      "auto": "大型科技 / 平台 占净值 29%，主题上限 25%。"
+      "auto": "大型科技 / 平台 占净值 28%，主题上限 25%。"
     },
     {
       "n": 8,
@@ -386,5 +344,5 @@
     }
   ],
   "formula": "股数 = floor(净值 × 单笔风险% × 环境系数 × 确认系数 × 首笔比例 / (入场价 − 止损价))",
-  "as_of": "2026-10-14 08:28"
+  "as_of": "2026-10-15 08:00"
 }

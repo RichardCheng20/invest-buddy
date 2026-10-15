@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "regime": "GREEN",
   "rows": [
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "AAPL",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 348.149994,
-      "atr14": 6.675821,
+      "atr14": 6.646731,
       "rs_rank": 78,
-      "rvol": 1.237898,
+      "rvol": 0.987395,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -20,14 +20,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 338.392511,
-        "ema21": 335.209602,
-        "sma50": 324.442257,
-        "sma200": 291.441599,
+        "ema10": 339.048417,
+        "ema21": 335.82691,
+        "sma50": 325.067617,
+        "sma200": 291.786513,
         "avwap_earn": null,
-        "chandelier": 327.481664
+        "chandelier": 327.566259
       },
-      "flags": [],
+      "flags": [
+        "sector_lag"
+      ],
       "exits": [
         "X6"
       ],
@@ -71,16 +73,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "MSFT",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 551.150024,
-      "atr14": 11.556148,
+      "atr14": 11.439455,
       "rs_rank": 89,
-      "rvol": 0.981731,
+      "rvol": 1.045058,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -88,34 +90,29 @@
         "2R": null
       },
       "levels": {
-        "ema10": 529.396532,
-        "ema21": 519.187977,
-        "sma50": 503.705011,
-        "sma200": 433.529215,
+        "ema10": 531.222618,
+        "ema21": 521.02907,
+        "sma50": 504.76293,
+        "sma200": 433.806268,
         "avwap_earn": null,
-        "chandelier": 516.192258
+        "chandelier": 516.428151
       },
-      "flags": [],
-      "exits": [
-        "X6"
+      "flags": [
+        "sector_lag"
       ],
+      "exits": [],
       "add": null,
       "rejected_by": [],
       "call": {
         "ticker": "MSFT",
-        "action": "trim",
-        "action_label": "减仓",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "MSFT：连续 3 根跳空高开",
-        "code": "X6",
-        "name": "高潮止盈",
-        "c_tag": "X6",
+        "line": "MSFT：没有新的离场条件。收盘 539.44，吊灯移动止损 516.43",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "高潮止盈",
-            "pass": true,
-            "text": "连续 3 根跳空高开"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -123,32 +120,28 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "减一部分，不是一次性清仓。",
-          "entry": null,
-          "stop": 390,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 516.43 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "NVDA",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 229.979996,
-      "atr14": 5.82356,
-      "rs_rank": 68,
-      "rvol": 1.01403,
+      "atr14": 6.011163,
+      "rs_rank": 63,
+      "rvol": 1.094188,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -156,14 +149,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 228.674249,
-        "ema21": 227.592446,
-        "sma50": 223.090357,
-        "sma200": 202.37448,
+        "ema10": 226.593476,
+        "ema21": 226.650406,
+        "sma50": 223.055458,
+        "sma200": 202.521727,
         "avwap_earn": null,
-        "chandelier": 225.264612
+        "chandelier": 224.935311
       },
-      "flags": [],
+      "flags": [
+        "sector_lag"
+      ],
       "exits": [
         "X3"
       ],
@@ -174,7 +169,7 @@
         "action": "sell",
         "action_label": "卖出",
         "block": "",
-        "line": "NVDA：收盘 221.30 跌破21 日均线 227.59",
+        "line": "NVDA：收盘 217.23 跌破21 日均线 226.65",
         "code": "X3",
         "name": "跌破吊灯移动止损",
         "c_tag": "X3",
@@ -182,7 +177,7 @@
           {
             "label": "跌破吊灯移动止损",
             "pass": true,
-            "text": "收盘 221.30 跌破21 日均线 227.59"
+            "text": "收盘 217.23 跌破21 日均线 226.65"
           },
           {
             "label": "突破失败",
@@ -200,23 +195,23 @@
           "risk_usd": 0,
           "risk_model": 0
         },
-        "invalidate": "收盘重新站上吊灯移动止损 225.26 后，这条就不再成立。",
+        "invalidate": "收盘重新站上吊灯移动止损 224.94 后，这条就不再成立。",
         "pending": [
           "X2"
         ]
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "AMZN",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 263.700012,
-      "atr14": 5.790679,
-      "rs_rank": 42,
-      "rvol": 1.013991,
+      "atr14": 5.873488,
+      "rs_rank": 37,
+      "rvol": 1.00418,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -224,15 +219,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 255.813816,
-        "ema21": 254.735898,
-        "sma50": 257.879,
-        "sma200": 242.5273,
+        "ema10": 255.622212,
+        "ema21": 254.738089,
+        "sma50": 257.5212,
+        "sma200": 242.64075,
         "avwap_earn": null,
-        "chandelier": 245.681338
+        "chandelier": 245.552639
       },
       "flags": [
-        "flat_market"
+        "flat_market",
+        "sector_lag"
       ],
       "exits": [],
       "add": null,
@@ -242,7 +238,7 @@
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "AMZN：没有新的离场条件。收盘 254.08，吊灯移动止损 245.68",
+        "line": "AMZN：没有新的离场条件。收盘 254.76，吊灯移动止损 245.55",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -255,7 +251,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 245.68 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 245.55 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -266,16 +262,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "GOOGL",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 364.170013,
-      "atr14": 8.480742,
+      "atr14": 8.697833,
       "rs_rank": 84,
-      "rvol": 1.126189,
+      "rvol": 0.862118,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -283,37 +279,31 @@
         "2R": null
       },
       "levels": {
-        "ema10": 348.797242,
-        "ema21": 346.877375,
-        "sma50": 345.090054,
-        "sma200": 340.238491,
+        "ema10": 348.874109,
+        "ema21": 347.090342,
+        "sma50": 344.830511,
+        "sma200": 340.419836,
         "avwap_earn": null,
-        "chandelier": 338.163604
+        "chandelier": 337.774802
       },
       "flags": [
         "flat_market",
+        "sector_lag",
         "weekly_below"
       ],
-      "exits": [
-        "X6"
-      ],
+      "exits": [],
       "add": null,
       "rejected_by": [],
       "call": {
         "ticker": "GOOGL",
-        "action": "trim",
-        "action_label": "减仓",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "GOOGL：连续 3 根跳空高开",
-        "code": "X6",
-        "name": "高潮止盈",
-        "c_tag": "X6",
+        "line": "GOOGL：没有新的离场条件。收盘 349.22，吊灯移动止损 337.77",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "高潮止盈",
-            "pass": true,
-            "text": "连续 3 根跳空高开"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -321,32 +311,28 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "减一部分，不是一次性清仓。",
-          "entry": null,
-          "stop": 145,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 337.77 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "META",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 747.599976,
-      "atr14": 24.192315,
-      "rs_rank": 37,
-      "rvol": 0.851113,
+      "atr14": 24.491916,
+      "rs_rank": 42,
+      "rvol": 0.863171,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -354,15 +340,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 734.914405,
-        "ema21": 716.945324,
-        "sma50": 649.58939,
-        "sma200": 630.442607,
+        "ema10": 735.242686,
+        "ema21": 718.743018,
+        "sma50": 652.557675,
+        "sma200": 630.841213,
         "avwap_earn": null,
-        "chandelier": 708.125176
+        "chandelier": 707.513127
       },
       "flags": [
-        "earnings_blk"
+        "earnings_blk",
+        "sector_lag"
       ],
       "exits": [],
       "add": null,
@@ -372,7 +359,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "META：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 737.54，在 50 日均线之上，相对强度排名 37",
+        "line": "META：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 736.72，在 50 日均线之上，相对强度排名 42",
         "code": null,
         "name": "",
         "c_tag": "C1:1",
@@ -394,7 +381,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 58.1，近 10 日最低 56.8，没有形成拐头"
+            "text": "相对强弱指数 57.9，近 10 日最低 56.8，没有形成拐头"
           }
         ],
         "plan": null,
@@ -403,16 +390,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "TSLA",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 388.559998,
-      "atr14": 11.069419,
+      "atr14": 11.130888,
       "rs_rank": 6,
-      "rvol": 0.86598,
+      "rvol": 0.743487,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -420,15 +407,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 373.109475,
-        "ema21": 369.922717,
-        "sma50": 357.940598,
-        "sma200": 388.975899,
+        "ema10": 371.169572,
+        "ema21": 369.242471,
+        "sma50": 358.758398,
+        "sma200": 388.489899,
         "avwap_earn": null,
-        "chandelier": 352.93362
+        "chandelier": 352.926184
       },
       "flags": [
         "earnings_blk",
+        "sector_lag",
         "weekly_below"
       ],
       "exits": [],
@@ -439,7 +427,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "TSLA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 367.16，在 200 日均线之下，相对强度排名 6",
+        "line": "TSLA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 362.44，在 200 日均线之下，相对强度排名 6",
         "code": null,
         "name": "",
         "c_tag": "C1:1",
@@ -461,7 +449,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 49.3，近 10 日最低 45.6，没有形成拐头"
+            "text": "相对强弱指数 46.5，近 10 日最低 46.5，没有形成拐头"
           }
         ],
         "plan": null,
@@ -470,16 +458,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "AVGO",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 380.839996,
-      "atr14": 11.213483,
+      "atr14": 11.243956,
       "rs_rank": 11,
-      "rvol": 0.996555,
+      "rvol": 1.210329,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -487,15 +475,17 @@
         "2R": null
       },
       "levels": {
-        "ema10": 357.159313,
-        "ema21": 358.269419,
-        "sma50": 368.604139,
-        "sma200": 367.167489,
+        "ema10": 354.826708,
+        "ema21": 357.002198,
+        "sma50": 367.140344,
+        "sma200": 367.151762,
         "avwap_earn": null,
-        "chandelier": 345.658834
+        "chandelier": 345.670691
       },
       "flags": [
-        "weekly_below"
+        "sector_lag",
+        "weekly_below",
+        "death_cross_bg"
       ],
       "exits": [],
       "add": null,
@@ -505,7 +495,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "AVGO：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 346.25，在 200 日均线之下，相对强度排名 11",
+        "line": "AVGO：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 344.33，在 200 日均线之下，相对强度排名 11",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -521,13 +511,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.75，门槛 1.2"
+            "text": "0.65，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 42.4，近 10 日最低 39.8，没有形成拐头"
+            "text": "相对强弱指数 41.5，近 10 日最低 41.5，没有形成拐头"
           }
         ],
         "plan": null,
@@ -536,16 +526,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "JPM",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 333.790009,
-      "atr14": 6.436844,
-      "rs_rank": 16,
-      "rvol": 1.464598,
+      "atr14": 6.336462,
+      "rs_rank": 22,
+      "rvol": 1.230562,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -553,12 +543,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 333.396426,
-        "ema21": 336.647615,
-        "sma50": 347.424235,
-        "sma200": 319.262929,
+        "ema10": 333.784348,
+        "ema21": 336.546013,
+        "sma50": 346.985701,
+        "sma200": 319.352417,
         "avwap_earn": null,
-        "chandelier": 334.602135
+        "chandelier": 334.790151
       },
       "flags": [
         "sector_lag"
@@ -571,7 +561,7 @@
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "JPM：没有新的离场条件。收盘 335.28，吊灯移动止损 334.60",
+        "line": "JPM：没有新的离场条件。收盘 335.53，吊灯移动止损 334.79",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -584,7 +574,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 334.60 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 334.79 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -595,16 +585,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "UNH",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 395.105647,
-      "atr14": 11.195101,
-      "rs_rank": 27,
-      "rvol": 1.553151,
+      "pivot": 399.880005,
+      "atr14": 11.718205,
+      "rs_rank": 32,
+      "rvol": 1.991429,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -612,12 +602,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 379.597578,
-        "ema21": 379.206275,
-        "sma50": 386.158285,
-        "sma200": 354.822421,
-        "avwap_earn": 386.507219,
-        "chandelier": 368.062978
+        "ema10": 384.519838,
+        "ema21": 381.702978,
+        "sma50": 386.087205,
+        "sma200": 355.242957,
+        "avwap_earn": 393.285477,
+        "chandelier": 381.223868
       },
       "flags": [],
       "exits": [
@@ -669,16 +659,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "XOM",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 164.910004,
-      "atr14": 3.454477,
+      "atr14": 3.563801,
       "rs_rank": 99,
-      "rvol": 1.001795,
+      "rvol": 0.829527,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -686,16 +676,14 @@
         "2R": null
       },
       "levels": {
-        "ema10": 169.467439,
-        "ema21": 166.422664,
-        "sma50": 162.582991,
-        "sma200": 149.800907,
+        "ema10": 170.415176,
+        "ema21": 167.17333,
+        "sma50": 163.063501,
+        "sma200": 150.083508,
         "avwap_earn": null,
-        "chandelier": 166.893939
+        "chandelier": 167.848092
       },
-      "flags": [
-        "extended"
-      ],
+      "flags": [],
       "exits": [
         "X6"
       ],
@@ -739,16 +727,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "JNJ",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 275.230011,
-      "atr14": 6.070879,
+      "atr14": 6.346327,
       "rs_rank": 73,
-      "rvol": 1.427261,
+      "rvol": 1.359933,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -756,12 +744,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 257.792726,
-        "ema21": 261.027114,
-        "sma50": 264.982396,
-        "sma200": 241.794812,
-        "avwap_earn": 250.803865,
-        "chandelier": 257.753206
+        "ema10": 256.97223,
+        "ema21": 260.322831,
+        "sma50": 264.92148,
+        "sma200": 242.03984,
+        "avwap_earn": 252.162149,
+        "chandelier": 257.193514
       },
       "flags": [],
       "exits": [],
@@ -772,7 +760,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "JNJ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 253.91，没有站上 50 日均线，相对强度排名 73",
+        "line": "JNJ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 253.28，没有站上 50 日均线，相对强度排名 73",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -788,13 +776,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.43，门槛 1.2"
+            "text": "0.39，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 41.5，近 10 日最低 29.6，没有形成拐头"
+            "text": "相对强弱指数 40.9，近 10 日最低 29.6，没有形成拐头"
           }
         ],
         "plan": null,
@@ -803,16 +791,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "V",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 396.350006,
-      "atr14": 6.615768,
-      "rs_rank": 58,
-      "rvol": 1.239604,
+      "pivot": 397.190002,
+      "atr14": 7.059234,
+      "rs_rank": 68,
+      "rvol": 1.365308,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -820,14 +808,15 @@
         "2R": null
       },
       "levels": {
-        "ema10": 381.060104,
-        "ema21": 375.499658,
-        "sma50": 371.183153,
-        "sma200": 337.841263,
+        "ema10": 384.458266,
+        "ema21": 377.704234,
+        "sma50": 371.821021,
+        "sma200": 338.077547,
         "avwap_earn": null,
-        "chandelier": 376.71174
+        "chandelier": 382.706601
       },
       "flags": [
+        "extended",
         "sector_lag"
       ],
       "exits": [],
@@ -838,10 +827,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "V：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 391.43，在 50 日均线之上，相对强度排名 58",
+        "line": "V：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 399.75，在 50 日均线之上，相对强度排名 68",
         "code": null,
         "name": "",
-        "c_tag": "C1:0",
+        "c_tag": "C1:1",
         "checks": [],
         "confirmation": [
           {
@@ -854,13 +843,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.51，门槛 1.2"
+            "text": "0.62，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 67.6，近 10 日最低 40.1，没有形成拐头"
+            "pass": true,
+            "text": "相对强弱指数 近 10 日最低 41.3，落在 40–50，且 72.2 高于前一日 67.6"
           }
         ],
         "plan": null,
@@ -869,16 +858,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "MA",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 605.599976,
-      "atr14": 9.792472,
-      "rs_rank": 47,
-      "rvol": 1.166581,
+      "pivot": 606.609985,
+      "atr14": 10.306707,
+      "rs_rank": 53,
+      "rvol": 1.505311,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -886,12 +875,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 583.650816,
-        "ema21": 575.808259,
-        "sma50": 573.071779,
-        "sma200": 530.907216,
+        "ema10": 589.590668,
+        "ema21": 579.491145,
+        "sma50": 574.00585,
+        "sma200": 531.117772,
         "avwap_earn": null,
-        "chandelier": 577.026358
+        "chandelier": 589.242366
       },
       "flags": [
         "extended",
@@ -905,7 +894,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "MA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 603.24，在 50 日均线之上，相对强度排名 47",
+        "line": "MA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 616.32，在 50 日均线之上，相对强度排名 53",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -921,13 +910,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.75，门槛 1.2"
+            "text": "0.91，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 70.4，近 10 日最低 36.6，没有形成拐头"
+            "text": "相对强弱指数 74.9，近 10 日最低 38.9，没有形成拐头"
           }
         ],
         "plan": null,
@@ -936,16 +925,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "COST",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 966.0,
-      "atr14": 15.47519,
-      "rs_rank": 22,
-      "rvol": 1.506102,
+      "pivot": 982.640015,
+      "atr14": 16.593068,
+      "rs_rank": 16,
+      "rvol": 1.445084,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -953,15 +942,14 @@
         "2R": null
       },
       "levels": {
-        "ema10": 947.437281,
-        "ema21": 935.16027,
-        "sma50": 932.271997,
-        "sma200": 963.10901,
+        "ema10": 952.995959,
+        "ema21": 939.055701,
+        "sma50": 932.992397,
+        "sma200": 963.678927,
         "avwap_earn": null,
-        "chandelier": 935.366321
+        "chandelier": 958.996204
       },
       "flags": [
-        "extended",
         "sector_lag"
       ],
       "exits": [],
@@ -972,10 +960,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "COST：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 982.00，在 50 日均线之上，相对强度排名 22",
+        "line": "COST：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 978.01，在 50 日均线之上，相对强度排名 16",
         "code": null,
         "name": "",
-        "c_tag": "C1:2",
+        "c_tag": "C1:1",
         "checks": [],
         "confirmation": [
           {
@@ -988,13 +976,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "1.73，门槛 1.2"
+            "text": "1.49，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": true,
-            "text": "相对强弱指数 近 10 日最低 48.6，落在 40–50，且 72.1 高于前一日 63.8"
+            "pass": false,
+            "text": "相对强弱指数 69.6，近 10 日最低 51.4，没有形成拐头"
           }
         ],
         "plan": null,
@@ -1003,16 +991,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "LLY",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 1215.0,
-      "atr14": 34.418861,
+      "pivot": 1216.709961,
+      "atr14": 36.755819,
       "rs_rank": 94,
-      "rvol": 1.287341,
+      "rvol": 1.553719,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -1020,12 +1008,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 1176.386159,
-        "ema21": 1170.329161,
-        "sma50": 1177.16792,
-        "sma200": 1075.888448,
+        "ema10": 1190.063217,
+        "ema21": 1177.718326,
+        "sma50": 1178.836399,
+        "sma200": 1076.77878,
         "avwap_earn": null,
-        "chandelier": 1113.687303
+        "chandelier": 1168.381417
       },
       "flags": [
         "flat_market"
@@ -1037,12 +1025,33 @@
         "ticker": "LLY",
         "action": "watch",
         "action_label": "观望",
-        "block": "",
-        "line": "LLY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 1208.74，在 50 日均线之上，相对强度排名 94",
-        "code": null,
-        "name": "",
+        "block": "50 日均线走平且价格反复穿越，均线类信号暂停",
+        "line": "LLY：突破平底枢轴 1216.71，相对强度排名 94，买入确认分 2/3",
+        "code": "E1",
+        "name": "突破买点",
         "c_tag": "C1:2",
-        "checks": [],
+        "checks": [
+          {
+            "label": "突破",
+            "pass": true,
+            "text": "收盘 1251.61 高于平底枢轴 1216.71"
+          },
+          {
+            "label": "量比",
+            "pass": true,
+            "text": "量比 1.55，需要 ≥ 1.5"
+          },
+          {
+            "label": "阶段",
+            "pass": true,
+            "text": "第二阶段、周线和行业条件通过"
+          },
+          {
+            "label": "相对强度排名",
+            "pass": true,
+            "text": "观察列表内排名 94，这条需要 ≥ 80"
+          }
+        ],
         "confirmation": [
           {
             "id": "rs_high",
@@ -1054,31 +1063,39 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "1.76，门槛 1.2"
+            "text": "1.55，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 43.0，落在 40–50，且 60.4 高于前一日 50.0"
+            "text": "相对强弱指数 近 10 日最低 43.0，落在 40–50，且 67.8 高于前一日 60.4"
           }
         ],
-        "plan": null,
-        "invalidate": "出现突破、回踩、口袋支点、财报跳空或挤压买点，且组合限额允许时，才从观望改成买入候选。",
+        "plan": {
+          "entry": null,
+          "stop": null,
+          "shares": 0,
+          "shares_model": 0,
+          "risk_usd": 0,
+          "risk_model": 0.0,
+          "text": "入场 —，止损 —。公式 0 股，模型风险 $0。规则没有放行，建议股数是 0。"
+        },
+        "invalidate": "收盘跌破突破结构低点 1113.29，或跌破止损 1159.72，这个突破就失效。",
         "pending": []
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "HD",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 313.390015,
-      "atr14": 6.341595,
+      "pivot": 312.670013,
+      "atr14": 6.859338,
       "rs_rank": 1,
-      "rvol": 1.035157,
+      "rvol": 1.442991,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -1086,12 +1103,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 291.428265,
-        "ema21": 294.942958,
-        "sma50": 313.832011,
-        "sma200": 332.522815,
+        "ema10": 294.484943,
+        "ema21": 296.15178,
+        "sma50": 312.985677,
+        "sma200": 332.363679,
         "avwap_earn": null,
-        "chandelier": 291.169546
+        "chandelier": 289.493647
       },
       "flags": [
         "sector_lag",
@@ -1105,7 +1122,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "HD：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 295.51，在 200 日均线之下，相对强度排名 1",
+        "line": "HD：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 308.24，在 200 日均线之下，相对强度排名 1",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -1121,13 +1138,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.56，门槛 1.2"
+            "text": "0.63，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 47.4，近 10 日最低 25.5，没有形成拐头"
+            "text": "相对强弱指数 59.2，近 10 日最低 25.5，没有形成拐头"
           }
         ],
         "plan": null,
@@ -1136,16 +1153,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "PG",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
-      "pivot": 154.75,
-      "atr14": 2.50488,
-      "rs_rank": 32,
-      "rvol": 1.24695,
+      "pivot": 156.630005,
+      "atr14": 2.570246,
+      "rs_rank": 27,
+      "rvol": 1.862423,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -1153,15 +1170,16 @@
         "2R": null
       },
       "levels": {
-        "ema10": 150.991615,
-        "ema21": 148.983601,
-        "sma50": 146.4204,
-        "sma200": 146.578442,
+        "ema10": 152.098594,
+        "ema21": 149.719637,
+        "sma50": 146.626,
+        "sma200": 146.656732,
         "avwap_earn": null,
-        "chandelier": 149.059331
+        "chandelier": 152.257081
       },
       "flags": [
         "extended",
+        "earnings_blk",
         "flat_market",
         "sector_lag"
       ],
@@ -1173,7 +1191,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "PG：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 156.53，在 50 日均线之上，相对强度排名 32",
+        "line": "PG：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 157.08，在 50 日均线之上，相对强度排名 27",
         "code": null,
         "name": "",
         "c_tag": "C1:2",
@@ -1189,13 +1207,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "2.01，门槛 1.2"
+            "text": "2.76，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 43.6，落在 40–50，且 71.3 高于前一日 65.4"
+            "text": "相对强弱指数 近 10 日最低 46.6，落在 40–50，且 72.1 高于前一日 71.3"
           }
         ],
         "plan": null,
@@ -1204,16 +1222,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "SPY",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 781.619995,
-      "atr14": 6.417308,
-      "rs_rank": 53,
-      "rvol": 1.374181,
+      "atr14": 6.561071,
+      "rs_rank": 47,
+      "rvol": 1.065743,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -1221,12 +1239,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 773.655093,
-        "ema21": 770.798304,
-        "sma50": 767.390009,
-        "sma200": 721.023292,
+        "ema10": 773.315977,
+        "ema21": 770.888454,
+        "sma50": 767.468145,
+        "sma200": 721.469645,
         "avwap_earn": null,
-        "chandelier": 761.897448
+        "chandelier": 761.644383
       },
       "flags": [],
       "exits": [],
@@ -1237,7 +1255,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "SPY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 769.60，在 50 日均线之上，相对强度排名 53",
+        "line": "SPY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 771.79，在 50 日均线之上，相对强度排名 47",
         "code": null,
         "name": "",
         "c_tag": "C1:1",
@@ -1253,13 +1271,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.95，门槛 1.2"
+            "text": "1.07，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 50.1，近 10 日最低 50.1，没有形成拐头"
+            "text": "相对强弱指数 52.3，近 10 日最低 50.1，没有形成拐头"
           }
         ],
         "plan": null,
@@ -1268,16 +1286,16 @@
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-15",
       "ticker": "QQQ",
       "regime": "GREEN",
       "signals": [],
       "entry": null,
       "stop": null,
       "pivot": 762.859985,
-      "atr14": 9.446396,
-      "rs_rank": 63,
-      "rvol": 1.598437,
+      "atr14": 9.771296,
+      "rs_rank": 58,
+      "rvol": 1.506354,
       "shares": 0,
       "risk_usd": 0,
       "r_targets": {
@@ -1285,12 +1303,12 @@
         "2R": null
       },
       "levels": {
-        "ema10": 743.692506,
-        "ema21": 739.489326,
-        "sma50": 726.179233,
-        "sma200": 672.65131,
+        "ema10": 740.839325,
+        "ema21": 738.444843,
+        "sma50": 726.408167,
+        "sma200": 673.197492,
         "avwap_earn": null,
-        "chandelier": 733.606769
+        "chandelier": 733.028052
       },
       "flags": [],
       "exits": [],
@@ -1301,10 +1319,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "QQQ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 728.95，在 50 日均线之上，相对强度排名 63",
+        "line": "QQQ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 728.00，在 50 日均线之上，相对强度排名 58",
         "code": null,
         "name": "",
-        "c_tag": "C1:1",
+        "c_tag": "C1:0",
         "checks": [],
         "confirmation": [
           {
@@ -1316,14 +1334,14 @@
           {
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
-            "pass": true,
-            "text": "1.27，门槛 1.2"
+            "pass": false,
+            "text": "1.01，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 44.8，近 10 日最低 44.8，没有形成拐头"
+            "text": "相对强弱指数 44.2，近 10 日最低 44.2，没有形成拐头"
           }
         ],
         "plan": null,

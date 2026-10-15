@@ -8,7 +8,7 @@
     {
       "id": "theme",
       "title": "大型科技 / 平台 超过主题上限",
-      "detail": "市值 $19,797，占净值 28%。主题上限对应 $17,487。"
+      "detail": "市值 $19,823，占净值 28%。主题上限对应 $17,494。"
     },
     {
       "id": "trim",
@@ -16,19 +16,9 @@
       "detail": "AAPL：连续 3 根跳空高开"
     },
     {
-      "id": "trim",
-      "title": "MSFT 减仓",
-      "detail": "MSFT：连续 3 根跳空高开"
-    },
-    {
       "id": "sell",
       "title": "NVDA 卖出",
-      "detail": "NVDA：收盘 221.30 跌破21 日均线 227.59"
-    },
-    {
-      "id": "trim",
-      "title": "GOOGL 减仓",
-      "detail": "GOOGL：连续 3 根跳空高开"
+      "detail": "NVDA：收盘 217.23 跌破21 日均线 226.65"
     },
     {
       "id": "sell",
@@ -44,6 +34,11 @@
       "id": "null",
       "title": "止损和加仓这次算不了",
       "detail": "持仓没填成本或止损，交易日志也没有突破记录。这些规则是未定，不是没触发。"
+    },
+    {
+      "id": "watch",
+      "title": "LLY 观望",
+      "detail": "50 日均线走平且价格反复穿越，均线类信号暂停。LLY：突破平底枢轴 1216.71，相对强度排名 94，买入确认分 2/3"
     }
   ],
   "reviews": [
@@ -84,47 +79,11 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "action": "trim",
-      "action_label": "减仓",
-      "block": "",
-      "line": "MSFT：连续 3 根跳空高开",
-      "code": "X6",
-      "name": "高潮止盈",
-      "c_tag": "X6",
-      "checks": [
-        {
-          "label": "高潮止盈",
-          "pass": true,
-          "text": "连续 3 根跳空高开"
-        },
-        {
-          "label": "突破失败",
-          "pass": null,
-          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-        }
-      ],
-      "confirmation": [],
-      "plan": {
-        "text": "减一部分，不是一次性清仓。",
-        "entry": null,
-        "stop": 390,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0
-      },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
-      "pending": [
-        "X2"
-      ]
-    },
-    {
       "ticker": "NVDA",
       "action": "sell",
       "action_label": "卖出",
       "block": "",
-      "line": "NVDA：收盘 221.30 跌破21 日均线 227.59",
+      "line": "NVDA：收盘 217.23 跌破21 日均线 226.65",
       "code": "X3",
       "name": "跌破吊灯移动止损",
       "c_tag": "X3",
@@ -132,7 +91,7 @@
         {
           "label": "跌破吊灯移动止损",
           "pass": true,
-          "text": "收盘 221.30 跌破21 日均线 227.59"
+          "text": "收盘 217.23 跌破21 日均线 226.65"
         },
         {
           "label": "突破失败",
@@ -150,43 +109,7 @@
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "收盘重新站上吊灯移动止损 225.26 后，这条就不再成立。",
-      "pending": [
-        "X2"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "action": "trim",
-      "action_label": "减仓",
-      "block": "",
-      "line": "GOOGL：连续 3 根跳空高开",
-      "code": "X6",
-      "name": "高潮止盈",
-      "c_tag": "X6",
-      "checks": [
-        {
-          "label": "高潮止盈",
-          "pass": true,
-          "text": "连续 3 根跳空高开"
-        },
-        {
-          "label": "突破失败",
-          "pass": null,
-          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-        }
-      ],
-      "confirmation": [],
-      "plan": {
-        "text": "减一部分，不是一次性清仓。",
-        "entry": null,
-        "stop": 145,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0
-      },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "invalidate": "收盘重新站上吊灯移动止损 224.94 后，这条就不再成立。",
       "pending": [
         "X2"
       ]
@@ -267,13 +190,76 @@
       "pending": [
         "X2"
       ]
+    },
+    {
+      "ticker": "LLY",
+      "action": "watch",
+      "action_label": "观望",
+      "block": "50 日均线走平且价格反复穿越，均线类信号暂停",
+      "line": "LLY：突破平底枢轴 1216.71，相对强度排名 94，买入确认分 2/3",
+      "code": "E1",
+      "name": "突破买点",
+      "c_tag": "C1:2",
+      "checks": [
+        {
+          "label": "突破",
+          "pass": true,
+          "text": "收盘 1251.61 高于平底枢轴 1216.71"
+        },
+        {
+          "label": "量比",
+          "pass": true,
+          "text": "量比 1.55，需要 ≥ 1.5"
+        },
+        {
+          "label": "阶段",
+          "pass": true,
+          "text": "第二阶段、周线和行业条件通过"
+        },
+        {
+          "label": "相对强度排名",
+          "pass": true,
+          "text": "观察列表内排名 94，这条需要 ≥ 80"
+        }
+      ],
+      "confirmation": [
+        {
+          "id": "rs_high",
+          "label": "相对强度线处在近一年高点",
+          "pass": false,
+          "text": "没有处在近一年高点"
+        },
+        {
+          "id": "udvol",
+          "label": "放量上涨量 / 放量下跌量",
+          "pass": true,
+          "text": "1.55，门槛 1.2"
+        },
+        {
+          "id": "momentum",
+          "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
+          "pass": true,
+          "text": "相对强弱指数 近 10 日最低 43.0，落在 40–50，且 67.8 高于前一日 60.4"
+        }
+      ],
+      "plan": {
+        "entry": null,
+        "stop": null,
+        "shares": 0,
+        "shares_model": 0,
+        "risk_usd": 0,
+        "risk_model": 0.0,
+        "text": "入场 —，止损 —。公式 0 股，模型风险 $0。规则没有放行，建议股数是 0。"
+      },
+      "invalidate": "收盘跌破突破结构低点 1113.29，或跌破止损 1159.72，这个突破就失效。",
+      "pending": []
     }
   ],
   "checklist": [
     {
       "n": 1,
       "text": "宏观档位允许吗？本周权益敞口上限还有空间吗？未来 48 小时内有没有 FOMC / CPI / 非农？",
-      "auto": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。权益敞口上限 60%。当前多头敞口 43%。未来 48 小时内有 FOMC、CPI、非农或 PCE，短线不开新仓。"
+      "auto": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。权益敞口上限 60%。当前多头敞口 43%。从最近收盘日算，48 小时内没有 FOMC / CPI / 非农 / PCE。"
     },
     {
       "n": 2,
@@ -344,5 +330,5 @@
     }
   ],
   "formula": "股数 = floor(净值 × 单笔风险% × 环境系数 × 确认系数 × 首笔比例 / (入场价 − 止损价))",
-  "as_of": "2026-10-15 08:00"
+  "as_of": "2026-10-16 07:45"
 }

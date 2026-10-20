@@ -8,82 +8,36 @@
     {
       "id": "theme",
       "title": "大型科技 / 平台 超过主题上限",
-      "detail": "市值 $19,597，占净值 28%。主题上限对应 $17,470。"
-    },
-    {
-      "id": "trim",
-      "title": "AAPL 减仓",
-      "detail": "AAPL：连续 3 根跳空高开"
+      "detail": "市值 $19,834，占净值 28%。主题上限对应 $17,507。"
     },
     {
       "id": "sell",
       "title": "NVDA 卖出",
-      "detail": "NVDA：收盘 214.13 跌破21 日均线 225.51"
+      "detail": "NVDA：收盘 217.09 跌破21 日均线 224.75"
+    },
+    {
+      "id": "A1",
+      "title": "AMZN 加仓",
+      "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（6 股）。"
     },
     {
       "id": "sell",
       "title": "UNH 卖出",
-      "detail": "UNH：最低价碰到止损 460.00；连续 3 根跳空高开"
-    },
-    {
-      "id": "trim",
-      "title": "XOM 减仓",
-      "detail": "XOM：连续 3 根跳空高开"
+      "detail": "UNH：最低价碰到止损 460.00"
     },
     {
       "id": "null",
       "title": "止损和加仓这次算不了",
       "detail": "持仓没填成本或止损，交易日志也没有突破记录。这些规则是未定，不是没触发。"
-    },
-    {
-      "id": "watch",
-      "title": "HD 观望",
-      "detail": "环境为防守，不开新的多头。HD：收盘高于前收，成交量盖过近期下跌日，并贴近均线，相对强度排名 1，买入确认分 0/3"
     }
   ],
   "reviews": [
-    {
-      "ticker": "AAPL",
-      "action": "trim",
-      "action_label": "减仓",
-      "block": "",
-      "line": "AAPL：连续 3 根跳空高开",
-      "code": "X6",
-      "name": "高潮止盈",
-      "c_tag": "X6",
-      "checks": [
-        {
-          "label": "高潮止盈",
-          "pass": true,
-          "text": "连续 3 根跳空高开"
-        },
-        {
-          "label": "突破失败",
-          "pass": null,
-          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-        }
-      ],
-      "confirmation": [],
-      "plan": {
-        "text": "减一部分，不是一次性清仓。",
-        "entry": null,
-        "stop": 170,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0
-      },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
-      "pending": [
-        "X2"
-      ]
-    },
     {
       "ticker": "NVDA",
       "action": "sell",
       "action_label": "卖出",
       "block": "",
-      "line": "NVDA：收盘 214.13 跌破21 日均线 225.51",
+      "line": "NVDA：收盘 217.09 跌破21 日均线 224.75",
       "code": "X3",
       "name": "跌破吊灯移动止损",
       "c_tag": "X3",
@@ -91,7 +45,7 @@
         {
           "label": "跌破吊灯移动止损",
           "pass": true,
-          "text": "收盘 214.13 跌破21 日均线 225.51"
+          "text": "收盘 217.09 跌破21 日均线 224.75"
         },
         {
           "label": "突破失败",
@@ -109,7 +63,7 @@
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "收盘重新站上吊灯移动止损 225.05 后，这条就不再成立。",
+      "invalidate": "收盘重新站上吊灯移动止损 225.13 后，这条就不再成立。",
       "pending": [
         "X2"
       ]
@@ -119,20 +73,15 @@
       "action": "sell",
       "action_label": "卖出",
       "block": "",
-      "line": "UNH：最低价碰到止损 460.00；连续 3 根跳空高开",
+      "line": "UNH：最低价碰到止损 460.00",
       "code": "X1",
-      "name": "固定止损、高潮止盈",
-      "c_tag": "X1+X6",
+      "name": "固定止损",
+      "c_tag": "X1",
       "checks": [
         {
           "label": "固定止损",
           "pass": true,
           "text": "最低价碰到止损 460.00"
-        },
-        {
-          "label": "高潮止盈",
-          "pass": true,
-          "text": "连续 3 根跳空高开"
         },
         {
           "label": "突破失败",
@@ -150,116 +99,17 @@
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "invalidate": "条件消失后这条离场就不再成立。",
       "pending": [
         "X2"
       ]
-    },
-    {
-      "ticker": "XOM",
-      "action": "trim",
-      "action_label": "减仓",
-      "block": "",
-      "line": "XOM：连续 3 根跳空高开",
-      "code": "X6",
-      "name": "高潮止盈",
-      "c_tag": "X6",
-      "checks": [
-        {
-          "label": "高潮止盈",
-          "pass": true,
-          "text": "连续 3 根跳空高开"
-        },
-        {
-          "label": "突破失败",
-          "pass": null,
-          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-        }
-      ],
-      "confirmation": [],
-      "plan": {
-        "text": "减一部分，不是一次性清仓。",
-        "entry": null,
-        "stop": 100,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0
-      },
-      "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
-      "pending": [
-        "X2"
-      ]
-    },
-    {
-      "ticker": "HD",
-      "action": "watch",
-      "action_label": "观望",
-      "block": "环境为防守，不开新的多头",
-      "line": "HD：收盘高于前收，成交量盖过近期下跌日，并贴近均线，相对强度排名 1，买入确认分 0/3",
-      "code": "E3",
-      "name": "口袋支点",
-      "c_tag": "C1:0",
-      "checks": [
-        {
-          "label": "收盘上涨",
-          "pass": true,
-          "text": "收盘 309.63，前收 308.24"
-        },
-        {
-          "label": "量能",
-          "pass": true,
-          "text": "今日量 7014593，近 10 日下跌日最大量 5452900"
-        },
-        {
-          "label": "贴近均线",
-          "pass": true,
-          "text": "距 50 日均线 0.8%"
-        },
-        {
-          "label": "偏离",
-          "pass": true,
-          "text": "低于 50 日均线 0.38 倍 平均真实波幅，没有向上偏离过度"
-        }
-      ],
-      "confirmation": [
-        {
-          "id": "rs_high",
-          "label": "相对强度线处在近一年高点",
-          "pass": false,
-          "text": "没有处在近一年高点"
-        },
-        {
-          "id": "udvol",
-          "label": "放量上涨量 / 放量下跌量",
-          "pass": false,
-          "text": "0.71，门槛 1.2"
-        },
-        {
-          "id": "momentum",
-          "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-          "pass": false,
-          "text": "相对强弱指数 60.3，近 10 日最低 25.5，没有形成拐头"
-        }
-      ],
-      "plan": {
-        "entry": null,
-        "stop": null,
-        "shares": 0,
-        "shares_model": 0,
-        "risk_usd": 0,
-        "risk_model": 0.0,
-        "text": "入场 —，止损 —。公式 0 股，模型风险 $0。规则没有放行，建议股数是 0。"
-      },
-      "invalidate": "收盘跌破 10 日均线 297.24，或跌破止损 299.39，口袋支点失效。",
-      "pending": []
     }
   ],
   "checklist": [
     {
       "n": 1,
       "text": "宏观档位允许吗？本周权益敞口上限还有空间吗？未来 48 小时内有没有 FOMC / CPI / 非农？",
-      "auto": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。权益敞口上限 35%。当前多头敞口 43%。从最近收盘日算，48 小时内没有 FOMC / CPI / 非农 / PCE。"
+      "auto": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。权益敞口上限 60%。当前多头敞口 43%。从最近收盘日算，48 小时内没有 FOMC / CPI / 非农 / PCE。"
     },
     {
       "n": 2,
@@ -269,7 +119,7 @@
     {
       "n": 3,
       "text": "是领涨股吗？环境分 ≥ 2；中线要周线在 30 周均线上方、第二阶段、RS ≥ 80；短线 RS ≥ 70 且行业强于 SPY。",
-      "auto": "今天环境是防守，分数 1。具体标的看扫描表的 RS 和阶段列。"
+      "auto": "今天环境是谨慎，分数 2。具体标的看扫描表的 RS 和阶段列。"
     },
     {
       "n": 4,
@@ -330,5 +180,5 @@
     }
   ],
   "formula": "股数 = floor(净值 × 单笔风险% × 环境系数 × 确认系数 × 首笔比例 / (入场价 − 止损价))",
-  "as_of": "2026-10-17 07:45"
+  "as_of": "2026-10-20 08:30"
 }

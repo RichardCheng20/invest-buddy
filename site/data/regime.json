@@ -2,11 +2,11 @@
   "score": 3,
   "score_raw_before_lock": 3,
   "regime": "YELLOW",
-  "distribution_count": 9,
+  "distribution_count": 8,
   "distribution_penalty": true,
-  "vix": 17.309999,
-  "vix3m": 18.99,
-  "vix_ratio": 0.911532,
+  "vix": 16.68,
+  "vix3m": 18.719999,
+  "vix_ratio": 0.891026,
   "vix_lock": false,
   "breadth_above_50": 0.7,
   "breadth_above_200": 0.8,
@@ -19,7 +19,7 @@
       "id": "R2",
       "level": "primary",
       "title": "派发日达到 5 个",
-      "detail": "SPY 或 QQQ 在最近 25 个交易日有 9 个派发日"
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 8 个派发日"
     }
   ],
   "index_below_200": [],

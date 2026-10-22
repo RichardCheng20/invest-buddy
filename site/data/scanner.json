@@ -1,39 +1,39 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "rows": [
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "AAPL",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 339.5,
-      "change_1d": -0.010031,
-      "change_5d": -0.005186,
-      "change_1m": 0.001534,
-      "sma20": 337.609502,
-      "sma50": 326.9164,
-      "sma200": 292.847339,
-      "ema10": 340.246383,
-      "ema21": 337.322171,
-      "dist_sma20": 0.0056,
-      "dist_ema10": -0.002194,
-      "dist_ema21": 0.006456,
-      "dist_sma50": 0.038492,
-      "dist_sma200": 0.159307,
-      "rsi14": 55.541649,
-      "atr14": 6.476468,
-      "atr_pct": 0.019076,
-      "rvol": 0.887277,
-      "vol_ratio_20": 0.97164,
-      "dollar_avg50": 13142379592.88884,
+      "price": 343.99,
+      "change_1d": 0.013225,
+      "change_5d": 0.003003,
+      "change_1m": 0.01248,
+      "sma20": 337.958002,
+      "sma50": 327.698,
+      "sma200": 293.234615,
+      "ema10": 340.92704,
+      "ema21": 337.928337,
+      "dist_sma20": 0.017848,
+      "dist_ema10": 0.008984,
+      "dist_ema21": 0.017938,
+      "dist_sma50": 0.049717,
+      "dist_sma200": 0.173088,
+      "rsi14": 60.651537,
+      "atr14": 6.470293,
+      "atr_pct": 0.01881,
+      "rvol": 0.880428,
+      "vol_ratio_20": 0.958146,
+      "dollar_avg50": 13158344955.305567,
       "rs_rank": 84,
-      "rs_raw": 0.073908,
-      "rs_3m": 1.010812,
-      "rs_6m": 1.163933,
+      "rs_raw": 0.073728,
+      "rs_3m": 1.019479,
+      "rs_6m": 1.154677,
       "high_52w": 348.149994,
       "low_52w": 242.759224,
-      "dist_52w_high": -0.024846,
-      "dist_52w_low": 0.398505,
+      "dist_52w_high": -0.011949,
+      "dist_52w_low": 0.417001,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -44,7 +44,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-11-02",
-      "earnings_in_days": 9,
+      "earnings_in_days": 8,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -73,7 +73,7 @@
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
             "pass": false,
-            "text": "RSI 55.5，近 10 日最低 55.5，没有形成拐头"
+            "text": "RSI 60.7，近 10 日最低 55.5，没有形成拐头"
           }
         ]
       },
@@ -81,12 +81,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 340.246383,
-        "ema21": 337.322171,
-        "sma50": 326.9164,
-        "sma200": 292.847339,
+        "ema10": 340.92704,
+        "ema21": 337.928337,
+        "sma50": 327.698,
+        "sma200": 293.234615,
         "avwap_earn": null,
-        "chandelier": 327.973091
+        "chandelier": 328.018858
       },
       "flags": [
         "sector_lag"
@@ -121,7 +121,7 @@
         "kind": "cup_handle",
         "pivot": 348.149994,
         "base_low": 299.741503,
-        "length": 58
+        "length": 59
       },
       "leader_pos": false,
       "leader_swing": false,
@@ -141,12 +141,18 @@
       "risk_usd": 0,
       "rejected_by": [],
       "exits": [],
+      "add_signal": {
+        "id": "A1",
+        "shares_model": 10,
+        "shares": 10,
+        "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（10 股）。"
+      },
       "call": {
         "ticker": "AAPL",
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "AAPL：没有新的离场条件。收盘 339.50，吊灯移动止损 327.97",
+        "line": "AAPL：没有新的离场条件。收盘 343.99，吊灯移动止损 328.02",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -159,7 +165,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 327.97 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 328.02 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -168,42 +174,44 @@
           }
         ]
       },
-      "signals": [],
+      "signals": [
+        "A1"
+      ],
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "MSFT",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 531.87,
-      "change_1d": -0.003093,
-      "change_5d": -0.021308,
-      "change_1m": 0.060326,
-      "sma20": 523.509502,
-      "sma50": 506.590122,
-      "sma200": 434.603786,
-      "ema10": 531.417649,
-      "ema21": 523.649543,
-      "dist_sma20": 0.01597,
-      "dist_ema10": 0.000851,
-      "dist_ema21": 0.015698,
-      "dist_sma50": 0.049902,
-      "dist_sma200": 0.223804,
-      "rsi14": 58.371471,
-      "atr14": 11.447644,
-      "atr_pct": 0.021523,
-      "rvol": 0.665154,
-      "vol_ratio_20": 0.672543,
-      "dollar_avg50": 10993909214.083376,
+      "price": 532.95,
+      "change_1d": 0.002031,
+      "change_5d": -0.001387,
+      "change_1m": 0.070181,
+      "sma20": 525.127502,
+      "sma50": 507.191855,
+      "sma200": 434.919191,
+      "ema10": 531.696257,
+      "ema21": 524.495038,
+      "dist_sma20": 0.014896,
+      "dist_ema10": 0.002358,
+      "dist_ema21": 0.01612,
+      "dist_sma50": 0.050786,
+      "dist_sma200": 0.2254,
+      "rsi14": 58.958823,
+      "atr14": 11.22128,
+      "atr_pct": 0.021055,
+      "rvol": 0.642626,
+      "vol_ratio_20": 0.652653,
+      "dollar_avg50": 10910999596.47905,
       "rs_rank": 89,
-      "rs_raw": 0.094909,
-      "rs_3m": 1.323447,
-      "rs_6m": 1.146846,
+      "rs_raw": 0.103992,
+      "rs_3m": 1.332824,
+      "rs_6m": 1.13138,
       "high_52w": 551.150024,
       "low_52w": 348.543869,
-      "dist_52w_high": -0.034981,
-      "dist_52w_low": 0.525977,
+      "dist_52w_high": -0.033022,
+      "dist_52w_low": 0.529076,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -212,9 +220,9 @@
       "sector_rs_ok": false,
       "liquid": true,
       "extended": false,
-      "earnings_blk": false,
+      "earnings_blk": true,
       "earnings_date": "2026-10-28",
-      "earnings_in_days": 6,
+      "earnings_in_days": 5,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -243,7 +251,7 @@
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
             "pass": false,
-            "text": "RSI 58.4，近 10 日最低 57.4，没有形成拐头"
+            "text": "RSI 59.0，近 10 日最低 57.4，没有形成拐头"
           }
         ]
       },
@@ -251,17 +259,20 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 531.417649,
-        "ema21": 523.649543,
-        "sma50": 506.590122,
-        "sma200": 434.603786,
+        "ema10": 531.696257,
+        "ema21": 524.495038,
+        "sma50": 507.191855,
+        "sma200": 434.919191,
         "avwap_earn": null,
-        "chandelier": 516.425996
+        "chandelier": 516.875398
       },
       "flags": [
+        "earnings_blk",
         "sector_lag"
       ],
-      "blockers": [],
+      "blockers": [
+        "财报前 5 个交易日内"
+      ],
       "candidates": [
         {
           "id": "E2",
@@ -304,23 +315,30 @@
       "x8": false,
       "x6_why": [],
       "x8_why": [],
-      "gate_open": true,
+      "gate_open": false,
       "shares_model": 0,
       "risk_usd_model": 0.0,
       "shares": 0,
       "risk_usd": 0,
       "rejected_by": [],
-      "exits": [],
+      "exits": [
+        "X7"
+      ],
       "call": {
         "ticker": "MSFT",
-        "action": "hold",
-        "action_label": "持有",
+        "action": "trim",
+        "action_label": "减仓",
         "block": "",
-        "line": "MSFT：没有新的离场条件。收盘 531.87，吊灯移动止损 516.43",
-        "code": null,
-        "name": "",
-        "c_tag": null,
+        "line": "MSFT：按 15% 跳空（近似）估算的亏损约 $945，超过净值的 1%",
+        "code": "X7",
+        "name": "财报前减仓",
+        "c_tag": "X7",
         "checks": [
+          {
+            "label": "财报前减仓",
+            "pass": true,
+            "text": "按 15% 跳空（近似）估算的亏损约 $945，超过净值的 1%"
+          },
           {
             "label": "突破失败",
             "pass": null,
@@ -328,52 +346,56 @@
           }
         ],
         "confirmation": [],
-        "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 516.43 会变成卖出。",
+        "plan": {
+          "text": "减一部分，不是一次性清仓。",
+          "entry": null,
+          "stop": 390,
+          "shares": 0,
+          "shares_model": 0,
+          "risk_usd": 0,
+          "risk_model": 0
+        },
+        "invalidate": "条件消失后这条离场就不再成立。",
         "pending": [
-          {
-            "label": "突破失败",
-            "pass": null,
-            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-          }
+          "X2"
         ]
       },
       "signals": [],
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "NVDA",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 216.47,
-      "change_1d": -0.002856,
-      "change_5d": -0.052731,
-      "change_1m": -0.047981,
-      "sma20": 227.042501,
-      "sma50": 222.814022,
-      "sma200": 202.952297,
-      "ema10": 221.822137,
-      "ema21": 223.994121,
-      "dist_sma20": -0.046566,
-      "dist_ema10": -0.024128,
-      "dist_ema21": -0.033591,
-      "dist_sma50": -0.028472,
-      "dist_sma200": 0.066605,
-      "rsi14": 40.929913,
-      "atr14": 5.91355,
-      "atr_pct": 0.027318,
-      "rvol": 0.674875,
-      "vol_ratio_20": 0.748998,
-      "dollar_avg50": 25560229875.190468,
-      "rs_rank": 47,
-      "rs_raw": 0.040107,
-      "rs_3m": 0.990722,
-      "rs_6m": 0.988764,
+      "price": 221.97,
+      "change_1d": 0.025408,
+      "change_5d": 0.003028,
+      "change_1m": -0.030148,
+      "sma20": 226.865501,
+      "sma50": 222.908285,
+      "sma200": 203.123743,
+      "ema10": 221.849021,
+      "ema21": 223.810111,
+      "dist_sma20": -0.021579,
+      "dist_ema10": 0.000545,
+      "dist_ema21": -0.008222,
+      "dist_sma50": -0.004209,
+      "dist_sma200": 0.092782,
+      "rsi14": 47.938938,
+      "atr14": 5.899725,
+      "atr_pct": 0.026579,
+      "rvol": 0.752006,
+      "vol_ratio_20": 0.833225,
+      "dollar_avg50": 25511794397.320625,
+      "rs_rank": 53,
+      "rs_raw": 0.053903,
+      "rs_3m": 1.013883,
+      "rs_6m": 1.00562,
       "high_52w": 243.369995,
       "low_52w": 163.895378,
-      "dist_52w_high": -0.110531,
-      "dist_52w_low": 0.320782,
+      "dist_52w_high": -0.087932,
+      "dist_52w_low": 0.35434,
       "above_sma50": false,
       "above_sma200": true,
       "stage2": false,
@@ -384,7 +406,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-11-17",
-      "earnings_in_days": 20,
+      "earnings_in_days": 19,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -392,10 +414,10 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 228.639999,
-      "c_score": 2,
+      "pivot": 243.369995,
+      "c_score": 1,
       "c_detail": {
-        "score": 2,
+        "score": 1,
         "items": [
           {
             "id": "rs_high",
@@ -412,21 +434,21 @@
           {
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
-            "pass": true,
-            "text": "MACD 柱先连跌 3 根，最新一根转强"
+            "pass": false,
+            "text": "RSI 47.9，近 10 日最低 37.6，没有形成拐头"
           }
         ]
       },
-      "size_mult": 1.0,
+      "size_mult": 0.5,
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 221.822137,
-        "ema21": 223.994121,
-        "sma50": 222.814022,
-        "sma200": 202.952297,
+        "ema10": 221.849021,
+        "ema21": 223.810111,
+        "sma50": 222.908285,
+        "sma200": 203.123743,
         "avwap_earn": null,
-        "chandelier": 225.180112
+        "chandelier": 225.226925
       },
       "flags": [
         "sector_lag"
@@ -434,10 +456,10 @@
       "blockers": [],
       "candidates": [],
       "base": {
-        "kind": "cup_handle",
-        "pivot": 228.639999,
-        "base_low": 189.587856,
-        "length": 109
+        "kind": "flat",
+        "pivot": 243.369995,
+        "base_low": 212.5,
+        "length": 25
       },
       "leader_pos": false,
       "leader_swing": false,
@@ -459,12 +481,18 @@
       "exits": [
         "X3"
       ],
+      "add_signal": {
+        "id": "A1",
+        "shares_model": 4,
+        "shares": 4,
+        "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（4 股）。"
+      },
       "call": {
         "ticker": "NVDA",
         "action": "sell",
         "action_label": "卖出",
         "block": "",
-        "line": "NVDA：收盘 216.47 跌破21 日均线 223.99",
+        "line": "NVDA：收盘 221.97 跌破21 日均线 223.81",
         "code": "X3",
         "name": "跌破吊灯移动止损",
         "c_tag": "X3",
@@ -472,7 +500,7 @@
           {
             "label": "跌破吊灯移动止损",
             "pass": true,
-            "text": "收盘 216.47 跌破21 日均线 223.99"
+            "text": "收盘 221.97 跌破21 日均线 223.81"
           },
           {
             "label": "突破失败",
@@ -490,47 +518,49 @@
           "risk_usd": 0,
           "risk_model": 0
         },
-        "invalidate": "收盘重新站上吊灯移动止损 225.18 后，这条就不再成立。",
+        "invalidate": "收盘重新站上吊灯移动止损 225.23 后，这条就不再成立。",
         "pending": [
           "X2"
         ]
       },
-      "signals": [],
+      "signals": [
+        "A1"
+      ],
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "AMZN",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 262.63,
-      "change_1d": 0.000686,
-      "change_5d": 0.015663,
-      "change_1m": 0.016173,
-      "sma20": 253.8085,
-      "sma50": 256.5262,
-      "sma200": 243.0669,
-      "ema10": 257.227765,
-      "ema21": 255.736905,
-      "dist_sma20": 0.034757,
-      "dist_ema10": 0.021002,
-      "dist_ema21": 0.026954,
-      "dist_sma50": 0.023794,
-      "dist_sma200": 0.080484,
-      "rsi14": 57.407996,
-      "atr14": 6.391475,
-      "atr_pct": 0.024336,
-      "rvol": 0.999061,
-      "vol_ratio_20": 0.955844,
-      "dollar_avg50": 8856168969.995508,
-      "rs_rank": 63,
-      "rs_raw": 0.05823,
-      "rs_3m": 1.039852,
-      "rs_6m": 0.957268,
+      "price": 262.37,
+      "change_1d": -0.00099,
+      "change_5d": 0.032628,
+      "change_1m": 0.028983,
+      "sma20": 254.4635,
+      "sma50": 256.3282,
+      "sma200": 243.21345,
+      "ema10": 258.162717,
+      "ema21": 256.339914,
+      "dist_sma20": 0.031071,
+      "dist_ema10": 0.016297,
+      "dist_ema21": 0.023524,
+      "dist_sma50": 0.023571,
+      "dist_sma200": 0.078764,
+      "rsi14": 57.100645,
+      "atr14": 6.29639,
+      "atr_pct": 0.023998,
+      "rvol": 0.89746,
+      "vol_ratio_20": 0.873892,
+      "dollar_avg50": 8847307696.1609,
+      "rs_rank": 68,
+      "rs_raw": 0.066648,
+      "rs_3m": 1.06951,
+      "rs_6m": 0.940448,
       "high_52w": 287.200012,
       "low_52w": 196.0,
-      "dist_52w_high": -0.08555,
-      "dist_52w_low": 0.339949,
+      "dist_52w_high": -0.086455,
+      "dist_52w_low": 0.338622,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -541,7 +571,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-10-29",
-      "earnings_in_days": 7,
+      "earnings_in_days": 6,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -549,10 +579,10 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 263.720001,
-      "c_score": 2,
+      "pivot": 265.339996,
+      "c_score": 1,
       "c_detail": {
-        "score": 2,
+        "score": 1,
         "items": [
           {
             "id": "rs_high",
@@ -564,26 +594,26 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "1.41，门槛 1.2"
+            "text": "1.63，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
-            "pass": true,
-            "text": "RSI 近 10 日最低 45.0，落在 40–50，且 57.4 高于前一日 57.3"
+            "pass": false,
+            "text": "RSI 57.1，近 10 日最低 45.0，没有形成拐头"
           }
         ]
       },
-      "size_mult": 1.0,
+      "size_mult": 0.5,
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 257.227765,
-        "ema21": 255.736905,
-        "sma50": 256.5262,
-        "sma200": 243.0669,
+        "ema10": 258.162717,
+        "ema21": 256.339914,
+        "sma50": 256.3282,
+        "sma200": 243.21345,
         "avwap_earn": null,
-        "chandelier": 246.237163
+        "chandelier": 246.415726
       },
       "flags": [
         "flat_market",
@@ -598,7 +628,7 @@
           "ok": false,
           "technical": false,
           "pending_rs": 70,
-          "reason": "碰到 21 日均线或 50 日均线，但没有缩量收阳；RS 排名 63，需要 ≥ 70",
+          "reason": "碰到 21 日均线或 50 日均线，但没有缩量收阳；RS 排名 68，需要 ≥ 70",
           "entry": null,
           "stop": null,
           "pivot": null,
@@ -619,7 +649,7 @@
       ],
       "base": {
         "kind": "flat",
-        "pivot": 263.720001,
+        "pivot": 265.339996,
         "base_low": 244.300003,
         "length": 25
       },
@@ -685,38 +715,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "GOOGL",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 340.275,
-      "change_1d": -0.011346,
-      "change_5d": -0.038173,
-      "change_1m": -0.041398,
-      "sma20": 345.330249,
-      "sma50": 343.953752,
-      "sma200": 340.844205,
-      "ema10": 345.604052,
-      "ema21": 345.74186,
-      "dist_sma20": -0.014639,
-      "dist_ema10": -0.01542,
-      "dist_ema21": -0.015812,
-      "dist_sma50": -0.010695,
-      "dist_sma200": -0.00167,
-      "rsi14": 44.677713,
-      "atr14": 8.533469,
-      "atr_pct": 0.025078,
-      "rvol": 0.737407,
-      "vol_ratio_20": 0.746036,
-      "dollar_avg50": 8351231540.481499,
-      "rs_rank": 68,
-      "rs_raw": 0.065102,
-      "rs_3m": 0.96493,
-      "rs_6m": 0.933951,
+      "price": 334.76,
+      "change_1d": -0.016222,
+      "change_5d": -0.03705,
+      "change_1m": -0.046702,
+      "sma20": 345.177,
+      "sma50": 343.777469,
+      "sma200": 340.938402,
+      "ema10": 343.63315,
+      "ema21": 344.743923,
+      "dist_sma20": -0.030179,
+      "dist_ema10": -0.025822,
+      "dist_ema21": -0.02896,
+      "dist_sma50": -0.026231,
+      "dist_sma200": -0.018122,
+      "rsi14": 40.266988,
+      "atr14": 8.631078,
+      "atr_pct": 0.025783,
+      "rvol": 1.174768,
+      "vol_ratio_20": 1.205042,
+      "dollar_avg50": 8345163062.696481,
+      "rs_rank": 73,
+      "rs_raw": 0.072099,
+      "rs_3m": 1.004302,
+      "rs_6m": 0.90414,
       "high_52w": 408.103767,
-      "low_52w": 243.516673,
-      "dist_52w_high": -0.166205,
-      "dist_52w_low": 0.397338,
+      "low_52w": 243.516688,
+      "dist_52w_high": -0.179718,
+      "dist_52w_low": 0.37469,
       "above_sma50": false,
       "above_sma200": false,
       "stage2": false,
@@ -725,9 +755,9 @@
       "sector_rs_ok": false,
       "liquid": true,
       "extended": false,
-      "earnings_blk": false,
+      "earnings_blk": true,
       "earnings_date": "2026-10-28",
-      "earnings_in_days": 6,
+      "earnings_in_days": 5,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -750,13 +780,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "0.68，门槛 1.2"
+            "text": "0.60，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
             "pass": false,
-            "text": "RSI 44.7，近 10 日最低 44.5，没有形成拐头"
+            "text": "RSI 40.3，近 10 日最低 40.3，没有形成拐头"
           }
         ]
       },
@@ -764,19 +794,21 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 345.604052,
-        "ema21": 345.74186,
-        "sma50": 343.953752,
-        "sma200": 340.844205,
+        "ema10": 343.63315,
+        "ema21": 344.743923,
+        "sma50": 343.777469,
+        "sma200": 340.938402,
         "avwap_earn": null,
-        "chandelier": 338.118068
+        "chandelier": 337.952248
       },
       "flags": [
+        "earnings_blk",
         "flat_market",
         "sector_lag",
         "weekly_below"
       ],
       "blockers": [
+        "财报前 5 个交易日内",
         "50 日均线走平且价格反复穿越，均线类信号暂停"
       ],
       "candidates": [],
@@ -794,26 +826,41 @@
       "max_hold": null,
       "held": true,
       "x6": false,
-      "x8": false,
+      "x8": true,
       "x6_why": [],
-      "x8_why": [],
+      "x8_why": [
+        "相对强度处在近 63 日低点，20 日涨跌 -0.9%"
+      ],
       "gate_open": false,
       "shares_model": 0,
       "risk_usd_model": 0.0,
       "shares": 0,
       "risk_usd": 0,
       "rejected_by": [],
-      "exits": [],
+      "exits": [
+        "X3",
+        "X8"
+      ],
       "call": {
         "ticker": "GOOGL",
-        "action": "hold",
-        "action_label": "持有",
+        "action": "sell",
+        "action_label": "卖出",
         "block": "",
-        "line": "GOOGL：没有新的离场条件。收盘 340.27，吊灯移动止损 338.12",
-        "code": null,
-        "name": "",
-        "c_tag": null,
+        "line": "GOOGL：收盘 334.76 跌破吊灯移动止损 337.95；相对强度处在近 63 日低点，20 日涨跌 -0.9%",
+        "code": "X3",
+        "name": "跌破吊灯移动止损、强度走坏减仓",
+        "c_tag": "X3+X8",
         "checks": [
+          {
+            "label": "跌破吊灯移动止损",
+            "pass": true,
+            "text": "收盘 334.76 跌破吊灯移动止损 337.95"
+          },
+          {
+            "label": "强度走坏减仓",
+            "pass": true,
+            "text": "相对强度处在近 63 日低点，20 日涨跌 -0.9%"
+          },
           {
             "label": "突破失败",
             "pass": null,
@@ -821,52 +868,56 @@
           }
         ],
         "confirmation": [],
-        "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 338.12 会变成卖出。",
+        "plan": {
+          "text": "卖出剩余仓位。",
+          "entry": null,
+          "stop": 145,
+          "shares": 0,
+          "shares_model": 0,
+          "risk_usd": 0,
+          "risk_model": 0
+        },
+        "invalidate": "收盘重新站上吊灯移动止损 337.95 后，这条就不再成立。",
         "pending": [
-          {
-            "label": "突破失败",
-            "pass": null,
-            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
-          }
+          "X2"
         ]
       },
       "signals": [],
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "META",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 694.25,
-      "change_1d": -0.015862,
-      "change_5d": -0.089508,
-      "change_1m": -0.063406,
-      "sma20": 731.866998,
-      "sma50": 659.227699,
-      "sma200": 631.529439,
-      "ema10": 720.202105,
-      "ema21": 714.709744,
-      "dist_sma20": -0.051399,
-      "dist_ema10": -0.036034,
-      "dist_ema21": -0.028627,
-      "dist_sma50": 0.053126,
-      "dist_sma200": 0.099315,
-      "rsi14": 46.425368,
-      "atr14": 24.581466,
-      "atr_pct": 0.035407,
-      "rvol": 0.863183,
-      "vol_ratio_20": 0.852049,
-      "dollar_avg50": 12933441499.52606,
-      "rs_rank": 16,
-      "rs_raw": 0.021131,
-      "rs_3m": 1.07399,
-      "rs_6m": 0.947134,
+      "price": 697.52,
+      "change_1d": 0.00471,
+      "change_5d": -0.054261,
+      "change_1m": -0.053055,
+      "sma20": 729.538,
+      "sma50": 661.205149,
+      "sma200": 631.731547,
+      "ema10": 716.078086,
+      "ema21": 713.14704,
+      "dist_sma20": -0.043888,
+      "dist_ema10": -0.025916,
+      "dist_ema21": -0.021913,
+      "dist_sma50": 0.054922,
+      "dist_sma200": 0.10414,
+      "rsi14": 47.380239,
+      "atr14": 24.477075,
+      "atr_pct": 0.035092,
+      "rvol": 1.350726,
+      "vol_ratio_20": 1.366101,
+      "dollar_avg50": 13150481460.547014,
+      "rs_rank": 27,
+      "rs_raw": 0.028436,
+      "rs_3m": 1.097009,
+      "rs_6m": 0.947876,
       "high_52w": 779.820007,
       "low_52w": 519.368366,
-      "dist_52w_high": -0.10973,
-      "dist_52w_low": 0.33672,
+      "dist_52w_high": -0.105537,
+      "dist_52w_low": 0.343016,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": false,
@@ -875,9 +926,9 @@
       "sector_rs_ok": false,
       "liquid": true,
       "extended": false,
-      "earnings_blk": true,
+      "earnings_blk": false,
       "earnings_date": "2026-10-21",
-      "earnings_in_days": 1,
+      "earnings_in_days": null,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -886,9 +937,9 @@
       "entry": null,
       "stop": null,
       "pivot": 747.599976,
-      "c_score": 1,
+      "c_score": 2,
       "c_detail": {
-        "score": 1,
+        "score": 2,
         "items": [
           {
             "id": "rs_high",
@@ -900,35 +951,45 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "1.58，门槛 1.2"
+            "text": "1.71，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 46.4，近 10 日最低 46.4，没有形成拐头"
+            "pass": true,
+            "text": "相对强弱指数 近 10 日最低 46.4，落在 40–50，且 47.4 高于前一日 46.4"
           }
         ]
       },
-      "size_mult": 0.5,
+      "size_mult": 1.0,
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 720.202105,
-        "ema21": 714.709744,
-        "sma50": 659.227699,
-        "sma200": 631.529439,
-        "avwap_earn": null,
-        "chandelier": 707.146577
+        "ema10": 716.078086,
+        "ema21": 713.14704,
+        "sma50": 661.205149,
+        "sma200": 631.731547,
+        "avwap_earn": 700.279982,
+        "chandelier": 707.297188
       },
       "flags": [
-        "earnings_blk",
         "sector_lag"
       ],
-      "blockers": [
-        "财报前 5 个交易日内"
+      "blockers": [],
+      "candidates": [
+        {
+          "id": "E4",
+          "ok": false,
+          "technical": false,
+          "pending_rs": null,
+          "reason": "财报日附近没有同时满足跳空、RVOL 和收盘位置的 K 线",
+          "entry": null,
+          "stop": null,
+          "pivot": null,
+          "blurb": "财报日附近没有同时满足跳空、RVOL 和收盘位置的 K 线",
+          "facts": []
+        }
       ],
-      "candidates": [],
       "base": {
         "kind": "vcp",
         "pivot": 747.599976,
@@ -946,7 +1007,7 @@
       "x8": false,
       "x6_why": [],
       "x8_why": [],
-      "gate_open": false,
+      "gate_open": true,
       "shares_model": 0,
       "risk_usd_model": 0.0,
       "shares": 0,
@@ -957,10 +1018,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "META：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 694.25，在 50 日均线之上，相对强度排名 16",
+        "line": "META：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 697.52，在 50 日均线之上，相对强度排名 27",
         "code": null,
         "name": "",
-        "c_tag": "C1:1",
+        "c_tag": "C1:2",
         "checks": [],
         "confirmation": [
           {
@@ -973,13 +1034,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "1.58，门槛 1.2"
+            "text": "1.71，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 46.4，近 10 日最低 46.4，没有形成拐头"
+            "pass": true,
+            "text": "相对强弱指数 近 10 日最低 46.4，落在 40–50，且 47.4 高于前一日 46.4"
           }
         ],
         "plan": null,
@@ -990,49 +1051,49 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "TSLA",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 373.71,
-      "change_1d": 0.015351,
-      "change_5d": -0.004051,
-      "change_1m": -0.004237,
-      "sma20": 369.712,
-      "sma50": 361.108399,
-      "sma200": 387.261249,
-      "ema10": 369.16676,
-      "ema21": 368.45979,
-      "dist_sma20": 0.010814,
-      "dist_ema10": 0.012307,
-      "dist_ema21": 0.014249,
-      "dist_sma50": 0.034897,
-      "dist_sma200": -0.034993,
-      "rsi14": 53.680734,
-      "atr14": 12.214471,
-      "atr_pct": 0.032684,
-      "rvol": 0.843958,
-      "vol_ratio_20": 0.886236,
-      "dollar_avg50": 13175896315.814495,
-      "rs_rank": 11,
-      "rs_raw": -0.031538,
-      "rs_3m": 0.968676,
-      "rs_6m": 0.880943,
+      "price": 386.47,
+      "change_1d": 0.034144,
+      "change_5d": 0.052593,
+      "change_1m": 0.019979,
+      "sma20": 370.0295,
+      "sma50": 362.181598,
+      "sma200": 386.935249,
+      "ema10": 372.312802,
+      "ema21": 370.097081,
+      "dist_sma20": 0.04443,
+      "dist_ema10": 0.038025,
+      "dist_ema21": 0.04424,
+      "dist_sma50": 0.067061,
+      "dist_sma200": -0.001202,
+      "rsi14": 59.767286,
+      "atr14": 12.422937,
+      "atr_pct": 0.032145,
+      "rvol": 1.213384,
+      "vol_ratio_20": 1.267073,
+      "dollar_avg50": 13376806147.566174,
+      "rs_rank": 16,
+      "rs_raw": 0.021041,
+      "rs_3m": 1.151441,
+      "rs_6m": 0.912864,
       "high_52w": 498.829987,
       "low_52w": 297.380005,
-      "dist_52w_high": -0.250827,
-      "dist_52w_low": 0.256675,
+      "dist_52w_high": -0.225247,
+      "dist_52w_low": 0.299583,
       "above_sma50": true,
       "above_sma200": false,
       "stage2": false,
-      "weekly_ok": false,
+      "weekly_ok": true,
       "flat_market": false,
       "sector_rs_ok": false,
       "liquid": true,
       "extended": false,
-      "earnings_blk": true,
+      "earnings_blk": false,
       "earnings_date": "2026-10-21",
-      "earnings_in_days": 1,
+      "earnings_in_days": null,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -1055,13 +1116,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "2.02，门槛 1.2"
+            "text": "2.19，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 42.2，落在 40–50，且 53.7 高于前一日 50.6"
+            "text": "相对强弱指数 近 10 日最低 42.2，落在 40–50，且 59.8 高于前一日 53.7"
           }
         ]
       },
@@ -1069,22 +1130,31 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 369.16676,
-        "ema21": 368.45979,
-        "sma50": 361.108399,
-        "sma200": 387.261249,
-        "avwap_earn": null,
-        "chandelier": 351.068404
+        "ema10": 372.312802,
+        "ema21": 370.097081,
+        "sma50": 362.181598,
+        "sma200": 386.935249,
+        "avwap_earn": 385.274332,
+        "chandelier": 350.991966
       },
       "flags": [
-        "earnings_blk",
-        "sector_lag",
-        "weekly_below"
+        "sector_lag"
       ],
-      "blockers": [
-        "财报前 5 个交易日内"
+      "blockers": [],
+      "candidates": [
+        {
+          "id": "E4",
+          "ok": false,
+          "technical": false,
+          "pending_rs": null,
+          "reason": "财报日附近没有同时满足跳空、RVOL 和收盘位置的 K 线",
+          "entry": null,
+          "stop": null,
+          "pivot": null,
+          "blurb": "财报日附近没有同时满足跳空、RVOL 和收盘位置的 K 线",
+          "facts": []
+        }
       ],
-      "candidates": [],
       "base": {
         "kind": "flat",
         "pivot": 388.559998,
@@ -1104,7 +1174,7 @@
         "连续 3 根跳空高开"
       ],
       "x8_why": [],
-      "gate_open": false,
+      "gate_open": true,
       "shares_model": 0,
       "risk_usd_model": 0.0,
       "shares": 0,
@@ -1115,7 +1185,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "TSLA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 373.71，在 200 日均线之下，相对强度排名 11",
+        "line": "TSLA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 386.47，在 200 日均线之下，相对强度排名 16",
         "code": null,
         "name": "",
         "c_tag": "C1:2",
@@ -1131,13 +1201,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "2.02，门槛 1.2"
+            "text": "2.19，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 42.2，落在 40–50，且 53.7 高于前一日 50.6"
+            "text": "相对强弱指数 近 10 日最低 42.2，落在 40–50，且 59.8 高于前一日 53.7"
           }
         ],
         "plan": null,
@@ -1148,38 +1218,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "AVGO",
       "theme": "tech",
       "theme_name": "大型科技 / 平台",
-      "price": 334.37,
-      "change_1d": -0.000658,
-      "change_5d": -0.064202,
-      "change_1m": -0.078007,
-      "sma20": 352.482003,
-      "sma50": 361.726138,
-      "sma200": 366.951062,
-      "ema10": 344.923013,
-      "ema21": 350.969848,
-      "dist_sma20": -0.051384,
-      "dist_ema10": -0.030595,
-      "dist_ema21": -0.047297,
-      "dist_sma50": -0.075627,
-      "dist_sma200": -0.088789,
-      "rsi14": 38.720005,
-      "atr14": 11.466997,
-      "atr_pct": 0.034294,
-      "rvol": 0.663825,
-      "vol_ratio_20": 0.727417,
-      "dollar_avg50": 8546179155.462039,
+      "price": 337.8,
+      "change_1d": 0.010258,
+      "change_5d": -0.024404,
+      "change_1m": -0.073353,
+      "sma20": 351.622503,
+      "sma50": 360.175664,
+      "sma200": 366.932373,
+      "ema10": 343.627919,
+      "ema21": 349.772589,
+      "dist_sma20": -0.039311,
+      "dist_ema10": -0.01696,
+      "dist_ema21": -0.03423,
+      "dist_sma50": -0.062124,
+      "dist_sma200": -0.079394,
+      "rsi14": 41.130274,
+      "atr14": 11.145025,
+      "atr_pct": 0.032993,
+      "rvol": 0.71256,
+      "vol_ratio_20": 0.795067,
+      "dollar_avg50": 8555146369.262626,
       "rs_rank": 6,
-      "rs_raw": -0.031554,
-      "rs_3m": 0.818393,
-      "rs_6m": 0.759919,
+      "rs_raw": -0.022799,
+      "rs_3m": 0.821294,
+      "rs_6m": 0.734056,
       "high_52w": 493.319509,
       "low_52w": 288.97558,
-      "dist_52w_high": -0.322204,
-      "dist_52w_low": 0.157087,
+      "dist_52w_high": -0.315251,
+      "dist_52w_low": 0.168957,
       "above_sma50": false,
       "above_sma200": false,
       "stage2": false,
@@ -1190,7 +1260,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-12-09",
-      "earnings_in_days": 36,
+      "earnings_in_days": 35,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -1199,9 +1269,9 @@
       "entry": null,
       "stop": null,
       "pivot": 380.839996,
-      "c_score": 0,
+      "c_score": 1,
       "c_detail": {
-        "score": 0,
+        "score": 1,
         "items": [
           {
             "id": "rs_high",
@@ -1218,8 +1288,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 38.7，近 10 日最低 34.9，没有形成拐头"
+            "pass": true,
+            "text": "指数平滑异同 柱先连跌 3 根，最新一根转强"
           }
         ]
       },
@@ -1227,12 +1297,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 344.923013,
-        "ema21": 350.969848,
-        "sma50": 361.726138,
-        "sma200": 366.951062,
+        "ema10": 343.627919,
+        "ema21": 349.772589,
+        "sma50": 360.175664,
+        "sma200": 366.932373,
         "avwap_earn": null,
-        "chandelier": 345.401339
+        "chandelier": 346.063144
       },
       "flags": [
         "sector_lag",
@@ -1269,10 +1339,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "AVGO：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 334.37，在 200 日均线之下，相对强度排名 6",
+        "line": "AVGO：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 337.80，在 200 日均线之下，相对强度排名 6",
         "code": null,
         "name": "",
-        "c_tag": "C1:0",
+        "c_tag": "C1:1",
         "checks": [],
         "confirmation": [
           {
@@ -1290,8 +1360,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 38.7，近 10 日最低 34.9，没有形成拐头"
+            "pass": true,
+            "text": "指数平滑异同 柱先连跌 3 根，最新一根转强"
           }
         ],
         "plan": null,
@@ -1302,38 +1372,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "JPM",
       "theme": "fin",
       "theme_name": "金融",
-      "price": 335.26,
-      "change_1d": 0.005187,
-      "change_5d": 0.011556,
-      "change_1m": -0.042914,
-      "sma20": 333.741033,
-      "sma50": 345.790293,
-      "sma200": 319.631118,
-      "ema10": 334.737258,
-      "ema21": 336.418312,
-      "dist_sma20": 0.004551,
-      "dist_ema10": 0.001562,
-      "dist_ema21": -0.003443,
-      "dist_sma50": -0.030453,
-      "dist_sma200": 0.048897,
-      "rsi14": 46.546942,
-      "atr14": 6.658446,
-      "atr_pct": 0.019861,
-      "rvol": 0.817466,
-      "vol_ratio_20": 0.739564,
-      "dollar_avg50": 2467273978.700047,
-      "rs_rank": 22,
-      "rs_raw": 0.022782,
-      "rs_3m": 0.938057,
-      "rs_6m": 0.984972,
+      "price": 335.19,
+      "change_1d": -0.000209,
+      "change_5d": -0.000268,
+      "change_1m": -0.009229,
+      "sma20": 333.707812,
+      "sma50": 345.289238,
+      "sma200": 319.668425,
+      "ema10": 334.819576,
+      "ema21": 336.306648,
+      "dist_sma20": 0.004442,
+      "dist_ema10": 0.001106,
+      "dist_ema21": -0.00332,
+      "dist_sma50": -0.029249,
+      "dist_sma200": 0.048555,
+      "rsi14": 46.453982,
+      "atr14": 6.501771,
+      "atr_pct": 0.019397,
+      "rvol": 0.800786,
+      "vol_ratio_20": 0.732128,
+      "dollar_avg50": 2474938029.422004,
+      "rs_rank": 11,
+      "rs_raw": 0.018687,
+      "rs_3m": 0.916988,
+      "rs_6m": 0.989477,
       "high_52w": 364.68062,
-      "low_52w": 275.061373,
-      "dist_52w_high": -0.080675,
-      "dist_52w_low": 0.218855,
+      "low_52w": 275.061313,
+      "dist_52w_high": -0.080867,
+      "dist_52w_low": 0.218601,
       "above_sma50": false,
       "above_sma200": true,
       "stage2": false,
@@ -1344,7 +1414,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2027-01-14",
-      "earnings_in_days": 62,
+      "earnings_in_days": 61,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -1373,7 +1443,7 @@
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
             "pass": false,
-            "text": "RSI 46.5，近 10 日最低 33.8，没有形成拐头"
+            "text": "RSI 46.5，近 10 日最低 37.2，没有形成拐头"
           }
         ]
       },
@@ -1381,12 +1451,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 334.737258,
-        "ema21": 336.418312,
-        "sma50": 345.790293,
-        "sma200": 319.631118,
+        "ema10": 334.819576,
+        "ema21": 336.306648,
+        "sma50": 345.289238,
+        "sma200": 319.668425,
         "avwap_earn": null,
-        "chandelier": 333.063435
+        "chandelier": 330.960906
       },
       "flags": [
         "sector_lag"
@@ -1398,9 +1468,9 @@
           "ok": false,
           "technical": false,
           "pending_rs": 80,
-          "reason": "不符合第二阶段模板；行业相对 SPY 不在 50 日均线之上；RVOL 0.82，需要 ≥ 1.5；RS 排名 22，需要 ≥ 80",
-          "entry": 335.26,
-          "stop": 323.405396,
+          "reason": "不符合第二阶段模板；行业相对 SPY 不在 50 日均线之上；RVOL 0.80，需要 ≥ 1.5；RS 排名 11，需要 ≥ 80",
+          "entry": 335.19,
+          "stop": 323.444564,
           "pivot": 333.790009,
           "base_low": 325.070007,
           "pattern": "vcp",
@@ -1409,17 +1479,17 @@
             {
               "label": "突破",
               "pass": true,
-              "text": "收盘 335.26 高于波动收缩枢轴 333.79"
+              "text": "收盘 335.19 高于波动收缩枢轴 333.79"
             },
             {
               "label": "量比",
               "pass": false,
-              "text": "量比 0.82，需要 ≥ 1.5"
+              "text": "量比 0.80，需要 ≥ 1.5"
             },
             {
               "label": "阶段",
               "pass": false,
-              "text": "不符合第二阶段模板；行业相对 SPY 不在 50 日均线之上；RVOL 0.82，需要 ≥ 1.5"
+              "text": "不符合第二阶段模板；行业相对 SPY 不在 50 日均线之上；RVOL 0.80，需要 ≥ 1.5"
             }
           ]
         }
@@ -1453,7 +1523,7 @@
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "JPM：没有新的离场条件。收盘 335.26，吊灯移动止损 333.06",
+        "line": "JPM：没有新的离场条件。收盘 335.19，吊灯移动止损 330.96",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -1466,7 +1536,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 333.06 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 330.96 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -1479,38 +1549,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "UNH",
       "theme": "health",
       "theme_name": "医疗",
-      "price": 419.26,
-      "change_1d": 0.030427,
-      "change_5d": 0.109858,
-      "change_1m": 0.110446,
-      "sma20": 382.3555,
-      "sma50": 386.392106,
-      "sma200": 356.484267,
-      "ema10": 396.220723,
-      "ema21": 388.680119,
-      "dist_sma20": 0.096519,
-      "dist_ema10": 0.058148,
-      "dist_ema21": 0.078676,
-      "dist_sma50": 0.085064,
-      "dist_sma200": 0.176097,
-      "rsi14": 71.309606,
-      "atr14": 12.145431,
-      "atr_pct": 0.028969,
-      "rvol": 1.296242,
-      "vol_ratio_20": 1.131895,
-      "dollar_avg50": 2029174526.058226,
-      "rs_rank": 42,
-      "rs_raw": 0.039102,
-      "rs_3m": 0.948172,
-      "rs_6m": 1.116882,
+      "price": 417.0,
+      "change_1d": -0.00539,
+      "change_5d": 0.054042,
+      "change_1m": 0.118112,
+      "sma20": 384.641,
+      "sma50": 386.737534,
+      "sma200": 356.892323,
+      "ema10": 399.998775,
+      "ema21": 391.254654,
+      "dist_sma20": 0.084128,
+      "dist_ema10": 0.042503,
+      "dist_ema21": 0.065802,
+      "dist_sma50": 0.078251,
+      "dist_sma200": 0.16842,
+      "rsi14": 69.197135,
+      "atr14": 11.763614,
+      "atr_pct": 0.02821,
+      "rvol": 0.755077,
+      "vol_ratio_20": 0.660142,
+      "dollar_avg50": 2035187662.543687,
+      "rs_rank": 37,
+      "rs_raw": 0.034225,
+      "rs_3m": 0.943501,
+      "rs_6m": 1.092533,
       "high_52w": 458.794937,
       "low_52w": 252.958732,
-      "dist_52w_high": -0.086171,
-      "dist_52w_low": 0.657424,
+      "dist_52w_high": -0.091097,
+      "dist_52w_low": 0.64849,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -1518,10 +1588,10 @@
       "flat_market": false,
       "sector_rs_ok": true,
       "liquid": true,
-      "extended": true,
+      "extended": false,
       "earnings_blk": false,
       "earnings_date": "2027-01-12",
-      "earnings_in_days": 60,
+      "earnings_in_days": 59,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -1529,10 +1599,10 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 414.119995,
-      "c_score": 1,
+      "pivot": 422.399994,
+      "c_score": 0,
       "c_detail": {
-        "score": 1,
+        "score": 0,
         "items": [
           {
             "id": "rs_high",
@@ -1549,8 +1619,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
-            "pass": true,
-            "text": "RSI 近 10 日最低 41.5，落在 40–50，且 71.3 高于前一日 66.0"
+            "pass": false,
+            "text": "RSI 69.2，近 10 日最低 41.5，没有形成拐头"
           }
         ]
       },
@@ -1558,54 +1628,19 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 396.220723,
-        "ema21": 388.680119,
-        "sma50": 386.392106,
-        "sma200": 356.484267,
+        "ema10": 399.998775,
+        "ema21": 391.254654,
+        "sma50": 386.737534,
+        "sma200": 356.892323,
         "avwap_earn": null,
-        "chandelier": 388.368401
+        "chandelier": 388.98802
       },
-      "flags": [
-        "extended"
-      ],
-      "blockers": [
-        "价格相对 21 日 EMA 或 50 日 SMA 过度延伸"
-      ],
-      "candidates": [
-        {
-          "id": "E1",
-          "ok": false,
-          "technical": false,
-          "pending_rs": 80,
-          "reason": "RVOL 1.30，需要 ≥ 1.5；RS 排名 42，需要 ≥ 80",
-          "entry": 419.26,
-          "stop": 388.896422,
-          "pivot": 414.119995,
-          "base_low": 362.600006,
-          "pattern": "flat",
-          "blurb": "突破平底枢轴 414.12",
-          "facts": [
-            {
-              "label": "突破",
-              "pass": true,
-              "text": "收盘 419.26 高于平底枢轴 414.12"
-            },
-            {
-              "label": "量比",
-              "pass": false,
-              "text": "量比 1.30，需要 ≥ 1.5"
-            },
-            {
-              "label": "阶段",
-              "pass": false,
-              "text": "RVOL 1.30，需要 ≥ 1.5"
-            }
-          ]
-        }
-      ],
+      "flags": [],
+      "blockers": [],
+      "candidates": [],
       "base": {
         "kind": "flat",
-        "pivot": 414.119995,
+        "pivot": 422.399994,
         "base_low": 362.600006,
         "length": 25
       },
@@ -1620,7 +1655,7 @@
       "x8": false,
       "x6_why": [],
       "x8_why": [],
-      "gate_open": false,
+      "gate_open": true,
       "shares_model": 0,
       "risk_usd_model": 0.0,
       "shares": 0,
@@ -1669,38 +1704,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "XOM",
       "theme": "energy",
       "theme_name": "能源",
-      "price": 177.86,
-      "change_1d": -0.002356,
-      "change_5d": 0.021714,
-      "change_1m": 0.123563,
-      "sma20": 168.070999,
-      "sma50": 164.472676,
-      "sma200": 150.974998,
-      "ema10": 173.981204,
-      "ema21": 169.949804,
-      "dist_sma20": 0.058243,
-      "dist_ema10": 0.022294,
-      "dist_ema21": 0.046544,
-      "dist_sma50": 0.081395,
-      "dist_sma200": 0.178076,
-      "rsi14": 69.910253,
-      "atr14": 3.654384,
-      "atr_pct": 0.020546,
-      "rvol": 1.007286,
-      "vol_ratio_20": 1.163035,
-      "dollar_avg50": 2177155819.636691,
+      "price": 178.09,
+      "change_1d": 0.001293,
+      "change_5d": 0.006101,
+      "change_1m": 0.122109,
+      "sma20": 168.913999,
+      "sma50": 164.859037,
+      "sma200": 151.250975,
+      "ema10": 174.728258,
+      "ema21": 170.689822,
+      "dist_sma20": 0.054324,
+      "dist_ema10": 0.01924,
+      "dist_ema21": 0.043355,
+      "dist_sma50": 0.080256,
+      "dist_sma200": 0.177447,
+      "rsi14": 70.201688,
+      "atr14": 3.61124,
+      "atr_pct": 0.020278,
+      "rvol": 0.846046,
+      "vol_ratio_20": 0.978619,
+      "dollar_avg50": 2173823440.393231,
       "rs_rank": 99,
-      "rs_raw": 0.13669,
-      "rs_3m": 1.123623,
-      "rs_6m": 1.106561,
+      "rs_raw": 0.13276,
+      "rs_3m": 1.088184,
+      "rs_6m": 1.104873,
       "high_52w": 180.259995,
-      "low_52w": 108.825928,
-      "dist_52w_high": -0.013314,
-      "dist_52w_low": 0.634353,
+      "low_52w": 108.835648,
+      "dist_52w_high": -0.012038,
+      "dist_52w_low": 0.63632,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -1711,7 +1746,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-10-30",
-      "earnings_in_days": 8,
+      "earnings_in_days": 7,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -1719,7 +1754,7 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 164.910004,
+      "pivot": 180.259995,
       "c_score": 1,
       "c_detail": {
         "score": 1,
@@ -1740,7 +1775,7 @@
             "id": "momentum",
             "label": "动量拐头（RSI 或 MACD，合计最多 1 分）",
             "pass": false,
-            "text": "RSI 69.9，近 10 日最低 54.9，没有形成拐头"
+            "text": "RSI 70.2，近 10 日最低 63.5，没有形成拐头"
           }
         ]
       },
@@ -1748,21 +1783,21 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 173.981204,
-        "ema21": 169.949804,
-        "sma50": 164.472676,
-        "sma200": 150.974998,
+        "ema10": 174.728258,
+        "ema21": 170.689822,
+        "sma50": 164.859037,
+        "sma200": 151.250975,
         "avwap_earn": null,
-        "chandelier": 169.354267
+        "chandelier": 169.434041
       },
       "flags": [],
       "blockers": [],
       "candidates": [],
       "base": {
-        "kind": "vcp",
-        "pivot": 164.910004,
-        "base_low": 159.270004,
-        "length": 7
+        "kind": "cup_handle",
+        "pivot": 180.259995,
+        "base_low": 134.081791,
+        "length": 142
       },
       "leader_pos": true,
       "leader_swing": true,
@@ -1787,7 +1822,7 @@
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "XOM：没有新的离场条件。收盘 177.86，吊灯移动止损 169.35",
+        "line": "XOM：没有新的离场条件。收盘 178.09，吊灯移动止损 169.43",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -1800,7 +1835,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 169.35 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 169.43 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -1813,38 +1848,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "JNJ",
       "theme": "health",
       "theme_name": "医疗",
-      "price": 259.36,
-      "change_1d": 0.021947,
-      "change_5d": 0.04324,
-      "change_1m": -0.037518,
-      "sma20": 260.117002,
-      "sma50": 264.811447,
-      "sma200": 242.826509,
-      "ema10": 256.761093,
-      "ema21": 259.337558,
-      "dist_sma20": -0.00291,
-      "dist_ema10": 0.010122,
-      "dist_ema21": 8.7e-05,
-      "dist_sma50": -0.020586,
-      "dist_sma200": 0.068088,
-      "rsi14": 48.962629,
-      "atr14": 6.112352,
-      "atr_pct": 0.023567,
-      "rvol": 1.117781,
-      "vol_ratio_20": 0.998543,
-      "dollar_avg50": 1802630025.649604,
-      "rs_rank": 73,
-      "rs_raw": 0.070889,
-      "rs_3m": 0.988451,
-      "rs_6m": 1.055814,
+      "price": 257.78,
+      "change_1d": -0.006092,
+      "change_5d": 0.015242,
+      "change_1m": -0.042386,
+      "sma20": 259.547501,
+      "sma50": 264.796547,
+      "sma200": 243.110029,
+      "ema10": 256.946346,
+      "ema21": 259.195961,
+      "dist_sma20": -0.00681,
+      "dist_ema10": 0.003244,
+      "dist_ema21": -0.005463,
+      "dist_sma50": -0.026498,
+      "dist_sma200": 0.060343,
+      "rsi14": 47.249332,
+      "atr14": 6.018611,
+      "atr_pct": 0.023348,
+      "rvol": 0.905438,
+      "vol_ratio_20": 0.811708,
+      "dollar_avg50": 1803925834.186429,
+      "rs_rank": 63,
+      "rs_raw": 0.065353,
+      "rs_3m": 0.951675,
+      "rs_6m": 1.054749,
       "high_52w": 281.070007,
-      "low_52w": 180.590272,
-      "dist_52w_high": -0.077241,
-      "dist_52w_low": 0.436179,
+      "low_52w": 180.590257,
+      "dist_52w_high": -0.082862,
+      "dist_52w_low": 0.42743,
       "above_sma50": false,
       "above_sma200": true,
       "stage2": false,
@@ -1884,7 +1919,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 49.0，近 10 日最低 34.5，没有形成拐头"
+            "text": "相对强弱指数 47.2，近 10 日最低 34.5，没有形成拐头"
           }
         ]
       },
@@ -1892,12 +1927,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 256.761093,
-        "ema21": 259.337558,
-        "sma50": 264.811447,
-        "sma200": 242.826509,
-        "avwap_earn": 253.648898,
-        "chandelier": 257.531511
+        "ema10": 256.946346,
+        "ema21": 259.195961,
+        "sma50": 264.796547,
+        "sma200": 243.110029,
+        "avwap_earn": 253.943389,
+        "chandelier": 257.681444
       },
       "flags": [],
       "blockers": [],
@@ -1922,7 +1957,7 @@
         "length": 25
       },
       "leader_pos": false,
-      "leader_swing": true,
+      "leader_swing": false,
       "hi_vol": false,
       "leverage": 1.0,
       "signal_source": null,
@@ -1943,7 +1978,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "JNJ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 259.36，没有站上 50 日均线，相对强度排名 73",
+        "line": "JNJ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 257.78，没有站上 50 日均线，相对强度排名 63",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -1965,7 +2000,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 49.0，近 10 日最低 34.5，没有形成拐头"
+            "text": "相对强弱指数 47.2，近 10 日最低 34.5，没有形成拐头"
           }
         ],
         "plan": null,
@@ -1976,38 +2011,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "V",
       "theme": "fin",
       "theme_name": "金融",
-      "price": 406.57,
-      "change_1d": 0.009059,
-      "change_5d": 0.026536,
-      "change_1m": 0.098986,
-      "sma20": 378.5975,
-      "sma50": 374.217803,
-      "sma200": 338.915359,
-      "ema10": 393.434257,
-      "ema21": 384.283549,
-      "dist_sma20": 0.073885,
-      "dist_ema10": 0.033387,
-      "dist_ema21": 0.057995,
-      "dist_sma50": 0.086453,
-      "dist_sma200": 0.199621,
-      "rsi14": 75.604215,
-      "atr14": 6.748872,
-      "atr_pct": 0.0166,
-      "rvol": 1.054197,
-      "vol_ratio_20": 1.152089,
-      "dollar_avg50": 2363049062.358176,
+      "price": 407.85,
+      "change_1d": 0.003148,
+      "change_5d": 0.041949,
+      "change_1m": 0.126533,
+      "sma20": 380.914001,
+      "sma50": 375.118403,
+      "sma200": 339.196169,
+      "ema10": 396.055302,
+      "ema21": 386.425955,
+      "dist_sma20": 0.070714,
+      "dist_ema10": 0.02978,
+      "dist_ema21": 0.055442,
+      "dist_sma50": 0.087257,
+      "dist_sma200": 0.202402,
+      "rsi14": 76.226053,
+      "atr14": 6.654991,
+      "atr_pct": 0.016317,
+      "rvol": 0.84762,
+      "vol_ratio_20": 0.926858,
+      "dollar_avg50": 2375006710.573758,
       "rs_rank": 78,
-      "rs_raw": 0.071161,
-      "rs_3m": 1.11732,
-      "rs_6m": 1.199599,
-      "high_52w": 408.584991,
+      "rs_raw": 0.07228,
+      "rs_3m": 1.106911,
+      "rs_6m": 1.203966,
+      "high_52w": 409.529907,
       "low_52w": 292.738169,
-      "dist_52w_high": -0.004932,
-      "dist_52w_low": 0.388852,
+      "dist_52w_high": -0.004102,
+      "dist_52w_low": 0.393225,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -2018,7 +2053,7 @@
       "extended": true,
       "earnings_blk": true,
       "earnings_date": "2026-10-27",
-      "earnings_in_days": 5,
+      "earnings_in_days": 4,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2026,16 +2061,16 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 404.73999,
-      "c_score": 1,
+      "pivot": 408.589996,
+      "c_score": 0,
       "c_detail": {
-        "score": 1,
+        "score": 0,
         "items": [
           {
             "id": "rs_high",
             "label": "相对强度线处在近一年高点",
-            "pass": true,
-            "text": "处在近一年高点"
+            "pass": false,
+            "text": "没有处在近一年高点"
           },
           {
             "id": "udvol",
@@ -2047,7 +2082,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 75.6，近 10 日最低 55.7，没有形成拐头"
+            "text": "相对强弱指数 76.2，近 10 日最低 58.9，没有形成拐头"
           }
         ]
       },
@@ -2055,12 +2090,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 393.434257,
-        "ema21": 384.283549,
-        "sma50": 374.217803,
-        "sma200": 338.915359,
+        "ema10": 396.055302,
+        "ema21": 386.425955,
+        "sma50": 375.118403,
+        "sma200": 339.196169,
         "avwap_earn": null,
-        "chandelier": 388.60878
+        "chandelier": 389.720613
       },
       "flags": [
         "extended",
@@ -2071,41 +2106,10 @@
         "价格相对 21 日 EMA 或 50 日 SMA 过度延伸",
         "财报前 5 个交易日内"
       ],
-      "candidates": [
-        {
-          "id": "E1",
-          "ok": false,
-          "technical": false,
-          "pending_rs": 80,
-          "reason": "行业相对 SPY 不在 50 日均线之上；RVOL 1.05，需要 ≥ 1.5；RS 排名 78，需要 ≥ 80",
-          "entry": 406.57,
-          "stop": 389.697821,
-          "pivot": 404.73999,
-          "base_low": 356.75,
-          "pattern": "flat",
-          "blurb": "突破平底枢轴 404.74",
-          "facts": [
-            {
-              "label": "突破",
-              "pass": true,
-              "text": "收盘 406.57 高于平底枢轴 404.74"
-            },
-            {
-              "label": "量比",
-              "pass": false,
-              "text": "量比 1.05，需要 ≥ 1.5"
-            },
-            {
-              "label": "阶段",
-              "pass": false,
-              "text": "行业相对 SPY 不在 50 日均线之上；RVOL 1.05，需要 ≥ 1.5"
-            }
-          ]
-        }
-      ],
+      "candidates": [],
       "base": {
         "kind": "flat",
-        "pivot": 404.73999,
+        "pivot": 408.589996,
         "base_low": 356.75,
         "length": 25
       },
@@ -2131,17 +2135,17 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "V：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 406.57，在 50 日均线之上，相对强度排名 78",
+        "line": "V：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 407.85，在 50 日均线之上，相对强度排名 78",
         "code": null,
         "name": "",
-        "c_tag": "C1:1",
+        "c_tag": "C1:0",
         "checks": [],
         "confirmation": [
           {
             "id": "rs_high",
             "label": "相对强度线处在近一年高点",
-            "pass": true,
-            "text": "处在近一年高点"
+            "pass": false,
+            "text": "没有处在近一年高点"
           },
           {
             "id": "udvol",
@@ -2153,7 +2157,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 75.6，近 10 日最低 55.7，没有形成拐头"
+            "text": "相对强弱指数 76.2，近 10 日最低 58.9，没有形成拐头"
           }
         ],
         "plan": null,
@@ -2164,38 +2168,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "MA",
       "theme": "fin",
       "theme_name": "金融",
-      "price": 620.42,
-      "change_1d": 0.006522,
-      "change_5d": 0.025827,
-      "change_1m": 0.094619,
-      "sma20": 580.390748,
-      "sma50": 577.100777,
-      "sma200": 531.886477,
-      "ema10": 602.571359,
-      "ema21": 589.11192,
-      "dist_sma20": 0.068969,
-      "dist_ema10": 0.029621,
-      "dist_ema21": 0.053145,
-      "dist_sma50": 0.075064,
-      "dist_sma200": 0.166452,
-      "rsi14": 75.657411,
-      "atr14": 10.004595,
-      "atr_pct": 0.016126,
-      "rvol": 1.026098,
-      "vol_ratio_20": 0.971907,
-      "dollar_avg50": 1633030490.35678,
+      "price": 622.62,
+      "change_1d": 0.003546,
+      "change_5d": 0.032127,
+      "change_1m": 0.12174,
+      "sma20": 583.568125,
+      "sma50": 578.341373,
+      "sma200": 532.174887,
+      "ema10": 606.216564,
+      "ema21": 592.158108,
+      "dist_sma20": 0.066919,
+      "dist_ema10": 0.027059,
+      "dist_ema21": 0.051442,
+      "dist_sma50": 0.076561,
+      "dist_sma200": 0.169954,
+      "rsi14": 76.413597,
+      "atr14": 9.808544,
+      "atr_pct": 0.015754,
+      "rvol": 0.971736,
+      "vol_ratio_20": 0.923382,
+      "dollar_avg50": 1640865126.023823,
       "rs_rank": 58,
-      "rs_raw": 0.058148,
-      "rs_3m": 1.132337,
-      "rs_6m": 1.10873,
-      "high_52w": 624.289978,
+      "rs_raw": 0.058911,
+      "rs_3m": 1.120012,
+      "rs_6m": 1.120664,
+      "high_52w": 624.659912,
       "low_52w": 463.040638,
-      "dist_52w_high": -0.006199,
-      "dist_52w_low": 0.339882,
+      "dist_52w_high": -0.003266,
+      "dist_52w_low": 0.344634,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -2206,7 +2210,7 @@
       "extended": true,
       "earnings_blk": false,
       "earnings_date": "2026-10-29",
-      "earnings_in_days": 7,
+      "earnings_in_days": 6,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2214,7 +2218,7 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 622.48999,
+      "pivot": 624.289978,
       "c_score": 0,
       "c_detail": {
         "score": 0,
@@ -2229,13 +2233,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "1.03，门槛 1.2"
+            "text": "1.04，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 75.7，近 10 日最低 53.5，没有形成拐头"
+            "text": "相对强弱指数 76.4，近 10 日最低 56.8，没有形成拐头"
           }
         ]
       },
@@ -2243,12 +2247,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 602.571359,
-        "ema21": 589.11192,
-        "sma50": 577.100777,
-        "sma200": 531.886477,
+        "ema10": 606.216564,
+        "ema21": 592.158108,
+        "sma50": 578.341373,
+        "sma200": 532.174887,
         "avwap_earn": null,
-        "chandelier": 594.272655
+        "chandelier": 595.017028
       },
       "flags": [
         "extended",
@@ -2260,7 +2264,7 @@
       "candidates": [],
       "base": {
         "kind": "flat",
-        "pivot": 622.48999,
+        "pivot": 624.289978,
         "base_low": 544.584404,
         "length": 25
       },
@@ -2286,7 +2290,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "MA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 620.42，在 50 日均线之上，相对强度排名 58",
+        "line": "MA：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 622.62，在 50 日均线之上，相对强度排名 58",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -2302,13 +2306,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": false,
-            "text": "1.03，门槛 1.2"
+            "text": "1.04，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 75.7，近 10 日最低 53.5，没有形成拐头"
+            "text": "相对强弱指数 76.4，近 10 日最低 56.8，没有形成拐头"
           }
         ],
         "plan": null,
@@ -2319,38 +2323,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "COST",
       "theme": "consumer",
       "theme_name": "消费",
-      "price": 994.61,
-      "change_1d": -0.000924,
-      "change_5d": 0.04188,
-      "change_1m": 0.106992,
-      "sma20": 943.350504,
-      "sma50": 935.582997,
-      "sma200": 965.719465,
-      "ema10": 971.285077,
-      "ema21": 952.534044,
-      "dist_sma20": 0.054338,
-      "dist_ema10": 0.024014,
-      "dist_ema21": 0.044173,
-      "dist_sma50": 0.063091,
-      "dist_sma200": 0.029916,
-      "rsi14": 73.384117,
-      "atr14": 15.901434,
-      "atr_pct": 0.015988,
-      "rvol": 1.032542,
-      "vol_ratio_20": 0.94377,
-      "dollar_avg50": 1954641817.530763,
-      "rs_rank": 27,
-      "rs_raw": 0.029531,
-      "rs_3m": 1.041466,
-      "rs_6m": 0.903503,
+      "price": 998.31,
+      "change_1d": 0.00372,
+      "change_5d": 0.016609,
+      "change_1m": 0.109961,
+      "sma20": 948.031003,
+      "sma50": 936.662797,
+      "sma200": 966.351555,
+      "ema10": 976.198697,
+      "ema21": 956.695493,
+      "dist_sma20": 0.053035,
+      "dist_ema10": 0.02265,
+      "dist_ema21": 0.043498,
+      "dist_sma50": 0.065816,
+      "dist_sma200": 0.033071,
+      "rsi14": 74.329037,
+      "atr14": 15.607048,
+      "atr_pct": 0.015633,
+      "rvol": 0.718233,
+      "vol_ratio_20": 0.665911,
+      "dollar_avg50": 1950636973.644345,
+      "rs_rank": 32,
+      "rs_raw": 0.031495,
+      "rs_3m": 1.028422,
+      "rs_6m": 0.913176,
       "high_52w": 1094.759479,
       "low_52w": 840.351054,
-      "dist_52w_high": -0.091481,
-      "dist_52w_low": 0.183565,
+      "dist_52w_high": -0.088101,
+      "dist_52w_low": 0.187968,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": false,
@@ -2361,7 +2365,7 @@
       "extended": true,
       "earnings_blk": false,
       "earnings_date": "2026-12-10",
-      "earnings_in_days": 37,
+      "earnings_in_days": 36,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2390,7 +2394,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 73.4，近 10 日最低 60.9，没有形成拐头"
+            "text": "相对强弱指数 74.3，近 10 日最低 62.4，没有形成拐头"
           }
         ]
       },
@@ -2398,12 +2402,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 971.285077,
-        "ema21": 952.534044,
-        "sma50": 935.582997,
-        "sma200": 965.719465,
+        "ema10": 976.198697,
+        "ema21": 956.695493,
+        "sma50": 936.662797,
+        "sma200": 966.351555,
         "avwap_earn": null,
-        "chandelier": 960.291879
+        "chandelier": 960.87088
       },
       "flags": [
         "extended"
@@ -2440,7 +2444,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "COST：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 994.61，在 50 日均线之上，相对强度排名 27",
+        "line": "COST：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 998.31，在 50 日均线之上，相对强度排名 32",
         "code": null,
         "name": "",
         "c_tag": "C1:1",
@@ -2462,7 +2466,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 73.4，近 10 日最低 60.9，没有形成拐头"
+            "text": "相对强弱指数 74.3，近 10 日最低 62.4，没有形成拐头"
           }
         ],
         "plan": null,
@@ -2473,38 +2477,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "LLY",
       "theme": "health",
       "theme_name": "医疗",
-      "price": 1283.66,
-      "change_1d": 0.034926,
-      "change_5d": 0.100428,
-      "change_1m": 0.101958,
-      "sma20": 1188.211992,
-      "sma50": 1182.368503,
-      "sma200": 1079.587743,
-      "ema10": 1222.710731,
-      "ema21": 1198.483535,
-      "dist_sma20": 0.080329,
-      "dist_ema10": 0.049848,
-      "dist_ema21": 0.07107,
-      "dist_sma50": 0.085668,
-      "dist_sma200": 0.189028,
-      "rsi14": 69.784802,
-      "atr14": 37.334769,
-      "atr_pct": 0.029085,
-      "rvol": 1.252294,
-      "vol_ratio_20": 1.286722,
-      "dollar_avg50": 2801732192.518811,
+      "price": 1270.75,
+      "change_1d": -0.010057,
+      "change_5d": 0.051301,
+      "change_1m": 0.085981,
+      "sma20": 1194.199994,
+      "sma50": 1183.517876,
+      "sma200": 1080.75898,
+      "ema10": 1231.445149,
+      "ema21": 1205.053217,
+      "dist_sma20": 0.064101,
+      "dist_ema10": 0.031918,
+      "dist_ema21": 0.054518,
+      "dist_sma50": 0.073706,
+      "dist_sma200": 0.175794,
+      "rsi14": 66.082698,
+      "atr14": 36.237292,
+      "atr_pct": 0.028516,
+      "rvol": 0.794714,
+      "vol_ratio_20": 0.819818,
+      "dollar_avg50": 2798278136.870313,
       "rs_rank": 94,
-      "rs_raw": 0.133672,
-      "rs_3m": 1.071558,
-      "rs_6m": 1.298956,
+      "rs_raw": 0.125271,
+      "rs_3m": 1.022116,
+      "rs_6m": 1.266241,
       "high_52w": 1311.75,
-      "low_52w": 788.844786,
-      "dist_52w_high": -0.021414,
-      "dist_52w_low": 0.627266,
+      "low_52w": 788.844846,
+      "dist_52w_high": -0.031256,
+      "dist_52w_low": 0.6109,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": true,
@@ -2515,7 +2519,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-10-29",
-      "earnings_in_days": 7,
+      "earnings_in_days": 6,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2523,16 +2527,16 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 1275.880005,
-      "c_score": 3,
+      "pivot": 1311.75,
+      "c_score": 1,
       "c_detail": {
-        "score": 3,
+        "score": 1,
         "items": [
           {
             "id": "rs_high",
             "label": "相对强度线处在近一年高点",
-            "pass": true,
-            "text": "处在近一年高点"
+            "pass": false,
+            "text": "没有处在近一年高点"
           },
           {
             "id": "udvol",
@@ -2543,21 +2547,21 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": true,
-            "text": "相对强弱指数 近 10 日最低 50.0，落在 40–50，且 69.8 高于前一日 63.4"
+            "pass": false,
+            "text": "相对强弱指数 66.1，近 10 日最低 50.0，没有形成拐头"
           }
         ]
       },
-      "size_mult": 1.0,
+      "size_mult": 0.5,
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 1222.710731,
-        "ema21": 1198.483535,
-        "sma50": 1182.368503,
-        "sma200": 1079.587743,
+        "ema10": 1231.445149,
+        "ema21": 1205.053217,
+        "sma50": 1183.517876,
+        "sma200": 1080.75898,
         "avwap_earn": null,
-        "chandelier": 1202.9322
+        "chandelier": 1204.882542
       },
       "flags": [
         "flat_market"
@@ -2565,41 +2569,10 @@
       "blockers": [
         "50 日均线走平且价格反复穿越，均线类信号暂停"
       ],
-      "candidates": [
-        {
-          "id": "E1",
-          "ok": false,
-          "technical": false,
-          "pending_rs": 80,
-          "reason": "RVOL 1.25，需要 ≥ 1.5",
-          "entry": 1283.66,
-          "stop": 1190.323079,
-          "pivot": 1275.880005,
-          "base_low": 1131.209961,
-          "pattern": "flat",
-          "blurb": "突破平底枢轴 1275.88",
-          "facts": [
-            {
-              "label": "突破",
-              "pass": true,
-              "text": "收盘 1283.66 高于平底枢轴 1275.88"
-            },
-            {
-              "label": "量比",
-              "pass": false,
-              "text": "量比 1.25，需要 ≥ 1.5"
-            },
-            {
-              "label": "阶段",
-              "pass": false,
-              "text": "RVOL 1.25，需要 ≥ 1.5"
-            }
-          ]
-        }
-      ],
+      "candidates": [],
       "base": {
         "kind": "flat",
-        "pivot": 1275.880005,
+        "pivot": 1311.75,
         "base_low": 1131.209961,
         "length": 25
       },
@@ -2625,17 +2598,17 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "LLY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 1283.66，在 50 日均线之上，相对强度排名 94",
+        "line": "LLY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 1270.75，在 50 日均线之上，相对强度排名 94",
         "code": null,
         "name": "",
-        "c_tag": "C1:3",
+        "c_tag": "C1:1",
         "checks": [],
         "confirmation": [
           {
             "id": "rs_high",
             "label": "相对强度线处在近一年高点",
-            "pass": true,
-            "text": "处在近一年高点"
+            "pass": false,
+            "text": "没有处在近一年高点"
           },
           {
             "id": "udvol",
@@ -2646,8 +2619,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": true,
-            "text": "相对强弱指数 近 10 日最低 50.0，落在 40–50，且 69.8 高于前一日 63.4"
+            "pass": false,
+            "text": "相对强弱指数 66.1，近 10 日最低 50.0，没有形成拐头"
           }
         ],
         "plan": null,
@@ -2658,38 +2631,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "HD",
       "theme": "consumer",
       "theme_name": "消费",
-      "price": 315.11,
-      "change_1d": 0.016877,
-      "change_5d": 0.072094,
-      "change_1m": 0.060262,
-      "sma20": 293.628001,
-      "sma50": 310.714166,
-      "sma200": 331.96553,
-      "ema10": 302.368479,
-      "ema21": 300.022458,
-      "dist_sma20": 0.073161,
-      "dist_ema10": 0.042139,
-      "dist_ema21": 0.050288,
-      "dist_sma50": 0.014148,
-      "dist_sma200": -0.050775,
-      "rsi14": 64.430856,
-      "atr14": 6.816757,
-      "atr_pct": 0.021633,
-      "rvol": 0.856468,
-      "vol_ratio_20": 0.71995,
-      "dollar_avg50": 1439417810.23061,
+      "price": 314.14,
+      "change_1d": -0.003078,
+      "change_5d": 0.063044,
+      "change_1m": 0.028787,
+      "sma20": 294.499,
+      "sma50": 309.959228,
+      "sma200": 331.852337,
+      "ema10": 304.508753,
+      "ema21": 301.305869,
+      "dist_sma20": 0.066693,
+      "dist_ema10": 0.031629,
+      "dist_ema21": 0.042595,
+      "dist_sma50": 0.013488,
+      "dist_sma200": -0.053374,
+      "rsi14": 63.161994,
+      "atr14": 6.709489,
+      "atr_pct": 0.021358,
+      "rvol": 0.618243,
+      "vol_ratio_20": 0.52894,
+      "dollar_avg50": 1439730632.569385,
       "rs_rank": 1,
-      "rs_raw": -0.045457,
-      "rs_3m": 0.928453,
-      "rs_6m": 0.847055,
+      "rs_raw": -0.040645,
+      "rs_3m": 0.928264,
+      "rs_6m": 0.859589,
       "high_52w": 389.180678,
       "low_52w": 277.149994,
-      "dist_52w_high": -0.190325,
-      "dist_52w_low": 0.136966,
+      "dist_52w_high": -0.192817,
+      "dist_52w_low": 0.133466,
       "above_sma50": true,
       "above_sma200": false,
       "stage2": false,
@@ -2700,7 +2673,7 @@
       "extended": false,
       "earnings_blk": false,
       "earnings_date": "2026-11-17",
-      "earnings_in_days": 20,
+      "earnings_in_days": 19,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2708,7 +2681,7 @@
       "primary_id": null,
       "entry": null,
       "stop": null,
-      "pivot": 314.660004,
+      "pivot": 317.709991,
       "c_score": 0,
       "c_detail": {
         "score": 0,
@@ -2729,7 +2702,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 64.4，近 10 日最低 33.4，没有形成拐头"
+            "text": "相对强弱指数 63.2，近 10 日最低 41.6，没有形成拐头"
           }
         ]
       },
@@ -2737,52 +2710,21 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 302.368479,
-        "ema21": 300.022458,
-        "sma50": 310.714166,
-        "sma200": 331.96553,
+        "ema10": 304.508753,
+        "ema21": 301.305869,
+        "sma50": 309.959228,
+        "sma200": 331.852337,
         "avwap_earn": null,
-        "chandelier": 296.935165
+        "chandelier": 297.154702
       },
       "flags": [
         "weekly_below"
       ],
       "blockers": [],
-      "candidates": [
-        {
-          "id": "E1",
-          "ok": false,
-          "technical": false,
-          "pending_rs": 80,
-          "reason": "不符合第二阶段模板；周线不在上升的 30 周均线之上；RVOL 0.86，需要 ≥ 1.5；RS 排名 1，需要 ≥ 80",
-          "entry": 315.11,
-          "stop": 298.068107,
-          "pivot": 314.660004,
-          "base_low": 277.149994,
-          "pattern": "flat",
-          "blurb": "突破平底枢轴 314.66",
-          "facts": [
-            {
-              "label": "突破",
-              "pass": true,
-              "text": "收盘 315.11 高于平底枢轴 314.66"
-            },
-            {
-              "label": "量比",
-              "pass": false,
-              "text": "量比 0.86，需要 ≥ 1.5"
-            },
-            {
-              "label": "阶段",
-              "pass": false,
-              "text": "不符合第二阶段模板；周线不在上升的 30 周均线之上；RVOL 0.86，需要 ≥ 1.5"
-            }
-          ]
-        }
-      ],
+      "candidates": [],
       "base": {
         "kind": "flat",
-        "pivot": 314.660004,
+        "pivot": 317.709991,
         "base_low": 277.149994,
         "length": 25
       },
@@ -2808,7 +2750,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "HD：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 315.11，在 200 日均线之下，相对强度排名 1",
+        "line": "HD：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 314.14，在 200 日均线之下，相对强度排名 1",
         "code": null,
         "name": "",
         "c_tag": "C1:0",
@@ -2830,7 +2772,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 64.4，近 10 日最低 33.4，没有形成拐头"
+            "text": "相对强弱指数 63.2，近 10 日最低 41.6，没有形成拐头"
           }
         ],
         "plan": null,
@@ -2841,49 +2783,49 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "PG",
       "theme": "consumer",
       "theme_name": "消费",
-      "price": 159.32,
-      "change_1d": 0.010337,
-      "change_5d": 0.041035,
-      "change_1m": 0.090635,
-      "sma20": 150.5495,
-      "sma50": 147.3692,
-      "sma200": 146.939502,
-      "ema10": 155.125948,
-      "ema21": 151.974649,
-      "dist_sma20": 0.058257,
-      "dist_ema10": 0.027036,
-      "dist_ema21": 0.048333,
-      "dist_sma50": 0.081094,
-      "dist_sma200": 0.084256,
-      "rsi14": 71.571865,
-      "atr14": 2.518838,
-      "atr_pct": 0.01581,
-      "rvol": 1.090066,
-      "vol_ratio_20": 1.084538,
-      "dollar_avg50": 1310835583.245857,
-      "rs_rank": 32,
-      "rs_raw": 0.032223,
-      "rs_3m": 1.043428,
-      "rs_6m": 1.035059,
+      "price": 156.84,
+      "change_1d": -0.015566,
+      "change_5d": 0.00198,
+      "change_1m": 0.058157,
+      "sma20": 151.022,
+      "sma50": 147.6018,
+      "sma200": 147.037134,
+      "ema10": 155.437595,
+      "ema21": 152.416954,
+      "dist_sma20": 0.038524,
+      "dist_ema10": 0.009022,
+      "dist_ema21": 0.029019,
+      "dist_sma50": 0.062589,
+      "dist_sma200": 0.066669,
+      "rsi14": 63.428927,
+      "atr14": 2.518921,
+      "atr_pct": 0.01606,
+      "rvol": 1.113105,
+      "vol_ratio_20": 1.091704,
+      "dollar_avg50": 1319146587.986205,
+      "rs_rank": 22,
+      "rs_raw": 0.027939,
+      "rs_3m": 1.024031,
+      "rs_6m": 1.020089,
       "high_52w": 164.769995,
       "low_52w": 134.623525,
-      "dist_52w_high": -0.033076,
-      "dist_52w_low": 0.183448,
+      "dist_52w_high": -0.048128,
+      "dist_52w_low": 0.165027,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": false,
       "weekly_ok": true,
-      "flat_market": true,
+      "flat_market": false,
       "sector_rs_ok": true,
       "liquid": true,
-      "extended": true,
+      "extended": false,
       "earnings_blk": true,
       "earnings_date": "2026-10-22",
-      "earnings_in_days": 2,
+      "earnings_in_days": 1,
       "earnings_confirmed": false,
       "earnings_note": null,
       "earnings_source": "yfinance",
@@ -2906,13 +2848,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "2.68，门槛 1.2"
+            "text": "2.29，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 71.6，近 10 日最低 54.4，没有形成拐头"
+            "text": "相对强弱指数 63.4，近 10 日最低 60.8，没有形成拐头"
           }
         ]
       },
@@ -2920,23 +2862,19 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 155.125948,
-        "ema21": 151.974649,
-        "sma50": 147.3692,
-        "sma200": 146.939502,
+        "ema10": 155.437595,
+        "ema21": 152.416954,
+        "sma50": 147.6018,
+        "sma200": 147.037134,
         "avwap_earn": null,
-        "chandelier": 152.381517
+        "chandelier": 152.383265
       },
       "flags": [
-        "extended",
         "earnings_blk",
-        "flat_market",
         "golden_cross_bg"
       ],
       "blockers": [
-        "价格相对 21 日 EMA 或 50 日 SMA 过度延伸",
-        "财报前 5 个交易日内",
-        "50 日均线走平且价格反复穿越，均线类信号暂停"
+        "财报前 5 个交易日内"
       ],
       "candidates": [],
       "base": {
@@ -2967,7 +2905,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "PG：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 159.32，在 50 日均线之上，相对强度排名 32",
+        "line": "PG：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 156.84，在 50 日均线之上，相对强度排名 22",
         "code": null,
         "name": "",
         "c_tag": "C1:1",
@@ -2983,13 +2921,13 @@
             "id": "udvol",
             "label": "放量上涨量 / 放量下跌量",
             "pass": true,
-            "text": "2.68，门槛 1.2"
+            "text": "2.29，门槛 1.2"
           },
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": false,
-            "text": "相对强弱指数 71.6，近 10 日最低 54.4，没有形成拐头"
+            "text": "相对强弱指数 63.4，近 10 日最低 60.8，没有形成拐头"
           }
         ],
         "plan": null,
@@ -3000,38 +2938,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "SPY",
       "theme": "broad",
       "theme_name": "宽基",
-      "price": 769.05,
-      "change_1d": 0.003353,
-      "change_5d": -0.011517,
-      "change_1m": -0.005753,
-      "sma20": 770.616495,
-      "sma50": 767.261424,
-      "sma200": 722.782567,
-      "ema10": 770.29826,
-      "ema21": 769.783097,
-      "dist_sma20": -0.002033,
-      "dist_ema10": -0.00162,
-      "dist_ema21": -0.000952,
-      "dist_sma50": 0.002331,
-      "dist_sma200": 0.064013,
-      "rsi14": 50.028054,
-      "atr14": 7.081086,
-      "atr_pct": 0.009208,
-      "rvol": 0.849808,
-      "vol_ratio_20": 0.834082,
-      "dollar_avg50": 31123231082.24385,
-      "rs_rank": 37,
-      "rs_raw": 0.038421,
+      "price": 773.09,
+      "change_1d": 0.005253,
+      "change_5d": 0.004535,
+      "change_1m": -0.000375,
+      "sma20": 770.880495,
+      "sma50": 767.350197,
+      "sma200": 723.236064,
+      "ema10": 770.805847,
+      "ema21": 770.083723,
+      "dist_sma20": 0.002866,
+      "dist_ema10": 0.002963,
+      "dist_ema21": 0.003904,
+      "dist_sma50": 0.00748,
+      "dist_sma200": 0.068932,
+      "rsi14": 53.805641,
+      "atr14": 7.007662,
+      "atr_pct": 0.009064,
+      "rvol": 0.780618,
+      "vol_ratio_20": 0.786075,
+      "dollar_avg50": 31055743725.2863,
+      "rs_rank": 42,
+      "rs_raw": 0.040978,
       "rs_3m": 1.0,
       "rs_6m": 1.0,
       "high_52w": 781.619995,
       "low_52w": 626.108285,
-      "dist_52w_high": -0.016082,
-      "dist_52w_low": 0.228302,
+      "dist_52w_high": -0.010913,
+      "dist_52w_low": 0.234754,
       "above_sma50": true,
       "above_sma200": true,
       "stage2": false,
@@ -3071,7 +3009,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 44.2，落在 40–50，且 50.0 高于前一日 47.5"
+            "text": "相对强弱指数 近 10 日最低 44.2，落在 40–50，且 53.8 高于前一日 50.0"
           }
         ]
       },
@@ -3079,12 +3017,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 770.29826,
-        "ema21": 769.783097,
-        "sma50": 767.261424,
-        "sma200": 722.782567,
+        "ema10": 770.805847,
+        "ema21": 770.083723,
+        "sma50": 767.350197,
+        "sma200": 723.236064,
         "avwap_earn": null,
-        "chandelier": 760.646978
+        "chandelier": 760.774779
       },
       "flags": [],
       "blockers": [],
@@ -3106,7 +3044,7 @@
       "x8": true,
       "x6_why": [],
       "x8_why": [
-        "相对强度处在近 63 日低点，20 日涨跌 -0.6%"
+        "相对强度处在近 63 日低点，20 日涨跌 0.7%"
       ],
       "gate_open": true,
       "shares_model": 0,
@@ -3119,7 +3057,7 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "SPY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 769.05，在 50 日均线之上，相对强度排名 37",
+        "line": "SPY：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 773.09，在 50 日均线之上，相对强度排名 42",
         "code": null,
         "name": "",
         "c_tag": "C1:2",
@@ -3141,7 +3079,7 @@
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
             "pass": true,
-            "text": "相对强弱指数 近 10 日最低 44.2，落在 40–50，且 50.0 高于前一日 47.5"
+            "text": "相对强弱指数 近 10 日最低 44.2，落在 40–50，且 53.8 高于前一日 50.0"
           }
         ],
         "plan": null,
@@ -3152,38 +3090,38 @@
       "r_targets": null
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ticker": "QQQ",
       "theme": "broad",
       "theme_name": "宽基",
-      "price": 717.63,
-      "change_1d": -0.001016,
-      "change_5d": -0.034886,
-      "change_1m": -0.032152,
-      "sma20": 739.872003,
-      "sma50": 726.197903,
-      "sma200": 674.723489,
-      "ema10": 729.497523,
-      "ema21": 732.740549,
-      "dist_sma20": -0.030062,
-      "dist_ema10": -0.016268,
-      "dist_ema21": -0.020622,
-      "dist_sma50": -0.011798,
-      "dist_sma200": 0.063591,
-      "rsi14": 40.901444,
-      "atr14": 10.963288,
-      "atr_pct": 0.015277,
-      "rvol": 0.88178,
-      "vol_ratio_20": 0.84328,
-      "dollar_avg50": 24276884679.00436,
-      "rs_rank": 53,
-      "rs_raw": 0.040393,
-      "rs_3m": 0.98736,
-      "rs_6m": 1.016704,
+      "price": 725.2,
+      "change_1d": 0.010549,
+      "change_5d": -0.005144,
+      "change_1m": -0.029781,
+      "sma20": 739.071502,
+      "sma50": 726.34786,
+      "sma200": 675.270027,
+      "ema10": 728.716156,
+      "ema21": 732.055045,
+      "dist_sma20": -0.018769,
+      "dist_ema10": -0.004825,
+      "dist_ema21": -0.009364,
+      "dist_sma50": -0.00158,
+      "dist_sma200": 0.073941,
+      "rsi14": 46.074717,
+      "atr14": 10.91757,
+      "atr_pct": 0.015055,
+      "rvol": 0.940943,
+      "vol_ratio_20": 0.902437,
+      "dollar_avg50": 24328591461.585567,
+      "rs_rank": 47,
+      "rs_raw": 0.045813,
+      "rs_3m": 0.999273,
+      "rs_6m": 1.015421,
       "high_52w": 762.859985,
       "low_52w": 554.412406,
-      "dist_52w_high": -0.05929,
-      "dist_52w_low": 0.294397,
+      "dist_52w_high": -0.049367,
+      "dist_52w_low": 0.308052,
       "above_sma50": false,
       "above_sma200": true,
       "stage2": false,
@@ -3203,9 +3141,9 @@
       "entry": null,
       "stop": null,
       "pivot": 762.859985,
-      "c_score": 0,
+      "c_score": 1,
       "c_detail": {
-        "score": 0,
+        "score": 1,
         "items": [
           {
             "id": "rs_high",
@@ -3222,8 +3160,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 40.9，近 10 日最低 35.1，没有形成拐头"
+            "pass": true,
+            "text": "指数平滑异同 柱先连跌 3 根，最新一根转强"
           }
         ]
       },
@@ -3231,12 +3169,12 @@
       "horizon": null,
       "initial_fraction": null,
       "levels": {
-        "ema10": 729.497523,
-        "ema21": 732.740549,
-        "sma50": 726.197903,
-        "sma200": 674.723489,
+        "ema10": 728.716156,
+        "ema21": 732.055045,
+        "sma50": 726.34786,
+        "sma200": 675.270027,
         "avwap_earn": null,
-        "chandelier": 730.728966
+        "chandelier": 730.78174
       },
       "flags": [],
       "blockers": [],
@@ -3269,10 +3207,10 @@
         "action": "watch",
         "action_label": "观望",
         "block": "",
-        "line": "QQQ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 717.63，没有站上 50 日均线，相对强度排名 53",
+        "line": "QQQ：没有突破、回踩、口袋支点、财报跳空或挤压买点。收盘 725.20，没有站上 50 日均线，相对强度排名 47",
         "code": null,
         "name": "",
-        "c_tag": "C1:0",
+        "c_tag": "C1:1",
         "checks": [],
         "confirmation": [
           {
@@ -3290,8 +3228,8 @@
           {
             "id": "momentum",
             "label": "动量拐头（相对强弱指数 或 指数平滑异同，合计最多 1 分）",
-            "pass": false,
-            "text": "相对强弱指数 40.9，近 10 日最低 35.1，没有形成拐头"
+            "pass": true,
+            "text": "指数平滑异同 柱先连跌 3 根，最新一根转强"
           }
         ],
         "plan": null,

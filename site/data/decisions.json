@@ -8,17 +8,37 @@
     {
       "id": "theme",
       "title": "大型科技 / 平台 超过主题上限",
-      "detail": "市值 $19,714，占净值 28%。主题上限对应 $17,494。"
+      "detail": "市值 $19,812，占净值 28%。主题上限对应 $17,517。"
+    },
+    {
+      "id": "A1",
+      "title": "AAPL 加仓",
+      "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（10 股）。"
+    },
+    {
+      "id": "trim",
+      "title": "MSFT 减仓",
+      "detail": "MSFT：按 15% 跳空（近似）估算的亏损约 $945，超过净值的 1%"
     },
     {
       "id": "sell",
       "title": "NVDA 卖出",
-      "detail": "NVDA：收盘 216.47 跌破21 日均线 223.99"
+      "detail": "NVDA：收盘 221.97 跌破21 日均线 223.81"
+    },
+    {
+      "id": "A1",
+      "title": "NVDA 加仓",
+      "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（4 股）。"
     },
     {
       "id": "trim",
       "title": "AMZN 减仓",
       "detail": "AMZN：连续 3 根跳空高开"
+    },
+    {
+      "id": "sell",
+      "title": "GOOGL 卖出",
+      "detail": "GOOGL：收盘 334.76 跌破吊灯移动止损 337.95；相对强度处在近 63 日低点，20 日涨跌 -0.9%"
     },
     {
       "id": "sell",
@@ -33,11 +53,47 @@
   ],
   "reviews": [
     {
+      "ticker": "MSFT",
+      "action": "trim",
+      "action_label": "减仓",
+      "block": "",
+      "line": "MSFT：按 15% 跳空（近似）估算的亏损约 $945，超过净值的 1%",
+      "code": "X7",
+      "name": "财报前减仓",
+      "c_tag": "X7",
+      "checks": [
+        {
+          "label": "财报前减仓",
+          "pass": true,
+          "text": "按 15% 跳空（近似）估算的亏损约 $945，超过净值的 1%"
+        },
+        {
+          "label": "突破失败",
+          "pass": null,
+          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+        }
+      ],
+      "confirmation": [],
+      "plan": {
+        "text": "减一部分，不是一次性清仓。",
+        "entry": null,
+        "stop": 390,
+        "shares": 0,
+        "shares_model": 0,
+        "risk_usd": 0,
+        "risk_model": 0
+      },
+      "invalidate": "条件消失后这条离场就不再成立。",
+      "pending": [
+        "X2"
+      ]
+    },
+    {
       "ticker": "NVDA",
       "action": "sell",
       "action_label": "卖出",
       "block": "",
-      "line": "NVDA：收盘 216.47 跌破21 日均线 223.99",
+      "line": "NVDA：收盘 221.97 跌破21 日均线 223.81",
       "code": "X3",
       "name": "跌破吊灯移动止损",
       "c_tag": "X3",
@@ -45,7 +101,7 @@
         {
           "label": "跌破吊灯移动止损",
           "pass": true,
-          "text": "收盘 216.47 跌破21 日均线 223.99"
+          "text": "收盘 221.97 跌破21 日均线 223.81"
         },
         {
           "label": "突破失败",
@@ -63,7 +119,7 @@
         "risk_usd": 0,
         "risk_model": 0
       },
-      "invalidate": "收盘重新站上吊灯移动止损 225.18 后，这条就不再成立。",
+      "invalidate": "收盘重新站上吊灯移动止损 225.23 后，这条就不再成立。",
       "pending": [
         "X2"
       ]
@@ -100,6 +156,47 @@
         "risk_model": 0
       },
       "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+      "pending": [
+        "X2"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "action": "sell",
+      "action_label": "卖出",
+      "block": "",
+      "line": "GOOGL：收盘 334.76 跌破吊灯移动止损 337.95；相对强度处在近 63 日低点，20 日涨跌 -0.9%",
+      "code": "X3",
+      "name": "跌破吊灯移动止损、强度走坏减仓",
+      "c_tag": "X3+X8",
+      "checks": [
+        {
+          "label": "跌破吊灯移动止损",
+          "pass": true,
+          "text": "收盘 334.76 跌破吊灯移动止损 337.95"
+        },
+        {
+          "label": "强度走坏减仓",
+          "pass": true,
+          "text": "相对强度处在近 63 日低点，20 日涨跌 -0.9%"
+        },
+        {
+          "label": "突破失败",
+          "pass": null,
+          "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+        }
+      ],
+      "confirmation": [],
+      "plan": {
+        "text": "卖出剩余仓位。",
+        "entry": null,
+        "stop": 145,
+        "shares": 0,
+        "shares_model": 0,
+        "risk_usd": 0,
+        "risk_model": 0
+      },
+      "invalidate": "收盘重新站上吊灯移动止损 337.95 后，这条就不再成立。",
       "pending": [
         "X2"
       ]
@@ -216,5 +313,5 @@
     }
   ],
   "formula": "股数 = floor(净值 × 单笔风险% × 环境系数 × 确认系数 × 首笔比例 / (入场价 − 止损价))",
-  "as_of": "2026-10-21 08:01"
+  "as_of": "2026-10-22 08:06"
 }

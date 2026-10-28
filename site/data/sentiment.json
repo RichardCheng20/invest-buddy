@@ -1,9 +1,9 @@
 {
-  "vix": 18.389999,
-  "vix3m": 19.940001,
-  "vix_ratio": 0.922267,
+  "vix": 17.52,
+  "vix3m": 19.57,
+  "vix_ratio": 0.895248,
   "vix_lock": false,
-  "breadth_above_50": 0.6,
+  "breadth_above_50": 0.65,
   "breadth_above_200": 0.8,
   "breadth_n": 20,
   "breadth_note": "宽度用观察列表（含持仓）计算，不是标普 500 全成分。只作近似。",
@@ -16,204 +16,204 @@
       "name": "科技",
       "group": "sector",
       "kind": "price",
-      "price": 186.32,
-      "change_1d": 0.016864,
-      "change_5d": 0.001936,
-      "change_1m": -0.050695,
-      "sma50": 189.464856,
-      "sma200": 168.40195,
-      "above_50": false,
+      "price": 189.49,
+      "change_1d": 0.017014,
+      "change_5d": 0.02184,
+      "change_1m": -0.025909,
+      "sma50": 189.452693,
+      "sma200": 168.621277,
+      "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 0.956722,
-      "rs_3m": 1.052759
+      "date": "2026-10-27",
+      "rs_1m": 0.968966,
+      "rs_3m": 1.076766
     },
     {
       "symbol": "XLF",
       "name": "金融",
       "group": "sector",
       "kind": "price",
-      "price": 56.02,
-      "change_1d": 0.002147,
-      "change_5d": 0.017435,
-      "change_1m": 0.021517,
-      "sma50": 55.93665,
-      "sma200": 53.362939,
-      "above_50": true,
+      "price": 55.88,
+      "change_1d": -0.002499,
+      "change_5d": 0.002871,
+      "change_1m": 0.031187,
+      "sma50": 55.906711,
+      "sma200": 53.367056,
+      "above_50": false,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.029498,
-      "rs_3m": 0.942416
+      "date": "2026-10-27",
+      "rs_1m": 1.02576,
+      "rs_3m": 0.935376
     },
     {
       "symbol": "XLE",
       "name": "能源",
       "group": "sector",
       "kind": "price",
-      "price": 69.64,
-      "change_1d": 0.004471,
-      "change_5d": 0.027139,
-      "change_1m": 0.122502,
-      "sma50": 64.311309,
-      "sma200": 57.696768,
+      "price": 68.21,
+      "change_1d": -0.020534,
+      "change_5d": 0.003531,
+      "change_1m": 0.09839,
+      "sma50": 64.431305,
+      "sma200": 57.809003,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.131272,
-      "rs_3m": 1.174962
+      "date": "2026-10-27",
+      "rs_1m": 1.09261,
+      "rs_3m": 1.106062
     },
     {
       "symbol": "XLV",
       "name": "医疗",
       "group": "sector",
       "kind": "price",
-      "price": 179.28,
-      "change_1d": 0.0,
-      "change_5d": 0.020666,
-      "change_1m": 0.050264,
-      "sma50": 171.044077,
-      "sma200": 157.138371,
+      "price": 179.18,
+      "change_1d": -0.000558,
+      "change_5d": -0.003559,
+      "change_1m": 0.046246,
+      "sma50": 171.299415,
+      "sma200": 157.257355,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.05847,
-      "rs_3m": 1.03893
+      "date": "2026-10-27",
+      "rs_1m": 1.04074,
+      "rs_3m": 1.022912
     },
     {
       "symbol": "XLI",
       "name": "工业",
       "group": "sector",
       "kind": "price",
-      "price": 166.96,
-      "change_1d": 0.014215,
-      "change_5d": 0.00168,
-      "change_1m": -0.02036,
-      "sma50": 171.619433,
-      "sma200": 172.447905,
+      "price": 167.92,
+      "change_1d": 0.00575,
+      "change_5d": 0.006715,
+      "change_1m": -0.005095,
+      "sma50": 171.261422,
+      "sma200": 172.484265,
       "above_50": false,
       "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 0.987294,
-      "rs_3m": 0.885782
+      "date": "2026-10-27",
+      "rs_1m": 0.989669,
+      "rs_3m": 0.901063
     },
     {
       "symbol": "XLY",
       "name": "可选消费",
       "group": "sector",
       "kind": "price",
-      "price": 114.26,
-      "change_1d": 0.010256,
-      "change_5d": -0.001747,
-      "change_1m": 0.033466,
-      "sma50": 113.235978,
-      "sma200": 115.310111,
+      "price": 115.45,
+      "change_1d": 0.010415,
+      "change_5d": -0.000433,
+      "change_1m": 0.059174,
+      "sma50": 113.21511,
+      "sma200": 115.269154,
       "above_50": true,
-      "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 1.041541,
-      "rs_3m": 0.983019
+      "above_200": true,
+      "date": "2026-10-27",
+      "rs_1m": 1.053601,
+      "rs_3m": 0.980103
     },
     {
       "symbol": "XLP",
       "name": "必选消费",
       "group": "sector",
       "kind": "price",
-      "price": 87.96,
-      "change_1d": -0.003399,
-      "change_5d": 0.0086,
-      "change_1m": 0.071899,
-      "sma50": 84.150971,
-      "sma200": 83.403382,
+      "price": 87.15,
+      "change_1d": -0.009209,
+      "change_5d": -0.006838,
+      "change_1m": 0.059188,
+      "sma50": 84.211436,
+      "sma200": 83.450372,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.080274,
-      "rs_3m": 0.981976
+      "date": "2026-10-27",
+      "rs_1m": 1.053615,
+      "rs_3m": 0.949352
     },
     {
       "symbol": "XLB",
       "name": "材料",
       "group": "sector",
       "kind": "price",
-      "price": 51.38,
-      "change_1d": 0.001364,
-      "change_5d": 0.00844,
-      "change_1m": 0.031727,
-      "sma50": 50.877493,
-      "sma200": 50.639428,
+      "price": 51.78,
+      "change_1d": 0.007785,
+      "change_5d": 0.010736,
+      "change_1m": 0.046695,
+      "sma50": 50.873079,
+      "sma200": 50.660088,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.039788,
-      "rs_3m": 0.95223
+      "date": "2026-10-27",
+      "rs_1m": 1.041187,
+      "rs_3m": 0.950507
     },
     {
       "symbol": "XLRE",
       "name": "不动产",
       "group": "sector",
       "kind": "price",
-      "price": 42.8,
-      "change_1d": 0.005403,
-      "change_5d": 0.027118,
-      "change_1m": 0.029836,
-      "sma50": 42.648603,
-      "sma200": 42.713916,
-      "above_50": true,
-      "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.037883,
-      "rs_3m": 0.905773
+      "price": 42.44,
+      "change_1d": -0.008411,
+      "change_5d": 0.001416,
+      "change_1m": 0.02636,
+      "sma50": 42.608287,
+      "sma200": 42.72838,
+      "above_50": false,
+      "above_200": false,
+      "date": "2026-10-27",
+      "rs_1m": 1.02096,
+      "rs_3m": 0.880362
     },
     {
       "symbol": "XLU",
       "name": "公用事业",
       "group": "sector",
       "kind": "price",
-      "price": 42.55,
-      "change_1d": -0.000235,
-      "change_5d": 0.028772,
-      "change_1m": 0.076943,
-      "sma50": 41.682298,
-      "sma200": 43.781917,
+      "price": 42.85,
+      "change_1d": 0.007051,
+      "change_5d": 0.023161,
+      "change_1m": 0.09172,
+      "sma50": 41.662148,
+      "sma200": 43.787963,
       "above_50": true,
       "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 1.085357,
-      "rs_3m": 0.909215
+      "date": "2026-10-27",
+      "rs_1m": 1.085975,
+      "rs_3m": 0.908688
     },
     {
       "symbol": "XLC",
       "name": "通信",
       "group": "sector",
       "kind": "price",
-      "price": 103.85,
-      "change_1d": -0.015733,
-      "change_5d": -0.056681,
-      "change_1m": -0.080648,
-      "sma50": 111.24473,
-      "sma200": 112.632301,
+      "price": 103.58,
+      "change_1d": -0.0026,
+      "change_5d": -0.059987,
+      "change_1m": -0.068358,
+      "sma50": 111.107211,
+      "sma200": 112.565977,
       "above_50": false,
       "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 0.926535,
-      "rs_3m": 0.91735
+      "date": "2026-10-27",
+      "rs_1m": 0.92674,
+      "rs_3m": 0.897174
     },
     {
       "symbol": "SMH",
       "name": "半导体",
       "group": "sector",
       "kind": "price",
-      "price": 541.62,
-      "change_1d": 0.027352,
-      "change_5d": -0.012471,
-      "change_1m": -0.107063,
-      "sma50": 574.167601,
-      "sma200": 516.250701,
+      "price": 557.98,
+      "change_1d": 0.030206,
+      "change_5d": 0.021268,
+      "change_1m": -0.070049,
+      "sma50": 573.445801,
+      "sma200": 517.094501,
       "above_50": false,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 0.899914,
-      "rs_3m": 0.987494
+      "date": "2026-10-27",
+      "rs_1m": 0.925058,
+      "rs_3m": 1.046222
     }
   ],
   "sectors_top": [
@@ -222,51 +222,51 @@
       "name": "能源",
       "group": "sector",
       "kind": "price",
-      "price": 69.64,
-      "change_1d": 0.004471,
-      "change_5d": 0.027139,
-      "change_1m": 0.122502,
-      "sma50": 64.311309,
-      "sma200": 57.696768,
+      "price": 68.21,
+      "change_1d": -0.020534,
+      "change_5d": 0.003531,
+      "change_1m": 0.09839,
+      "sma50": 64.431305,
+      "sma200": 57.809003,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.131272,
-      "rs_3m": 1.174962
+      "date": "2026-10-27",
+      "rs_1m": 1.09261,
+      "rs_3m": 1.106062
     },
     {
       "symbol": "XLU",
       "name": "公用事业",
       "group": "sector",
       "kind": "price",
-      "price": 42.55,
-      "change_1d": -0.000235,
-      "change_5d": 0.028772,
-      "change_1m": 0.076943,
-      "sma50": 41.682298,
-      "sma200": 43.781917,
+      "price": 42.85,
+      "change_1d": 0.007051,
+      "change_5d": 0.023161,
+      "change_1m": 0.09172,
+      "sma50": 41.662148,
+      "sma200": 43.787963,
       "above_50": true,
       "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 1.085357,
-      "rs_3m": 0.909215
+      "date": "2026-10-27",
+      "rs_1m": 1.085975,
+      "rs_3m": 0.908688
     },
     {
       "symbol": "XLP",
       "name": "必选消费",
       "group": "sector",
       "kind": "price",
-      "price": 87.96,
-      "change_1d": -0.003399,
-      "change_5d": 0.0086,
-      "change_1m": 0.071899,
-      "sma50": 84.150971,
-      "sma200": 83.403382,
+      "price": 87.15,
+      "change_1d": -0.009209,
+      "change_5d": -0.006838,
+      "change_1m": 0.059188,
+      "sma50": 84.211436,
+      "sma200": 83.450372,
       "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 1.080274,
-      "rs_3m": 0.981976
+      "date": "2026-10-27",
+      "rs_1m": 1.053615,
+      "rs_3m": 0.949352
     }
   ],
   "sectors_bottom": [
@@ -275,60 +275,60 @@
       "name": "半导体",
       "group": "sector",
       "kind": "price",
-      "price": 541.62,
-      "change_1d": 0.027352,
-      "change_5d": -0.012471,
-      "change_1m": -0.107063,
-      "sma50": 574.167601,
-      "sma200": 516.250701,
+      "price": 557.98,
+      "change_1d": 0.030206,
+      "change_5d": 0.021268,
+      "change_1m": -0.070049,
+      "sma50": 573.445801,
+      "sma200": 517.094501,
       "above_50": false,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 0.899914,
-      "rs_3m": 0.987494
+      "date": "2026-10-27",
+      "rs_1m": 0.925058,
+      "rs_3m": 1.046222
     },
     {
       "symbol": "XLC",
       "name": "通信",
       "group": "sector",
       "kind": "price",
-      "price": 103.85,
-      "change_1d": -0.015733,
-      "change_5d": -0.056681,
-      "change_1m": -0.080648,
-      "sma50": 111.24473,
-      "sma200": 112.632301,
+      "price": 103.58,
+      "change_1d": -0.0026,
+      "change_5d": -0.059987,
+      "change_1m": -0.068358,
+      "sma50": 111.107211,
+      "sma200": 112.565977,
       "above_50": false,
       "above_200": false,
-      "date": "2026-10-26",
-      "rs_1m": 0.926535,
-      "rs_3m": 0.91735
+      "date": "2026-10-27",
+      "rs_1m": 0.92674,
+      "rs_3m": 0.897174
     },
     {
       "symbol": "XLK",
       "name": "科技",
       "group": "sector",
       "kind": "price",
-      "price": 186.32,
-      "change_1d": 0.016864,
-      "change_5d": 0.001936,
-      "change_1m": -0.050695,
-      "sma50": 189.464856,
-      "sma200": 168.40195,
-      "above_50": false,
+      "price": 189.49,
+      "change_1d": 0.017014,
+      "change_5d": 0.02184,
+      "change_1m": -0.025909,
+      "sma50": 189.452693,
+      "sma200": 168.621277,
+      "above_50": true,
       "above_200": true,
-      "date": "2026-10-26",
-      "rs_1m": 0.956722,
-      "rs_3m": 1.052759
+      "date": "2026-10-27",
+      "rs_1m": 0.968966,
+      "rs_3m": 1.076766
     }
   ],
   "fear_greed": {
-    "score": 29.3,
+    "score": 33.6,
     "rating": "fear",
     "rating_cn": "恐惧",
     "date": "2026-10-27",
-    "previous_close": 27.1,
-    "previous_1_week": 29.6,
+    "previous_close": 27.3,
+    "previous_1_week": 28.7,
     "previous_1_month": 36.9,
     "previous_1_year": 37.3,
     "stale": false,
@@ -557,47 +557,47 @@
       },
       {
         "date": "2026-09-09",
-        "score": 32.2
+        "score": 31.9
       },
       {
         "date": "2026-09-10",
-        "score": 32.7
+        "score": 33.1
       },
       {
         "date": "2026-09-13",
-        "score": 31.0
+        "score": 32.1
       },
       {
         "date": "2026-09-14",
-        "score": 28.0
+        "score": 29.3
       },
       {
         "date": "2026-09-15",
-        "score": 27.3
+        "score": 27.0
       },
       {
         "date": "2026-09-16",
-        "score": 28.3
+        "score": 29.5
       },
       {
         "date": "2026-09-17",
-        "score": 30.4
+        "score": 28.5
       },
       {
         "date": "2026-09-20",
-        "score": 34.2
+        "score": 33.9
       },
       {
         "date": "2026-09-21",
-        "score": 35.0
+        "score": 35.2
       },
       {
         "date": "2026-09-22",
-        "score": 32.5
+        "score": 33.7
       },
       {
         "date": "2026-09-23",
-        "score": 35.7
+        "score": 34.5
       },
       {
         "date": "2026-09-24",
@@ -605,11 +605,11 @@
       },
       {
         "date": "2026-09-27",
-        "score": 34.4
+        "score": 32.4
       },
       {
         "date": "2026-09-28",
-        "score": 28.9
+        "score": 31.1
       },
       {
         "date": "2026-09-29",
@@ -617,121 +617,121 @@
       },
       {
         "date": "2026-09-30",
-        "score": 29.0
+        "score": 29.2
       },
       {
         "date": "2026-10-01",
-        "score": 40.0
+        "score": 38.2
       },
       {
         "date": "2026-10-04",
-        "score": 43.7
+        "score": 43.1
       },
       {
         "date": "2026-10-05",
-        "score": 46.8
+        "score": 47.0
       },
       {
         "date": "2026-10-06",
-        "score": 42.1
+        "score": 44.7
       },
       {
         "date": "2026-10-07",
-        "score": 39.8
+        "score": 39.2
       },
       {
         "date": "2026-10-08",
-        "score": 46.5
+        "score": 43.5
       },
       {
         "date": "2026-10-11",
-        "score": 46.3
+        "score": 45.2
       },
       {
         "date": "2026-10-12",
-        "score": 44.1
+        "score": 45.6
       },
       {
         "date": "2026-10-13",
-        "score": 26.7
+        "score": 28.8
       },
       {
         "date": "2026-10-14",
-        "score": 30.3
+        "score": 32.0
       },
       {
         "date": "2026-10-15",
-        "score": 22.1
+        "score": 18.2
       },
       {
         "date": "2026-10-18",
-        "score": 20.8
+        "score": 19.5
       },
       {
         "date": "2026-10-19",
-        "score": 29.6
+        "score": 28.7
       },
       {
         "date": "2026-10-20",
-        "score": 27.2
+        "score": 30.3
       },
       {
         "date": "2026-10-21",
-        "score": 19.4
+        "score": 20.0
       },
       {
         "date": "2026-10-22",
-        "score": 23.0
+        "score": 16.7
       },
       {
         "date": "2026-10-25",
-        "score": 29.3
+        "score": 29.8
       },
       {
         "date": "2026-10-26",
-        "score": 29.3
+        "score": 33.6
       },
       {
         "date": "2026-10-27",
-        "score": 29.3
+        "score": 33.6
       }
     ],
     "components": [
       {
         "id": "market_momentum_sp500",
         "name": "动量",
-        "score": 25.4,
+        "score": 36.4,
         "rating": "fear",
         "rating_cn": "恐惧",
-        "raw": 7676.77,
-        "raw_label": "标普 7,677"
+        "raw": 7722.6,
+        "raw_label": "标普 7,723"
       },
       {
         "id": "stock_price_strength",
         "name": "新高/新低",
-        "score": 27.2,
+        "score": 28.0,
         "rating": "fear",
         "rating_cn": "恐惧",
-        "raw": -5.52,
-        "raw_label": "原始值 -5.52"
+        "raw": -5.46,
+        "raw_label": "原始值 -5.46"
       },
       {
         "id": "stock_price_breadth",
         "name": "涨跌宽度",
-        "score": 27.0,
+        "score": 27.8,
         "rating": "fear",
         "rating_cn": "恐惧",
-        "raw": 457.64,
-        "raw_label": "原始值 457.64"
+        "raw": 467.18,
+        "raw_label": "原始值 467.18"
       },
       {
         "id": "put_call_options",
         "name": "看跌/看涨",
-        "score": 22.8,
-        "rating": "extreme fear",
-        "rating_cn": "极度恐惧",
-        "raw": 0.8,
-        "raw_label": "0.80"
+        "score": 28.6,
+        "rating": "fear",
+        "rating_cn": "恐惧",
+        "raw": 0.77,
+        "raw_label": "0.77"
       },
       {
         "id": "market_volatility_vix_50",
@@ -739,26 +739,26 @@
         "score": 50.0,
         "rating": "neutral",
         "rating_cn": "中性",
-        "raw": 16.06,
-        "raw_label": "VIX 18.11 / 50日 16.06"
+        "raw": 16.04,
+        "raw_label": "VIX 17.52 / 50日 16.04"
       },
       {
         "id": "junk_bond_demand",
         "name": "垃圾债需求",
-        "score": 41.6,
-        "rating": "fear",
-        "rating_cn": "恐惧",
-        "raw": 1.23,
-        "raw_label": "原始值 1.23"
+        "score": 49.8,
+        "rating": "neutral",
+        "rating_cn": "中性",
+        "raw": 1.21,
+        "raw_label": "原始值 1.21"
       },
       {
         "id": "safe_haven_demand",
         "name": "避险需求",
-        "score": 11.0,
+        "score": 14.6,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": -1.74,
-        "raw_label": "原始值 -1.74"
+        "raw": -1.05,
+        "raw_label": "原始值 -1.05"
       }
     ]
   },
@@ -1704,10 +1704,10 @@
       }
     ]
   },
-  "line": "CNN 恐惧贪婪指数 29（偏恐惧，逆向偏多） · CBOE 股票看跌/看涨期权比 0.60（小于 1，正常，5日 0.61） · VIX/VIX3M 期限结构 0.92（小于 1，正常） · 高收益债利差 3.38 · AAII 散户看多减看空 -8.9（多空差不大）",
+  "line": "CNN 恐惧贪婪指数 34（偏恐惧，逆向偏多） · CBOE 股票看跌/看涨期权比 0.60（小于 1，正常，5日 0.61） · VIX/VIX3M 期限结构 0.92（小于 1，正常） · 高收益债利差 3.38 · AAII 散户看多减看空 -8.9（多空差不大）",
   "detail": [
-    "恐惧与贪婪 29（恐惧，2026-10-27）。前收 27.1，一周 29.6，一月 36.9，一年 37.3。",
-    "分项：动量 25，新高/新低 27，涨跌宽度 27，看跌/看涨 23，VIX 相对 50 日 50，垃圾债需求 42，避险需求 11。",
+    "恐惧与贪婪 34（恐惧，2026-10-27）。前收 27.3，一周 28.7，一月 36.9，一年 37.3。",
+    "分项：动量 36，新高/新低 28，涨跌宽度 28，看跌/看涨 29，VIX 相对 50 日 50，垃圾债需求 50，避险需求 15。",
     "看跌/看涨（CBOE 2026-10-26）：股票 0.60，合计 0.86。5日均股票 0.61 / 合计 0.89，10日均股票 0.60 / 合计 0.88。",
     "VIX 期限（CBOE 2026-10-26）：18.39 / 19.94 = 0.92，没有倒挂。",
     "高收益债利差 3.38（FRED BAMLH0A0HYM2，2026-10-23）。较 2026-09-23 +0.65。",

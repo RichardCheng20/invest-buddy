@@ -11,7 +11,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": -13
+      "days_away": -14
     },
     {
       "date": "2026-10-15",
@@ -24,7 +24,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": -12
+      "days_away": -13
     },
     {
       "date": "2026-10-16",
@@ -36,7 +36,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": -11
+      "days_away": -12
     },
     {
       "date": "2026-10-28",
@@ -50,7 +50,7 @@
       "confirmed": true,
       "related": [],
       "note": "会议为 10/27–10/28，声明在 10/28 14:00 美东",
-      "days_away": 1
+      "days_away": 0
     },
     {
       "date": "2026-10-29",
@@ -64,7 +64,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": 2
+      "days_away": 1
     },
     {
       "date": "2026-10-30",
@@ -76,7 +76,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": 3
+      "days_away": 2
     },
     {
       "date": "2026-11-01",
@@ -86,7 +86,7 @@
       ],
       "confirmed": true,
       "note": "此后美东 8:30 的数据对应北京时间 21:30。邮件盘前仍按 America/New_York 自动换算。",
-      "days_away": 5
+      "days_away": 4
     },
     {
       "date": "2026-11-06",
@@ -99,7 +99,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": 10
+      "days_away": 9
     },
     {
       "date": "2026-11-10",
@@ -112,7 +112,7 @@
       ],
       "confirmed": true,
       "related": [],
-      "days_away": 14
+      "days_away": 13
     },
     {
       "date": "2026-11-26",
@@ -121,7 +121,7 @@
         "holiday"
       ],
       "confirmed": true,
-      "days_away": 30
+      "days_away": 29
     },
     {
       "date": "2026-11-27",
@@ -131,7 +131,7 @@
       ],
       "confirmed": true,
       "note": "流动性变差",
-      "days_away": 31
+      "days_away": 30
     },
     {
       "date": "2026-12-09",
@@ -144,7 +144,7 @@
       ],
       "confirmed": true,
       "note": "会议为 12/8–12/9",
-      "days_away": 43
+      "days_away": 42
     },
     {
       "date": "2026-12-10",
@@ -156,7 +156,7 @@
         "macro"
       ],
       "confirmed": true,
-      "days_away": 44
+      "days_away": 43
     },
     {
       "date": "2026-12-18",
@@ -165,7 +165,7 @@
         "opex"
       ],
       "confirmed": true,
-      "days_away": 52
+      "days_away": 51
     },
     {
       "date": "2026-12-25",
@@ -174,7 +174,7 @@
         "holiday"
       ],
       "confirmed": true,
-      "days_away": 59
+      "days_away": 58
     }
   ],
   "earnings": [
@@ -184,7 +184,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 1,
+      "days": null,
       "held": true
     },
     {
@@ -193,7 +193,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 1,
+      "days": null,
       "held": true
     },
     {
@@ -202,7 +202,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 2,
+      "days": 1,
       "held": true
     },
     {
@@ -211,7 +211,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 2,
+      "days": 1,
       "held": false
     },
     {
@@ -220,7 +220,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 2,
+      "days": 1,
       "held": false
     },
     {
@@ -229,7 +229,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 3,
+      "days": 2,
       "held": true
     },
     {
@@ -238,7 +238,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 4,
+      "days": 3,
       "held": true
     },
     {
@@ -247,7 +247,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 15,
+      "days": 14,
       "held": true
     },
     {
@@ -256,7 +256,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 15,
+      "days": 14,
       "held": false
     },
     {
@@ -265,7 +265,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 31,
+      "days": 30,
       "held": false
     },
     {
@@ -274,7 +274,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 32,
+      "days": 31,
       "held": false
     },
     {
@@ -283,7 +283,7 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 55,
+      "days": 54,
       "held": true
     },
     {
@@ -292,9 +292,9 @@
       "confirmed": false,
       "note": null,
       "source": "yfinance",
-      "days": 57,
+      "days": 56,
       "held": true
     }
   ],
-  "bar_date": "2026-10-27"
+  "bar_date": "2026-10-28"
 }

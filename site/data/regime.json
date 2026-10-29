@@ -1,25 +1,31 @@
 {
-  "score": 3,
-  "score_raw_before_lock": 3,
-  "regime": "YELLOW",
-  "distribution_count": 9,
+  "score": 4,
+  "score_raw_before_lock": 4,
+  "regime": "GREEN",
+  "distribution_count": 8,
   "distribution_penalty": true,
-  "vix": 17.52,
-  "vix3m": 19.57,
-  "vix_ratio": 0.895248,
+  "vix": 16.91,
+  "vix3m": 19.219999,
+  "vix_ratio": 0.879813,
   "vix_lock": false,
-  "breadth_above_50": 0.65,
+  "breadth_above_50": 0.7,
   "breadth_above_200": 0.8,
   "breadth_n": 20,
-  "risk_mult": 0.5,
+  "risk_mult": 1.0,
   "exposure_cap": 0.6,
   "yesterday_regime": "YELLOW",
   "alerts": [
     {
+      "id": "R1",
+      "level": "primary",
+      "title": "市场环境切换",
+      "detail": "YELLOW → GREEN（环境分 4）"
+    },
+    {
       "id": "R2",
       "level": "primary",
       "title": "派发日达到 5 个",
-      "detail": "SPY 或 QQQ 在最近 25 个交易日有 9 个派发日"
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 8 个派发日"
     }
   ],
   "index_below_200": [],
@@ -28,7 +34,7 @@
   "parts": {
     "spy_above_50": true,
     "spy_above_200_stack": true,
-    "qqq_above_50": false,
+    "qqq_above_50": true,
     "breadth": true,
     "vix_contango": true
   },

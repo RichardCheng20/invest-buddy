@@ -1,6 +1,6 @@
 {
-  "bar_date": "2026-10-28",
-  "nlv": 69922.36,
+  "bar_date": "2026-10-29",
+  "nlv": 69648.06,
   "limits": {
     "gross": 1.0,
     "name": 0.1,
@@ -14,18 +14,18 @@
       "ticker": "AAPL",
       "suggest": {
         "k": 2.0,
-        "chandelier": 332.34,
-        "sma50_stop": 319.4,
-        "price": 332.34,
+        "chandelier": 332.19,
+        "sma50_stop": 319.84,
+        "price": 332.19,
         "basis": "吊灯移动止损",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 332.34
+            "price": 332.19
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 319.4
+            "price": 319.84
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：吊灯移动止损。"
@@ -34,26 +34,26 @@
       "avg_cost": 180.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 3476.6,
-      "price": 343.83
+      "risk_usd": 3578.2,
+      "price": 348.91
     },
     {
       "key": "stk:MSFT",
       "ticker": "MSFT",
       "suggest": {
         "k": 2.0,
-        "chandelier": 517.87,
-        "sma50_stop": 489.63,
-        "price": 517.87,
+        "chandelier": 516.41,
+        "sma50_stop": 488.99,
+        "price": 516.41,
         "basis": "吊灯移动止损",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 517.87
+            "price": 516.41
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 489.63
+            "price": 488.99
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：吊灯移动止损。"
@@ -62,26 +62,26 @@
       "avg_cost": 420.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 1410.1,
-      "price": 531.01
+      "risk_usd": 1401.4,
+      "price": 530.14
     },
     {
       "key": "stk:NVDA",
       "ticker": "NVDA",
       "suggest": {
         "k": 2.0,
-        "chandelier": 225.27,
-        "sma50_stop": 210.18,
-        "price": 210.18,
+        "chandelier": 225.64,
+        "sma50_stop": 210.48,
+        "price": 210.48,
         "basis": "50日均线减 2 倍波动",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 225.27
+            "price": 225.64
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 210.18
+            "price": 210.48
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：50日均线减 2 倍波动。"
@@ -90,54 +90,54 @@
       "avg_cost": 120.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 923.04,
-      "price": 215.38
+      "risk_usd": 909.28,
+      "price": 213.66
     },
     {
       "key": "stk:AMZN",
       "ticker": "AMZN",
       "suggest": {
         "k": 2.0,
-        "chandelier": 246.57,
-        "sma50_stop": 242.73,
-        "price": 246.57,
-        "basis": "吊灯移动止损",
+        "chandelier": 245.6,
+        "sma50_stop": 241.27,
+        "price": 241.27,
+        "basis": "50日均线减 2 倍波动",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 246.57
+            "price": 245.6
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 242.73
+            "price": 241.27
           }
         ],
-        "note": "取两条里更靠近现价、且仍低于现价的那条：吊灯移动止损。"
+        "note": "取两条里更靠近现价、且仍低于现价的那条：50日均线减 2 倍波动。"
       },
       "stop": 175.0,
       "avg_cost": 190.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 955.2,
-      "price": 254.6
+      "risk_usd": 825.48,
+      "price": 243.79
     },
     {
       "key": "stk:GOOGL",
       "ticker": "GOOGL",
       "suggest": {
         "k": 2.0,
-        "chandelier": 334.34,
-        "sma50_stop": 325.31,
+        "chandelier": 329.41,
+        "sma50_stop": 318.89,
         "price": null,
         "basis": null,
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 334.34
+            "price": 329.41
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 325.31
+            "price": 318.89
           }
         ],
         "note": "两条参考都在现价上方，不能当作多头止损。"
@@ -146,26 +146,26 @@
       "avg_cost": 160.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 1439.12,
-      "price": 324.89
+      "risk_usd": 1110.56,
+      "price": 283.82
     },
     {
       "key": "stk:JPM",
       "ticker": "JPM",
       "suggest": {
         "k": 2.0,
-        "chandelier": 325.98,
-        "sma50_stop": 330.69,
-        "price": 330.69,
+        "chandelier": 327.26,
+        "sma50_stop": 330.39,
+        "price": 330.39,
         "basis": "50日均线减 2 倍波动",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 325.98
+            "price": 327.26
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 330.69
+            "price": 330.39
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：50日均线减 2 倍波动。"
@@ -174,26 +174,26 @@
       "avg_cost": 200.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 2314.5,
-      "price": 339.3
+      "risk_usd": 2378.7,
+      "price": 343.58
     },
     {
       "key": "stk:UNH",
       "ticker": "UNH",
       "suggest": {
         "k": 2.0,
-        "chandelier": 394.16,
-        "sma50_stop": 366.36,
-        "price": 394.16,
+        "chandelier": 394.28,
+        "sma50_stop": 367.02,
+        "price": 394.28,
         "basis": "吊灯移动止损",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 394.16
+            "price": 394.28
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 366.36
+            "price": 367.02
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：吊灯移动止损。"
@@ -203,25 +203,25 @@
       "entry_date": "2026-01-02",
       "stop_placed": false,
       "risk_usd": 0.0,
-      "price": 407.1
+      "price": 410.91
     },
     {
       "key": "stk:XOM",
       "ticker": "XOM",
       "suggest": {
         "k": 2.0,
-        "chandelier": 173.45,
-        "sma50_stop": 159.16,
-        "price": 173.45,
+        "chandelier": 173.5,
+        "sma50_stop": 159.59,
+        "price": 173.5,
         "basis": "吊灯移动止损",
         "parts": [
           {
             "name": "吊灯移动止损",
-            "price": 173.45
+            "price": 173.5
           },
           {
             "name": "50日均线减 2 倍波动",
-            "price": 159.16
+            "price": 159.59
           }
         ],
         "note": "取两条里更靠近现价、且仍低于现价的那条：吊灯移动止损。"
@@ -230,34 +230,34 @@
       "avg_cost": 110.0,
       "entry_date": "2026-01-02",
       "stop_placed": false,
-      "risk_usd": 1640.4,
-      "price": 182.02
+      "risk_usd": 1665.8,
+      "price": 183.29
     }
   ],
   "stops_filled": 8,
   "stops_missing": 0,
-  "open_risk_usd": 12158.96,
-  "open_risk_partial_usd": 12158.96,
-  "open_risk_cap_usd": 2796.89,
+  "open_risk_usd": 11869.42,
+  "open_risk_partial_usd": 11869.42,
+  "open_risk_cap_usd": 2785.92,
   "delta_notes": [],
   "options": [],
   "plans": {
     "full": {
       "before": {
         "cash": 40000.0,
-        "gross": 0.427937,
+        "gross": 0.425684,
         "worst_name": {
           "ticker": "AAPL",
-          "exposure": 6876.6,
-          "weight": 0.098346
+          "exposure": 6978.2,
+          "weight": 0.100192
         },
         "worst_theme": {
           "id": "tech",
           "name": "大型科技 / 平台",
-          "exposure": 19564.06,
-          "weight": 0.279797
+          "exposure": 19184.92,
+          "weight": 0.275455
         },
-        "gross_market_value": 0.427937
+        "gross_market_value": 0.425684
       },
       "steps": [
         {
@@ -268,22 +268,22 @@
           "title": "卖出 GOOGL 8 股",
           "why": "规则卖出：收盘跌破吊灯移动止损，可以整仓退出。财报 2026-10-28",
           "shares": 8,
-          "proceeds": 2599.12,
+          "proceeds": 2270.56,
           "shares_after": 0.0,
           "fraction_left": null,
           "after": {
-            "cash": 42599.12,
-            "gross": 0.390765,
+            "cash": 42270.56,
+            "gross": 0.393083,
             "worst_name": {
               "ticker": "AAPL",
-              "exposure": 6876.6,
-              "weight": 0.098346
+              "exposure": 6978.2,
+              "weight": 0.100192
             },
             "worst_theme": {
               "id": "tech",
               "name": "大型科技 / 平台",
-              "exposure": 16964.94,
-              "weight": 0.242625
+              "exposure": 16914.36,
+              "weight": 0.242855
             }
           }
         }
@@ -292,7 +292,7 @@
         "done": 0,
         "total": 1,
         "done_proceeds": 0.0,
-        "remaining_proceeds": 2599.12
+        "remaining_proceeds": 2270.56
       },
       "final": {
         "rows": [
@@ -300,83 +300,83 @@
             "ticker": "AAPL",
             "kept": "20 股",
             "shares": 20.0,
-            "weight": 0.098346,
-            "stock_weight": 0.098346,
-            "exposure": 6876.6
+            "weight": 0.100192,
+            "stock_weight": 0.100192,
+            "exposure": 6978.2
           },
           {
             "ticker": "MSFT",
             "kept": "10 股",
             "shares": 10.0,
-            "weight": 0.075943,
-            "stock_weight": 0.075943,
-            "exposure": 5310.1
+            "weight": 0.076117,
+            "stock_weight": 0.076117,
+            "exposure": 5301.4
           },
           {
             "ticker": "JPM",
             "kept": "15 股",
             "shares": 15.0,
-            "weight": 0.072788,
-            "stock_weight": 0.072788,
-            "exposure": 5089.5
+            "weight": 0.073996,
+            "stock_weight": 0.073996,
+            "exposure": 5153.7
           },
           {
             "ticker": "XOM",
             "kept": "20 股",
             "shares": 20.0,
-            "weight": 0.052063,
-            "stock_weight": 0.052063,
-            "exposure": 3640.4
+            "weight": 0.052633,
+            "stock_weight": 0.052633,
+            "exposure": 3665.8
           },
           {
             "ticker": "AMZN",
             "kept": "12 股",
             "shares": 12.0,
-            "weight": 0.043694,
-            "stock_weight": 0.043694,
-            "exposure": 3055.2
+            "weight": 0.042004,
+            "stock_weight": 0.042004,
+            "exposure": 2925.48
           },
           {
             "ticker": "NVDA",
             "kept": "8 股",
             "shares": 8.0,
-            "weight": 0.024642,
-            "stock_weight": 0.024642,
-            "exposure": 1723.04
+            "weight": 0.024542,
+            "stock_weight": 0.024542,
+            "exposure": 1709.28
           },
           {
             "ticker": "UNH",
             "kept": "4 股",
             "shares": 4.0,
-            "weight": 0.023289,
-            "stock_weight": 0.023289,
-            "exposure": 1628.4
+            "weight": 0.023599,
+            "stock_weight": 0.023599,
+            "exposure": 1643.64
           }
         ],
         "exited": [
           "GOOGL"
         ],
-        "cash": 42599.12,
-        "gross": 0.390765
+        "cash": 42270.56,
+        "gross": 0.393083
       },
       "alternatives": []
     },
     "staged": {
       "before": {
         "cash": 40000.0,
-        "gross": 0.427937,
+        "gross": 0.425684,
         "worst_name": {
           "ticker": "AAPL",
-          "exposure": 6876.6,
-          "weight": 0.098346
+          "exposure": 6978.2,
+          "weight": 0.100192
         },
         "worst_theme": {
           "id": "tech",
           "name": "大型科技 / 平台",
-          "exposure": 19564.06,
-          "weight": 0.279797
+          "exposure": 19184.92,
+          "weight": 0.275455
         },
-        "gross_market_value": 0.427937
+        "gross_market_value": 0.425684
       },
       "steps": [
         {
@@ -387,22 +387,22 @@
           "title": "卖出 GOOGL 8 股",
           "why": "规则卖出：收盘跌破吊灯移动止损，可以整仓退出。财报 2026-10-28",
           "shares": 8,
-          "proceeds": 2599.12,
+          "proceeds": 2270.56,
           "shares_after": 0.0,
           "fraction_left": null,
           "after": {
-            "cash": 42599.12,
-            "gross": 0.390765,
+            "cash": 42270.56,
+            "gross": 0.393083,
             "worst_name": {
               "ticker": "AAPL",
-              "exposure": 6876.6,
-              "weight": 0.098346
+              "exposure": 6978.2,
+              "weight": 0.100192
             },
             "worst_theme": {
               "id": "tech",
               "name": "大型科技 / 平台",
-              "exposure": 16964.94,
-              "weight": 0.242625
+              "exposure": 16914.36,
+              "weight": 0.242855
             }
           }
         }
@@ -411,7 +411,7 @@
         "done": 0,
         "total": 1,
         "done_proceeds": 0.0,
-        "remaining_proceeds": 2599.12
+        "remaining_proceeds": 2270.56
       },
       "phases": [
         {
@@ -432,64 +432,64 @@
             "ticker": "AAPL",
             "kept": "20 股",
             "shares": 20.0,
-            "weight": 0.098346,
-            "stock_weight": 0.098346,
-            "exposure": 6876.6
+            "weight": 0.100192,
+            "stock_weight": 0.100192,
+            "exposure": 6978.2
           },
           {
             "ticker": "MSFT",
             "kept": "10 股",
             "shares": 10.0,
-            "weight": 0.075943,
-            "stock_weight": 0.075943,
-            "exposure": 5310.1
+            "weight": 0.076117,
+            "stock_weight": 0.076117,
+            "exposure": 5301.4
           },
           {
             "ticker": "JPM",
             "kept": "15 股",
             "shares": 15.0,
-            "weight": 0.072788,
-            "stock_weight": 0.072788,
-            "exposure": 5089.5
+            "weight": 0.073996,
+            "stock_weight": 0.073996,
+            "exposure": 5153.7
           },
           {
             "ticker": "XOM",
             "kept": "20 股",
             "shares": 20.0,
-            "weight": 0.052063,
-            "stock_weight": 0.052063,
-            "exposure": 3640.4
+            "weight": 0.052633,
+            "stock_weight": 0.052633,
+            "exposure": 3665.8
           },
           {
             "ticker": "AMZN",
             "kept": "12 股",
             "shares": 12.0,
-            "weight": 0.043694,
-            "stock_weight": 0.043694,
-            "exposure": 3055.2
+            "weight": 0.042004,
+            "stock_weight": 0.042004,
+            "exposure": 2925.48
           },
           {
             "ticker": "NVDA",
             "kept": "8 股",
             "shares": 8.0,
-            "weight": 0.024642,
-            "stock_weight": 0.024642,
-            "exposure": 1723.04
+            "weight": 0.024542,
+            "stock_weight": 0.024542,
+            "exposure": 1709.28
           },
           {
             "ticker": "UNH",
             "kept": "4 股",
             "shares": 4.0,
-            "weight": 0.023289,
-            "stock_weight": 0.023289,
-            "exposure": 1628.4
+            "weight": 0.023599,
+            "stock_weight": 0.023599,
+            "exposure": 1643.64
           }
         ],
         "exited": [
           "GOOGL"
         ],
-        "cash": 42599.12,
-        "gross": 0.390765
+        "cash": 42270.56,
+        "gross": 0.393083
       },
       "alternatives": []
     }

@@ -2,11 +2,11 @@
   "as_of_config": "2026-01-02",
   "cash": 40000.0,
   "nlv_config": 100000,
-  "nlv_estimated": 68937.41983,
-  "nlv_basis": 68937.41983,
-  "long_mv": 28937.41983,
+  "nlv_estimated": 68986.6,
+  "nlv_basis": 68986.6,
+  "long_mv": 28986.6,
   "short_mv": 0,
-  "gross": 0.419764,
+  "gross": 0.420177,
   "using_margin": false,
   "price_incomplete": false,
   "positions": [
@@ -19,15 +19,13 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 338.320007,
+      "price": 331.9,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 6766.400146,
-      "pnl": 3166.400146,
-      "weight": 0.098153,
-      "exits": [
-        "X4"
-      ],
+      "market_value": 6638.0,
+      "pnl": 3038.0,
+      "weight": 0.096222,
+      "exits": [],
       "exit_notes": [
         "BE：浮盈已到 1R，把止损从 170.00 抬到成本 180.00。"
       ],
@@ -37,19 +35,14 @@
       "add": null,
       "call": {
         "ticker": "AAPL",
-        "action": "trim",
-        "action_label": "减仓",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "AAPL：放量跌破 50 日均线或财报锚定均价，规则是减半",
-        "code": "X4",
-        "name": "跌破均线减仓",
-        "c_tag": "X4",
+        "line": "AAPL：没有新的离场条件。收盘 331.90，吊灯移动止损 329.97",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "跌破均线减仓",
-            "pass": true,
-            "text": "收盘 338.32 相对 50 日均线 333.62，量比 1.56，并低于财报锚定均价 339.31"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -57,18 +50,14 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "减一部分，不是一次性清仓。",
-          "entry": null,
-          "stop": 170,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "收盘回到 50 日均线 333.62 之上且不再放量，减半条件取消。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 329.97 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
@@ -81,16 +70,13 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 507.119995,
+      "price": 520.99,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 5071.199951,
-      "pnl": 871.199951,
-      "weight": 0.073562,
-      "exits": [
-        "X3",
-        "X4"
-      ],
+      "market_value": 5209.9,
+      "pnl": 1009.9,
+      "weight": 0.07552,
+      "exits": [],
       "exit_notes": [
         "BE：浮盈已到 1R，把止损从 390.00 抬到成本 420.00。"
       ],
@@ -100,24 +86,14 @@
       "add": null,
       "call": {
         "ticker": "MSFT",
-        "action": "sell",
-        "action_label": "卖出",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "MSFT：收盘 507.12 跌破吊灯移动止损 514.04；放量跌破 50 日均线或财报锚定均价，规则是减半",
-        "code": "X3",
-        "name": "跌破吊灯移动止损、跌破均线减仓",
-        "c_tag": "X3+X4",
+        "line": "MSFT：没有新的离场条件。收盘 520.99，吊灯移动止损 513.50",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "跌破吊灯移动止损",
-            "pass": true,
-            "text": "收盘 507.12 跌破吊灯移动止损 514.04"
-          },
-          {
-            "label": "跌破均线减仓",
-            "pass": true,
-            "text": "收盘 507.12 相对 50 日均线 513.39，量比 1.57"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -125,18 +101,14 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "卖出剩余仓位。",
-          "entry": null,
-          "stop": 390,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "收盘重新站上吊灯移动止损 514.04 后，这条就不再成立。收盘回到 50 日均线 513.39 之上且不再放量，减半条件取消。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 513.50 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
@@ -149,12 +121,12 @@
       "horizon": "swing",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 202.059998,
+      "price": 206.69,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 1616.47998,
-      "pnl": 656.47998,
-      "weight": 0.023449,
+      "market_value": 1653.52,
+      "pnl": 693.52,
+      "weight": 0.023969,
       "exits": [
         "X3"
       ],
@@ -170,7 +142,7 @@
         "action": "sell",
         "action_label": "卖出",
         "block": "",
-        "line": "NVDA：收盘 202.06 跌破21 日均线 216.90",
+        "line": "NVDA：收盘 206.69 跌破21 日均线 215.98",
         "code": "X3",
         "name": "跌破吊灯移动止损",
         "c_tag": "X3",
@@ -178,7 +150,7 @@
           {
             "label": "跌破吊灯移动止损",
             "pass": true,
-            "text": "收盘 202.06 跌破21 日均线 216.90"
+            "text": "收盘 206.69 跌破21 日均线 215.98"
           },
           {
             "label": "突破失败",
@@ -196,7 +168,7 @@
           "risk_usd": 0,
           "risk_model": 0
         },
-        "invalidate": "收盘重新站上吊灯移动止损 224.43 后，这条就不再成立。",
+        "invalidate": "收盘重新站上吊灯移动止损 224.32 后，这条就不再成立。",
         "pending": [
           "X2"
         ]
@@ -211,42 +183,30 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 245.630005,
+      "price": 250.69,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 2947.560059,
-      "pnl": 667.560059,
-      "weight": 0.042757,
-      "exits": [
-        "X4"
-      ],
+      "market_value": 3008.28,
+      "pnl": 728.28,
+      "weight": 0.043607,
+      "exits": [],
       "exit_notes": [
         "BE：浮盈已到 1R，把止损从 175.00 抬到成本 190.00。"
       ],
       "rules_null": [
         "X2"
       ],
-      "add": {
-        "id": "A1",
-        "shares_model": 6,
-        "shares": 6,
-        "detail": "浮盈已到 1R。规则允许加仓不超过原仓位的一半（6 股）。"
-      },
+      "add": null,
       "call": {
         "ticker": "AMZN",
-        "action": "trim",
-        "action_label": "减仓",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "AMZN：放量跌破 50 日均线或财报锚定均价，规则是减半",
-        "code": "X4",
-        "name": "跌破均线减仓",
-        "c_tag": "X4",
+        "line": "AMZN：没有新的离场条件。收盘 250.69，吊灯移动止损 243.70",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "跌破均线减仓",
-            "pass": true,
-            "text": "收盘 245.63 相对 50 日均线 254.02，量比 1.54"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -254,18 +214,14 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "减一部分，不是一次性清仓。",
-          "entry": null,
-          "stop": 175,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "收盘回到 50 日均线 254.02 之上且不再放量，减半条件取消。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 243.70 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
@@ -278,12 +234,12 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 278.98999,
+      "price": 280.03,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 2231.919922,
-      "pnl": 951.919922,
-      "weight": 0.032376,
+      "market_value": 2240.24,
+      "pnl": 960.24,
+      "weight": 0.032474,
       "exits": [
         "X3",
         "X4"
@@ -300,7 +256,7 @@
         "action": "sell",
         "action_label": "卖出",
         "block": "",
-        "line": "GOOGL：收盘 278.99 跌破吊灯移动止损 330.06；放量跌破 50 日均线或财报锚定均价，规则是减半",
+        "line": "GOOGL：收盘 280.03 跌破吊灯移动止损 330.79；放量跌破 50 日均线或财报锚定均价，规则是减半",
         "code": "X3",
         "name": "跌破吊灯移动止损、跌破均线减仓",
         "c_tag": "X3+X4",
@@ -308,12 +264,12 @@
           {
             "label": "跌破吊灯移动止损",
             "pass": true,
-            "text": "收盘 278.99 跌破吊灯移动止损 330.06"
+            "text": "收盘 280.03 跌破吊灯移动止损 330.79"
           },
           {
             "label": "跌破均线减仓",
             "pass": true,
-            "text": "收盘 278.99 相对 50 日均线 337.72，量比 1.64，并低于财报锚定均价 290.97"
+            "text": "收盘 280.03 相对 50 日均线 336.36，量比 1.17，并低于财报锚定均价 289.84"
           },
           {
             "label": "突破失败",
@@ -331,7 +287,7 @@
           "risk_usd": 0,
           "risk_model": 0
         },
-        "invalidate": "收盘重新站上吊灯移动止损 330.06 后，这条就不再成立。收盘回到 50 日均线 337.72 之上且不再放量，减半条件取消。",
+        "invalidate": "收盘重新站上吊灯移动止损 330.79 后，这条就不再成立。收盘回到 50 日均线 336.36 之上且不再放量，减半条件取消。",
         "pending": [
           "X2"
         ]
@@ -346,15 +302,13 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 340.579987,
+      "price": 337.98,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 5108.699799,
-      "pnl": 2108.699799,
-      "weight": 0.074106,
-      "exits": [
-        "X6"
-      ],
+      "market_value": 5069.7,
+      "pnl": 2069.7,
+      "weight": 0.073488,
+      "exits": [],
       "exit_notes": [
         "BE：浮盈已到 1R，把止损从 185.00 抬到成本 200.00。"
       ],
@@ -364,19 +318,14 @@
       "add": null,
       "call": {
         "ticker": "JPM",
-        "action": "trim",
-        "action_label": "减仓",
+        "action": "hold",
+        "action_label": "持有",
         "block": "",
-        "line": "JPM：连续 3 根跳空高开",
-        "code": "X6",
-        "name": "高潮止盈",
-        "c_tag": "X6",
+        "line": "JPM：没有新的离场条件。收盘 337.98，吊灯移动止损 327.06",
+        "code": null,
+        "name": "",
+        "c_tag": null,
         "checks": [
-          {
-            "label": "高潮止盈",
-            "pass": true,
-            "text": "连续 3 根跳空高开"
-          },
           {
             "label": "突破失败",
             "pass": null,
@@ -384,18 +333,14 @@
           }
         ],
         "confirmation": [],
-        "plan": {
-          "text": "减一部分，不是一次性清仓。",
-          "entry": null,
-          "stop": 185,
-          "shares": 0,
-          "shares_model": 0,
-          "risk_usd": 0,
-          "risk_model": 0
-        },
-        "invalidate": "高潮条件消失后，止盈可以停在已经减掉的部分。",
+        "plan": null,
+        "invalidate": "收盘跌破吊灯移动止损 327.06 会变成卖出。",
         "pending": [
-          "X2"
+          {
+            "label": "突破失败",
+            "pass": null,
+            "text": "在交易日志里写下这次突破的枢轴价和突破当天的最低价。不写就无法判断突破有没有失败"
+          }
         ]
       }
     },
@@ -408,12 +353,12 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 400.440002,
+      "price": 404.44,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 1601.76001,
-      "pnl": -398.23999,
-      "weight": 0.023235,
+      "market_value": 1617.76,
+      "pnl": -382.24,
+      "weight": 0.02345,
       "exits": [
         "X1"
       ],
@@ -468,12 +413,12 @@
       "horizon": "position",
       "entry_date": "2026-01-02",
       "note": "EXAMPLE",
-      "price": 179.669998,
+      "price": 177.46,
       "mark_source": "收盘价",
       "mark_stale": false,
-      "market_value": 3593.399963,
-      "pnl": 1393.399963,
-      "weight": 0.052126,
+      "market_value": 3549.2,
+      "pnl": 1349.2,
+      "weight": 0.051448,
       "exits": [],
       "exit_notes": [
         "BE：浮盈已到 1R，把止损从 100.00 抬到成本 110.00。"
@@ -487,7 +432,7 @@
         "action": "hold",
         "action_label": "持有",
         "block": "",
-        "line": "XOM：没有新的离场条件。收盘 179.67，吊灯移动止损 176.41",
+        "line": "XOM：没有新的离场条件。收盘 177.46，吊灯移动止损 176.54",
         "code": null,
         "name": "",
         "c_tag": null,
@@ -500,7 +445,7 @@
         ],
         "confirmation": [],
         "plan": null,
-        "invalidate": "收盘跌破吊灯移动止损 176.41 会变成卖出。",
+        "invalidate": "收盘跌破吊灯移动止损 176.54 会变成卖出。",
         "pending": [
           {
             "label": "突破失败",
@@ -514,50 +459,50 @@
   "names": [
     {
       "ticker": "AAPL",
-      "market_value": 6766.400146,
-      "weight": 0.098153,
-      "breach": false
-    },
-    {
-      "ticker": "JPM",
-      "market_value": 5108.699799,
-      "weight": 0.074106,
+      "market_value": 6638.0,
+      "weight": 0.096222,
       "breach": false
     },
     {
       "ticker": "MSFT",
-      "market_value": 5071.199951,
-      "weight": 0.073562,
+      "market_value": 5209.9,
+      "weight": 0.07552,
+      "breach": false
+    },
+    {
+      "ticker": "JPM",
+      "market_value": 5069.7,
+      "weight": 0.073488,
       "breach": false
     },
     {
       "ticker": "XOM",
-      "market_value": 3593.399963,
-      "weight": 0.052126,
+      "market_value": 3549.2,
+      "weight": 0.051448,
       "breach": false
     },
     {
       "ticker": "AMZN",
-      "market_value": 2947.560059,
-      "weight": 0.042757,
+      "market_value": 3008.28,
+      "weight": 0.043607,
       "breach": false
     },
     {
       "ticker": "GOOGL",
-      "market_value": 2231.919922,
-      "weight": 0.032376,
+      "market_value": 2240.24,
+      "weight": 0.032474,
       "breach": false
     },
     {
       "ticker": "NVDA",
-      "market_value": 1616.47998,
-      "weight": 0.023449,
+      "market_value": 1653.52,
+      "weight": 0.023969,
       "breach": false
     },
     {
       "ticker": "UNH",
-      "market_value": 1601.76001,
-      "weight": 0.023235,
+      "market_value": 1617.76,
+      "weight": 0.02345,
       "breach": false
     }
   ],
@@ -565,29 +510,29 @@
     {
       "id": "tech",
       "name": "大型科技 / 平台",
-      "market_value": 18633.560059,
-      "weight": 0.270297,
+      "market_value": 18749.94,
+      "weight": 0.271791,
       "breach": true
     },
     {
       "id": "fin",
       "name": "金融",
-      "market_value": 5108.699799,
-      "weight": 0.074106,
+      "market_value": 5069.7,
+      "weight": 0.073488,
       "breach": false
     },
     {
       "id": "energy",
       "name": "能源",
-      "market_value": 3593.399963,
-      "weight": 0.052126,
+      "market_value": 3549.2,
+      "weight": 0.051448,
       "breach": false
     },
     {
       "id": "health",
       "name": "医疗",
-      "market_value": 1601.76001,
-      "weight": 0.023235,
+      "market_value": 1617.76,
+      "weight": 0.02345,
       "breach": false
     }
   ],
@@ -598,8 +543,8 @@
     }
   ],
   "stops_missing": false,
-  "open_risk": 11200.659821,
-  "open_risk_pct": 0.162476,
+  "open_risk": 11233.84,
+  "open_risk_pct": 0.162841,
   "snapshot": {
     "as_of": "2026-01-02T16:00-05:00",
     "nlv": 100000,
@@ -612,7 +557,7 @@
   },
   "need_proceeds": 0.0,
   "hwm": 100000.0,
-  "drawdown": -0.310626,
+  "drawdown": -0.310134,
   "drawdown_levels": [
     {
       "label": "-3%",
@@ -620,7 +565,7 @@
       "nlv": 97000.0,
       "action": "暂停新的短线，复盘最近的交易",
       "breached": true,
-      "distance": -28062.58017
+      "distance": -28013.4
     },
     {
       "label": "-5%",
@@ -628,7 +573,7 @@
       "nlv": 95000.0,
       "action": "总敞口降到 60% 或以下",
       "breached": true,
-      "distance": -26062.58017
+      "distance": -26013.4
     },
     {
       "label": "-7.5%",
@@ -636,7 +581,7 @@
       "nlv": 92500.0,
       "action": "总敞口降到 35% 或以下，只留核心指数和黄金",
       "breached": true,
-      "distance": -23562.58017
+      "distance": -23513.4
     },
     {
       "label": "-10%",
@@ -644,7 +589,7 @@
       "nlv": 90000.0,
       "action": "权益清掉，换成现金或短债；冷静 10 个交易日",
       "breached": true,
-      "distance": -21062.58017
+      "distance": -21013.4
     }
   ]
 }

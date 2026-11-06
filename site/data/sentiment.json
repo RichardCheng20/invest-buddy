@@ -323,7 +323,7 @@
     }
   ],
   "fear_greed": {
-    "score": 20.1,
+    "score": 20.0,
     "rating": "extreme fear",
     "rating_cn": "极度恐惧",
     "date": "2026-11-06",
@@ -685,15 +685,15 @@
       },
       {
         "date": "2026-11-04",
-        "score": 20.1
+        "score": 20.0
       },
       {
         "date": "2026-11-05",
-        "score": 20.1
+        "score": 20.0
       },
       {
         "date": "2026-11-06",
-        "score": 20.1
+        "score": 20.0
       }
     ],
     "components": [
@@ -727,11 +727,11 @@
       {
         "id": "put_call_options",
         "name": "看跌/看涨",
-        "score": 8.4,
+        "score": 7.6,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": 0.87,
-        "raw_label": "0.87"
+        "raw": 0.89,
+        "raw_label": "0.89"
       },
       {
         "id": "market_volatility_vix_50",
@@ -739,8 +739,8 @@
         "score": 6.3,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": 16.93,
-        "raw_label": "VIX 26.74 / 50日 16.93"
+        "raw": 16.94,
+        "raw_label": "VIX 27.37 / 50日 16.94"
       },
       {
         "id": "junk_bond_demand",

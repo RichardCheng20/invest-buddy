@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-05T13:29:02.280913+00:00",
-  "generated_at_cn": "2026-11-05 21:29",
-  "generated_date_cn": "2026-11-05",
-  "bar_date": "2026-11-04",
-  "session": "pm",
+  "generated_at": "2026-11-06T01:42:45.058744+00:00",
+  "generated_at_cn": "2026-11-06 09:42",
+  "generated_date_cn": "2026-11-06",
+  "bar_date": "2026-11-05",
+  "session": "am",
   "timezone": "Asia/Shanghai",
   "watchlist_count": 20,
   "scan_count": 20,
@@ -12,8 +12,8 @@
     "cap": 0.6,
     "note": "EXAMPLE。按你自己的利率和通胀判断改 name、cap 和这句话。脚本不会替你猜宏观档位。"
   },
-  "exposure_cap": 0.6,
-  "regime_risk_mult": 0.5,
+  "exposure_cap": 0.35,
+  "regime_risk_mult": 0.0,
   "approximations": [
     "市场宽度用观察列表，不是标普 500 全部成分。",
     "财报潜在亏损优先用平值跨式；跨式取不到时该格留空，不再用 15% 填上。近 8 次跳空用日线高低价。",

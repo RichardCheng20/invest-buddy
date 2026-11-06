@@ -1,36 +1,56 @@
 {
-  "score": 3,
-  "score_raw_before_lock": 3,
-  "regime": "YELLOW",
-  "distribution_count": 8,
+  "score": 1,
+  "score_raw_before_lock": 1,
+  "regime": "RED",
+  "distribution_count": 9,
   "distribution_penalty": true,
-  "vix": 16.610001,
-  "vix3m": 18.799999,
-  "vix_ratio": 0.883511,
-  "vix_lock": false,
-  "breadth_above_50": 0.75,
-  "breadth_above_200": 0.8,
+  "vix": 28.18,
+  "vix3m": 25.549999,
+  "vix_ratio": 1.102935,
+  "vix_lock": true,
+  "breadth_above_50": 0.55,
+  "breadth_above_200": 0.7,
   "breadth_n": 20,
-  "risk_mult": 0.5,
-  "exposure_cap": 0.6,
+  "risk_mult": 0.0,
+  "exposure_cap": 0.35,
   "yesterday_regime": "YELLOW",
   "alerts": [
+    {
+      "id": "R1",
+      "level": "primary",
+      "title": "市场环境切换",
+      "detail": "YELLOW → RED（环境分 1）"
+    },
     {
       "id": "R2",
       "level": "primary",
       "title": "派发日达到 5 个",
-      "detail": "SPY 或 QQQ 在最近 25 个交易日有 8 个派发日"
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 9 个派发日"
+    },
+    {
+      "id": "R3",
+      "level": "primary",
+      "title": "VIX 期限结构倒挂",
+      "detail": "VIX/VIX3M = 1.10，环境按防守处理，直到连续 2 天回到 0.95 以下"
+    },
+    {
+      "id": "IDX",
+      "level": "primary",
+      "title": "指数跌破 200 日均线",
+      "detail": "QQQ 收盘在 200 日均线下方。核心指数桶减半；重新站上并连续 2 天收在均线上方后再分三批买回"
     }
   ],
-  "index_below_200": [],
+  "index_below_200": [
+    "QQQ"
+  ],
   "breadth_approximate": true,
   "breadth_note": "宽度用观察列表（含持仓）计算，不是标普 500 全成分。只作近似。",
   "parts": {
-    "spy_above_50": true,
+    "spy_above_50": false,
     "spy_above_200_stack": true,
     "qqq_above_50": false,
     "breadth": true,
-    "vix_contango": true
+    "vix_contango": false
   },
   "macro": {
     "name": "neutral",

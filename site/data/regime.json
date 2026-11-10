@@ -1,15 +1,15 @@
 {
-  "score": 1,
-  "score_raw_before_lock": 1,
+  "score": 2,
+  "score_raw_before_lock": 2,
   "regime": "RED",
   "distribution_count": 9,
   "distribution_penalty": true,
-  "vix": 25.639999,
-  "vix3m": 24.6,
-  "vix_ratio": 1.042276,
+  "vix": 19.92,
+  "vix3m": 20.85,
+  "vix_ratio": 0.955396,
   "vix_lock": true,
-  "breadth_above_50": 0.55,
-  "breadth_above_200": 0.7,
+  "breadth_above_50": 0.65,
+  "breadth_above_200": 0.75,
   "breadth_n": 20,
   "risk_mult": 0.0,
   "exposure_cap": 0.35,
@@ -24,8 +24,8 @@
     {
       "id": "R3",
       "level": "primary",
-      "title": "VIX 期限结构倒挂",
-      "detail": "VIX/VIX3M = 1.04，环境按防守处理，直到连续 2 天回到 0.95 以下"
+      "title": "VIX 倒挂锁定未解除",
+      "detail": "比值已回到 1 以下，但还没有连续 2 个收盘低于 0.95"
     },
     {
       "id": "IDX",
@@ -44,7 +44,7 @@
     "spy_above_200_stack": true,
     "qqq_above_50": false,
     "breadth": true,
-    "vix_contango": false
+    "vix_contango": true
   },
   "macro": {
     "name": "neutral",

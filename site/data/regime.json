@@ -2,11 +2,11 @@
   "score": 2,
   "score_raw_before_lock": 2,
   "regime": "YELLOW",
-  "distribution_count": 8,
+  "distribution_count": 9,
   "distribution_penalty": true,
-  "vix": 18.700001,
-  "vix3m": 20.059999,
-  "vix_ratio": 0.932203,
+  "vix": 19.299999,
+  "vix3m": 20.620001,
+  "vix_ratio": 0.935984,
   "vix_lock": false,
   "breadth_above_50": 0.75,
   "breadth_above_200": 0.8,
@@ -19,10 +19,18 @@
       "id": "R2",
       "level": "primary",
       "title": "派发日达到 5 个",
-      "detail": "SPY 或 QQQ 在最近 25 个交易日有 8 个派发日"
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 9 个派发日"
+    },
+    {
+      "id": "IDX",
+      "level": "primary",
+      "title": "指数跌破 200 日均线",
+      "detail": "QQQ 收盘在 200 日均线下方。核心指数桶减半；重新站上并连续 2 天收在均线上方后再分三批买回"
     }
   ],
-  "index_below_200": [],
+  "index_below_200": [
+    "QQQ"
+  ],
   "breadth_approximate": true,
   "breadth_note": "宽度用观察列表（含持仓）计算，不是标普 500 全成分。只作近似。",
   "parts": {

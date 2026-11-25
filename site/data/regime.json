@@ -4,11 +4,11 @@
   "regime": "RED",
   "distribution_count": 9,
   "distribution_penalty": true,
-  "vix": 26.620001,
-  "vix3m": 25.5,
-  "vix_ratio": 1.043922,
+  "vix": 26.360001,
+  "vix3m": 25.469999,
+  "vix_ratio": 1.034943,
   "vix_lock": true,
-  "breadth_above_50": 0.5,
+  "breadth_above_50": 0.45,
   "breadth_above_200": 0.6,
   "breadth_n": 20,
   "risk_mult": 0.0,
@@ -25,7 +25,7 @@
       "id": "R3",
       "level": "primary",
       "title": "VIX 期限结构倒挂",
-      "detail": "VIX/VIX3M = 1.04，环境按防守处理，直到连续 2 天回到 0.95 以下"
+      "detail": "VIX/VIX3M = 1.03，环境按防守处理，直到连续 2 天回到 0.95 以下"
     },
     {
       "id": "IDX",

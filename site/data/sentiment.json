@@ -323,7 +323,7 @@
     }
   ],
   "fear_greed": {
-    "score": 23.3,
+    "score": 22.5,
     "rating": "extreme fear",
     "rating_cn": "极度恐惧",
     "date": "2026-11-27",
@@ -689,63 +689,63 @@
       },
       {
         "date": "2026-11-26",
-        "score": 23.3
+        "score": 22.4
       },
       {
         "date": "2026-11-27",
-        "score": 23.3
+        "score": 22.5
       }
     ],
     "components": [
       {
         "id": "market_momentum_sp500",
         "name": "动量",
-        "score": 6.0,
+        "score": 5.0,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": 7245.91,
-        "raw_label": "标普 7,246"
+        "raw": 7231.33,
+        "raw_label": "标普 7,231"
       },
       {
         "id": "stock_price_strength",
         "name": "新高/新低",
-        "score": 28.8,
+        "score": 29.2,
         "rating": "fear",
         "rating_cn": "恐惧",
-        "raw": -6.66,
-        "raw_label": "原始值 -6.66"
+        "raw": -6.65,
+        "raw_label": "原始值 -6.65"
       },
       {
         "id": "stock_price_breadth",
         "name": "涨跌宽度",
-        "score": 30.0,
+        "score": 29.4,
         "rating": "fear",
         "rating_cn": "恐惧",
-        "raw": 380.1,
-        "raw_label": "原始值 380.10"
+        "raw": 375.84,
+        "raw_label": "原始值 375.84"
       },
       {
         "id": "put_call_options",
         "name": "看跌/看涨",
-        "score": 18.8,
+        "score": 15.8,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": 0.87,
-        "raw_label": "0.87"
+        "raw": 0.88,
+        "raw_label": "0.88"
       },
       {
         "id": "market_volatility_vix_50",
         "name": "VIX 相对 50 日",
-        "score": 50.0,
+        "score": 45.6,
         "rating": "neutral",
         "rating_cn": "中性",
         "raw": 19.24,
-        "raw_label": "VIX 26.29 / 50日 19.24"
+        "raw_label": "VIX 26.65 / 50日 19.24"
       },
       {
         "id": "junk_bond_demand",
         "name": "垃圾债需求",
-        "score": 15.2,
+        "score": 16.6,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
         "raw": 1.28,
@@ -754,11 +754,11 @@
       {
         "id": "safe_haven_demand",
         "name": "避险需求",
-        "score": 14.0,
+        "score": 15.2,
         "rating": "extreme fear",
         "rating_cn": "极度恐惧",
-        "raw": -4.74,
-        "raw_label": "原始值 -4.74"
+        "raw": -4.35,
+        "raw_label": "原始值 -4.35"
       }
     ]
   },
@@ -1704,10 +1704,10 @@
       }
     ]
   },
-  "line": "CNN 恐惧贪婪指数 23（极度恐惧，逆向偏多） · CBOE 股票看跌/看涨期权比 0.64（小于 1，正常，5日 0.63） · VIX/VIX3M 期限结构 1.08（大于 1，近月更慌） · 高收益债利差 3.72 · AAII 散户看多减看空 -8.9（多空差不大）",
+  "line": "CNN 恐惧贪婪指数 22（极度恐惧，逆向偏多） · CBOE 股票看跌/看涨期权比 0.64（小于 1，正常，5日 0.63） · VIX/VIX3M 期限结构 1.08（大于 1，近月更慌） · 高收益债利差 3.72 · AAII 散户看多减看空 -8.9（多空差不大）",
   "detail": [
-    "恐惧与贪婪 23（极度恐惧，2026-11-27）。前收 15.6，一周 18.6，一月 32.9，一年 17.7。",
-    "分项：动量 6，新高/新低 29，涨跌宽度 30，看跌/看涨 19，VIX 相对 50 日 50，垃圾债需求 15，避险需求 14。",
+    "恐惧与贪婪 22（极度恐惧，2026-11-27）。前收 15.6，一周 18.6，一月 32.9，一年 17.7。",
+    "分项：动量 5，新高/新低 29，涨跌宽度 29，看跌/看涨 16，VIX 相对 50 日 46，垃圾债需求 17，避险需求 15。",
     "看跌/看涨（CBOE 2026-11-25）：股票 0.64，合计 0.98。5日均股票 0.63 / 合计 1.00，10日均股票 0.67 / 合计 0.97。",
     "VIX 期限（CBOE 2026-11-25）：28.29 / 26.29 = 1.08，倒挂。",
     "高收益债利差 3.72（FRED BAMLH0A0HYM2，2026-11-24）。较 2026-10-23 +0.34。",

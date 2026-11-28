@@ -2,14 +2,14 @@
   "score": 0,
   "score_raw_before_lock": 0,
   "regime": "RED",
-  "distribution_count": 10,
+  "distribution_count": 9,
   "distribution_penalty": true,
-  "vix": 28.290001,
-  "vix3m": 26.290001,
-  "vix_ratio": 1.076075,
+  "vix": 23.809999,
+  "vix3m": 23.82,
+  "vix_ratio": 0.99958,
   "vix_lock": true,
   "breadth_above_50": 0.45,
-  "breadth_above_200": 0.5,
+  "breadth_above_200": 0.65,
   "breadth_n": 20,
   "risk_mult": 0.0,
   "exposure_cap": 0.35,
@@ -19,13 +19,13 @@
       "id": "R2",
       "level": "primary",
       "title": "派发日达到 5 个",
-      "detail": "SPY 或 QQQ 在最近 25 个交易日有 10 个派发日"
+      "detail": "SPY 或 QQQ 在最近 25 个交易日有 9 个派发日"
     },
     {
       "id": "R3",
       "level": "primary",
-      "title": "VIX 期限结构倒挂",
-      "detail": "VIX/VIX3M = 1.08，环境按防守处理，直到连续 2 天回到 0.95 以下"
+      "title": "VIX 倒挂锁定未解除",
+      "detail": "比值已回到 1 以下，但还没有连续 2 个收盘低于 0.95"
     },
     {
       "id": "IDX",
@@ -45,7 +45,7 @@
     "spy_above_200_stack": false,
     "qqq_above_50": false,
     "breadth": false,
-    "vix_contango": false
+    "vix_contango": true
   },
   "macro": {
     "name": "neutral",
